@@ -47,7 +47,7 @@ namespace TECH.Procedural
                 _rooms.Clear();
                 foreach (Transform tr in gameObject.transform)
                 {
-                    Destroy(tr.gameObject);
+                    Destroy(tr.gameObject); //ç
                 }
                 InitRoomsGeneration();
                 
