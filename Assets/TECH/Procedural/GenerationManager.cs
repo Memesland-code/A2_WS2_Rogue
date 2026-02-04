@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,11 +19,11 @@ namespace TECH.Procedural
         [SerializeField] private List<GameObject> _fightRoomPrefabs_Clean;
         [SerializeField] private List<GameObject> _fightRoomPrefabs_Abandoned;
         [Space(5)]
-        [SerializeField] private List<GameObject> _notableRoomPrefabs; //TODO Check for 1 list / notable room type
+        [SerializeField] private List<GameObject> _notableRoomPrefabs;
+        //TODO Add gambling room
         [Space(5)]
         [SerializeField] private List<GameObject> _bossRoomPrefabs;
         
-        //private List<(Room room1, Room room2)> _rooms;
         private List<List<Room>> _rooms;
         
         void Start()
@@ -44,7 +45,13 @@ namespace TECH.Procedural
                 print("Generating new dungeon with parameters:" + "\nSeed: " + _seed);
                 
                 _rooms.Clear();
+                foreach (Transform tr in gameObject.transform)
+                {
+                    Destroy(tr.gameObject);
+                }
                 InitRoomsGeneration();
+                
+                print("Room Generation Complete!");
             }
         }
 
@@ -63,6 +70,8 @@ namespace TECH.Procedural
 
         public void InitRoomsGeneration()
         {
+            Debug.LogWarning(Enum.GetValues(typeof(RoomType)).Length-2);
+            
             for (int i = 0; i <= _roomsNumber; i++)
             {
                 Room roomChoice1 = new();
@@ -79,15 +88,20 @@ namespace TECH.Procedural
                     roomChoice1.Type = RoomType.Boss;
                     roomChoice2.Type = RoomType.Boss;
                 }
+                else if (i == _roomsNumber - 1)
+                {
+                    roomChoice1.Type = RoomType.Healing;
+                    roomChoice2.Type = RoomType.Healing;
+                }
                 else // For others generate random rooms
                 {
                     // Get random room type in enum
                     roomChoice1.Type = (RoomType)Random.Range(1, Enum.GetValues(typeof(RoomType)).Length-2);
-                    roomChoice1.RoomIndex = i;
                     
                     roomChoice2.Type = (RoomType)Random.Range(1, Enum.GetValues(typeof(RoomType)).Length-2);
-                    roomChoice2.RoomIndex = i;
                 }
+                roomChoice1.RoomId = i;
+                roomChoice2.RoomId = i;
                 
                 var rooms = new List<Room>
                 {
@@ -103,7 +117,7 @@ namespace TECH.Procedural
                 print(roomchoices[0].Type + " - " + roomchoices[1].Type);
             }
             
-            //TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements (for v2)
+            //TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements
 
             foreach (var roomsChoice in _rooms)
             {
@@ -131,18 +145,23 @@ namespace TECH.Procedural
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
                             break;
                         
-                        case RoomType.Healing:
+                        case RoomType.Upgrade:
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
                             break;
                         
-                        case RoomType.Bonus:
+                        case RoomType.Gambling:
+                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
+                            break;
+                        
+                        case RoomType.Healing:
+                            if (room.RoomId != _roomsNumber - 1) Debug.LogError("Healing room instantiated on other slot than pre-boss!");
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
                             break;
                         
                         case RoomType.Boss:
                             room.RoomPrefab = _bossRoomPrefabs[Random.Range(0, _bossRoomPrefabs.Count - 1)];
                             break;
-                        
+
                         default:
                             Debug.LogError($"Could not apply roo prefab for {room.Type} room type");
                             break;
@@ -155,7 +174,8 @@ namespace TECH.Procedural
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
                     Room room = _rooms[i][j];
-                    room.RoomInstanceReference = Instantiate(room.RoomPrefab, new Vector3(i * 50, j * 50, 0), Quaternion.Euler(0, 0, 0));
+                    room.RoomInstanceReference = Instantiate(room.RoomPrefab, new Vector3(i * 50, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
                 }
             }
 
@@ -164,7 +184,7 @@ namespace TECH.Procedural
              ** Generate boss room
              ** Generate rooms in map
              ** add room identifier in engine
-             * Resolve error: console rooms type != instantiated rooms in world
+             ** Resolve error: console rooms type != instantiated rooms in world
              * Add seed management
              */
         }

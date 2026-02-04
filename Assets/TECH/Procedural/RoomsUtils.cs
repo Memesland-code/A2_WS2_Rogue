@@ -7,8 +7,9 @@ namespace TECH.Procedural
 		Spawn,
 		Fight,
 		Merchant,
+		Upgrade,
+		Gambling,
 		Healing,
-		Bonus,
 		Boss
 	}
 
@@ -20,7 +21,7 @@ namespace TECH.Procedural
     
 	public class Room
 	{
-		public int RoomIndex;
+		public int RoomId;
 		
 		public RoomType Type;
 		public RoomDifficulty RoomDifficulty; //TODO Select between clean and abandoned
