@@ -47,7 +47,7 @@ namespace TECH.Procedural
                 _rooms.Clear();
                 foreach (Transform tr in gameObject.transform)
                 {
-                    Destroy(tr.gameObject); //ç
+                    Destroy(tr.gameObject);
                 }
                 InitRoomsGeneration();
                 
@@ -178,15 +178,6 @@ namespace TECH.Procedural
                     room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
                 }
             }
-
-            /*
-             ** Show generation in List
-             ** Generate boss room
-             ** Generate rooms in map
-             ** add room identifier in engine
-             ** Resolve error: console rooms type != instantiated rooms in world
-             * Add seed management
-             */
         }
     }
 }
