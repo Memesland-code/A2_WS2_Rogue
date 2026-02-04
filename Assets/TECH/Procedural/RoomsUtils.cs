@@ -23,9 +23,10 @@ namespace TECH.Procedural
 		public int RoomIndex;
 		
 		public RoomType Type;
-		//TODO public RoomDifficulty RoomDifficulty; //TODO Select between clean and abandoned
+		public RoomDifficulty RoomDifficulty; //TODO Select between clean and abandoned
 		
-		public GameObject Prefab;
+		public GameObject RoomPrefab;
+		public GameObject RoomInstanceReference;
 		//TODO public (Room room1, Room room2) ExitRooms; //TODO Check with teleporters later
 	}
 }
