@@ -1,4 +1,3 @@
-using TECH.Procedural;
 using UnityEngine;
 
 namespace TECH.Procedural
@@ -12,13 +11,21 @@ namespace TECH.Procedural
 		Bonus,
 		Boss
 	}
+
+	public enum RoomDifficulty
+	{
+		Clean,
+		Abandoned
+	}
     
 	public class Room
 	{
-		public RoomType Type;
 		public int RoomIndex;
-		public (Room room1, Room room2) ExitRooms;
-		public GameObject Prefab;
 		
+		public RoomType Type;
+		//TODO public RoomDifficulty RoomDifficulty; //TODO Select between clean and abandoned
+		
+		public GameObject Prefab;
+		//TODO public (Room room1, Room room2) ExitRooms; //TODO Check with teleporters later
 	}
 }

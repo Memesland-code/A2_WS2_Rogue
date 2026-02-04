@@ -11,6 +11,14 @@ namespace TECH.Procedural
         
         [SerializeField] private bool _enableSeed;
         [SerializeField] private int _seed;
+
+        [Space(10)]
+        [SerializeField] private List<GameObject> _spawnRoomPrefabs;
+        [Space(5)]
+        [SerializeField] private List<GameObject> _fightRoomPrefabs_Clean;
+        [SerializeField] private List<GameObject> _fightRoomPrefabs_Abandoned;
+        [Space(5)]
+        [SerializeField] private List<GameObject> _notableRoomPrefabs;
         
         private List<(Room room1, Room room2)> _rooms;
         
@@ -83,8 +91,11 @@ namespace TECH.Procedural
             {
                 print(roomchoices.room1.Type + " - " + roomchoices.room2.Type);
             }
-            
-            
+
+            foreach (var room in _rooms)
+            {
+                
+            }
 
             /*
              ** Show generation in List
