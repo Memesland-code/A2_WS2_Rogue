@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &36506492295876290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2799576426259596726}
+  m_Layer: 0
+  m_Name: RoomEntry
+  m_TagString: RoomEntry
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2799576426259596726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36506492295876290}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.47, y: -2.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3914492965088644908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39793362342406781
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 39793362342406781}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3596802, y: 0.2808237, z: 7.987379}
+  m_LocalPosition: {x: 1.3596802, y: 0.2808237, z: 0}
   m_LocalScale: {x: 2.4683487, y: 1.9362, z: 2.5368}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3914492965088644908}
   m_Layer: 0
-  m_Name: Room_Fight_Clean
+  m_Name: R_F_1_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,10 +164,11 @@ Transform:
   m_GameObject: {fileID: 260534034792844701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.72032, y: 5.6991763, z: -11.807379}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2799576426259596726}
   - {fileID: 3536322347884119505}
   - {fileID: 2912474218393656145}
   - {fileID: 7403652823949955679}
@@ -173,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 395218820820541571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710695, w: 0.7071066}
-  m_LocalPosition: {x: -6.9703197, y: 0.0008234978, z: 7.987379}
+  m_LocalPosition: {x: -6.9703197, y: 0.0008234978, z: 0}
   m_LocalScale: {x: 10.351474, y: 1, z: 3.7128603}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -281,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 2316565624623604152}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710695, w: 0.7071066}
-  m_LocalPosition: {x: 10.179682, y: 0.0008234978, z: 7.987379}
+  m_LocalPosition: {x: 10.179682, y: 0.0008234978, z: 0}
   m_LocalScale: {x: 10.351474, y: 1, z: 3.7128603}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -389,7 +421,7 @@ Transform:
   m_GameObject: {fileID: 3734397605839377739}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6296806, y: 5.280823, z: 7.987379}
+  m_LocalPosition: {x: 1.6296806, y: 5.280823, z: 0}
   m_LocalScale: {x: 17.956348, y: 1, z: 3.7128603}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -497,7 +529,7 @@ Transform:
   m_GameObject: {fileID: 5548318218994236641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6296806, y: -4.4891763, z: 7.987379}
+  m_LocalPosition: {x: 1.6296806, y: -4.4891763, z: 0}
   m_LocalScale: {x: 17.956348, y: 1, z: 3.7128603}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -603,7 +635,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7067528626767122380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.557379}
+  m_LocalPosition: {x: 0, y: 0, z: -2.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -681,7 +713,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fight
 
-    Clean'
+    Abandoned 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -708,7 +740,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.5
+  m_fontSize: 19.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
