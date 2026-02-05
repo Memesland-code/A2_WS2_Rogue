@@ -1,3 +1,5 @@
+using System;
+using Tech_Dev.Procedural;
 using UnityEngine;
 
 namespace Tech_Dev.Player
@@ -17,6 +19,7 @@ namespace Tech_Dev.Player
 	    
 	    private Rigidbody _rb;
 	    private InputManager _inputs;
+	    private Vector3 _initialGravity;
 
 	    private float _jumpTimeDelta;
 
@@ -25,6 +28,7 @@ namespace Tech_Dev.Player
 		    _rb = GetComponent<Rigidbody>();
 		    _inputs = GetComponent<InputManager>();
 		    _jumpTimeDelta = 0;
+		    _initialGravity = Physics.gravity;
 	    }
 
 	    private void Update()
@@ -56,14 +60,17 @@ namespace Tech_Dev.Player
 		    // Detect if contact with ground ==> make jump
 		    if (_inputs.Jump && _groundDetector.Touched && _jumpTimeDelta <= 0.0f)
 		    {
-			    _rb.linearVelocity = new Vector3(0, _jumpHeight, 0);
+			    verticalMove = new Vector3(0, Mathf.Sqrt(_jumpHeight * -2.0f * _initialGravity.y), 0);
+			    //! _rb.linearVelocity = new Vector3(0, _jumpHeight, 0);
 			    _jumpTimeDelta = _jumpCooldown;
 		    }
 
+		    /* For constant jump (Mario like)
 		    if (!_inputs.Jump && _rb.linearVelocity.y > 0)
 		    {
 			    _rb.linearVelocity = new Vector3(0, 0, 0);
 		    }
+		    */
 		    
 		    // Process values
 		    float realGravity = _rb.linearVelocity.y >= 0 ? _rb.linearVelocity.y : _rb.linearVelocity.y * _fastFallingFactor;
@@ -75,6 +82,15 @@ namespace Tech_Dev.Player
 
 		    // Apply to physics
 		    _rb.linearVelocity = new Vector3(0, realGravity, 0) + horizontalMove + verticalMove;
+	    }
+
+
+	    private void OnTriggerEnter(Collider other)
+	    {
+		    if (other.TryGetComponent(out Teleporter teleporter))
+		    {
+			    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
+		    }
 	    }
     }
 }
