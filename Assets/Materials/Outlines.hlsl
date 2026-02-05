@@ -10,7 +10,7 @@ ScharrOperators GetEdgeDetectionKernels() {
 	return kernels;
 	}
 
-void DepthBasedOutlines float(float2 screenUV, float2 px, out float outlines) {
+void DepthBasedOutlines_float(float2 screenUV, float2 px, out float outlines) {
 	outlines = 0;
 	#if defined(UNITY_DECLARE_DEPTH_TEXTURE_INCLUDED)
 	ScharrOperators kernels = GetEdgeDetectionKernels();
@@ -27,5 +27,5 @@ void DepthBasedOutlines float(float2 screenUV, float2 px, out float outlines) {
 	}
 	float g  = sqrt(gx * gx + gy * gy);
 	outlines = step(.02, g);
-	#endif #if defined(UNITY_DECLARE_DEPTH_TEXTURE_INCLUDED)
+	#endif
 }
