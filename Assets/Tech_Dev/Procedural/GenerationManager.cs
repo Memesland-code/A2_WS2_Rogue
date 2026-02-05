@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TECH.Procedural
+namespace Tech_Dev.Procedural
 {
     public class GenerationManager : MonoBehaviour
     {
@@ -13,8 +13,6 @@ namespace TECH.Procedural
         [SerializeField] private bool _enableSeed;
         [SerializeField] private int _seed;
 
-        [Space(10)]
-        [SerializeField] private List<GameObject> _spawnRoomPrefabs;
         [Space(5)]
         [SerializeField] private List<GameObject> _fightRoomPrefabs_Clean;
         [SerializeField] private List<GameObject> _fightRoomPrefabs_Abandoned;
@@ -56,9 +54,9 @@ namespace TECH.Procedural
         }
 
 
+        // Set random seed or selected seed depending on user choice
         private void InitSeed()
         {
-            // Put random seed or selected seed depending on user choice
             if (!_enableSeed)
             {
                 _seed = (int)DateTime.Now.Ticks;
@@ -70,18 +68,16 @@ namespace TECH.Procedural
 
         public void InitRoomsGeneration()
         {
-            Debug.LogWarning(Enum.GetValues(typeof(RoomType)).Length-2);
-            
+            //info First rooms init of types
             for (int i = 0; i <= _roomsNumber; i++)
             {
                 Room roomChoice1 = new();
                 Room roomChoice2 = new();
-                
-                // For the first room, forces spawn room to spawn
+
                 if (i == 0)
                 {
-                    roomChoice1.Type = RoomType.Spawn;
-                    roomChoice2.Type = RoomType.Spawn;
+                    roomChoice1.Type = RoomType.Fight;
+                    roomChoice2.Type = RoomType.Fight;
                 }
                 else if (i == _roomsNumber) // For last room = boss
                 {
@@ -96,9 +92,8 @@ namespace TECH.Procedural
                 else // For others generate random rooms
                 {
                     // Get random room type in enum
-                    roomChoice1.Type = (RoomType)Random.Range(1, Enum.GetValues(typeof(RoomType)).Length-2);
-                    
-                    roomChoice2.Type = (RoomType)Random.Range(1, Enum.GetValues(typeof(RoomType)).Length-2);
+                    roomChoice1.Type = (RoomType)Random.Range(0, Enum.GetValues(typeof(RoomType)).Length-2);
+                    roomChoice2.Type = (RoomType)Random.Range(0, Enum.GetValues(typeof(RoomType)).Length-2);
                 }
                 roomChoice1.RoomId = i;
                 roomChoice2.RoomId = i;
@@ -111,14 +106,10 @@ namespace TECH.Procedural
 
                 _rooms.Add(rooms);
             }
-
-            foreach (var roomchoices in _rooms)
-            {
-                print(roomchoices[0].Type + " - " + roomchoices[1].Type);
-            }
             
             //TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements
 
+            //info Setting room prefab for all rooms depending on their type
             foreach (var roomsChoice in _rooms)
             {
                 foreach (var room in roomsChoice)
@@ -126,10 +117,6 @@ namespace TECH.Procedural
                     // Assign prefab depending on room type
                     switch (room.Type)
                     {
-                        case RoomType.Spawn:
-                            room.RoomPrefab = _spawnRoomPrefabs[Random.Range(0, _spawnRoomPrefabs.Count-1)];
-                            break;
-
                         case RoomType.Fight:
                             if (room.RoomDifficulty == RoomDifficulty.Clean)
                             {
@@ -163,12 +150,13 @@ namespace TECH.Procedural
                             break;
 
                         default:
-                            Debug.LogError($"Could not apply roo prefab for {room.Type} room type");
+                            Debug.LogError($"Could not apply room prefab for {room.Type} room type");
                             break;
                     }
                 }
             }
 
+            //info Check for all rooms and instantiate
             for (int i = 0; i < _rooms.Count; i++)
             {
                 for (int j = 0; j < _rooms[i].Count; j++)

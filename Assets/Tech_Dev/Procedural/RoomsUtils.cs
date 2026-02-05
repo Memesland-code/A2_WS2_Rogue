@@ -1,10 +1,9 @@
 using UnityEngine;
 
-namespace TECH.Procedural
+namespace Tech_Dev.Procedural
 {
 	public enum RoomType
 	{
-		Spawn,
 		Fight,
 		Merchant,
 		Upgrade,
@@ -18,6 +17,14 @@ namespace TECH.Procedural
 		Clean,
 		Abandoned
 	}
+	
+	/* todo 
+	 * Object List<List<(GameObject clean, GameObject abandoned)>>
+	 * Select in List a random element.
+	 * Selected element in List is a Tuple
+	 * Tuple.clean is the clean prefab of the room
+	 * Tuple.Abandoned is the abandoned prefab of the room
+	 */
     
 	public class Room
 	{
