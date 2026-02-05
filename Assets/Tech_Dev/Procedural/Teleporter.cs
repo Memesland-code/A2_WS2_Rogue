@@ -4,13 +4,13 @@ namespace Tech_Dev.Procedural
 {
 	public class Teleporter : MonoBehaviour
 	{
-		[SerializeField] private Teleporter _destinationTeleporter;
+		[SerializeField] private Transform _roomEntryPoint;
 
 		private void OnDrawGizmos()
 		{
-			if (_destinationTeleporter != null)
+			if (_roomEntryPoint != null)
 			{
-				Gizmos.DrawLine(transform.position, _destinationTeleporter.transform.position);
+				Gizmos.DrawLine(transform.position, _roomEntryPoint.transform.position);
 			}
 			else
 			{
@@ -19,14 +19,14 @@ namespace Tech_Dev.Procedural
 			}
 		}
 
-		public Teleporter GetDestination()
+		public Transform GetDestination()
 		{
-			return _destinationTeleporter;
+			return _roomEntryPoint;
 		}
 
-		public void SetDestinationTeleporter(Teleporter destinationTeleporter)
+		public void SetDestinationEntryPoint(Transform destinationTeleporter)
 		{
-			_destinationTeleporter = destinationTeleporter;
+			_roomEntryPoint = destinationTeleporter;
 		}
 	}
 }

@@ -13,9 +13,8 @@ namespace Tech_Dev.Procedural
         [SerializeField] private bool _enableSeed;
         [SerializeField] private int _seed;
 
-        [Space(5)]
-        [SerializeField] private List<GameObject> _fightRoomPrefabs_Clean;
-        [SerializeField] private List<GameObject> _fightRoomPrefabs_Abandoned;
+        [Space(10)]
+        [SerializeField] private List<RoomDifficultyPrefabs> _fightRoomPrefabs;
         [Space(5)]
         [SerializeField] private List<GameObject> _notableRoomPrefabs;
         //TODO Add gambling room
@@ -33,6 +32,7 @@ namespace Tech_Dev.Procedural
             InitRoomsGeneration();
         }
 
+        //info Optional for testing only: resets the rooms generation
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.N))
@@ -107,8 +107,12 @@ namespace Tech_Dev.Procedural
                 _rooms.Add(rooms);
             }
             
+            
+            
             //TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements
 
+            
+            
             //info Setting room prefab for all rooms depending on their type
             foreach (var roomsChoice in _rooms)
             {
@@ -118,35 +122,36 @@ namespace Tech_Dev.Procedural
                     switch (room.Type)
                     {
                         case RoomType.Fight:
+                            //info 0 = clean room ; 1 = abandoned room
                             if (room.RoomDifficulty == RoomDifficulty.Clean)
                             {
-                                room.RoomPrefab = _fightRoomPrefabs_Clean[Random.Range(0, _fightRoomPrefabs_Clean.Count - 1)];
+                                room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count)].PrefabsChoice[0];
                             }
                             else
                             {
-                                room.RoomPrefab = _fightRoomPrefabs_Abandoned[Random.Range(0, _fightRoomPrefabs_Abandoned.Count - 1)];
+                                room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count)].PrefabsChoice[1];
                             }
                             break;
                             
                         case RoomType.Merchant:
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
+                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
                         case RoomType.Upgrade:
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
+                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
                         case RoomType.Gambling:
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
+                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
                         case RoomType.Healing:
                             if (room.RoomId != _roomsNumber - 1) Debug.LogError("Healing room instantiated on other slot than pre-boss!");
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count - 1)];
+                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
                         case RoomType.Boss:
-                            room.RoomPrefab = _bossRoomPrefabs[Random.Range(0, _bossRoomPrefabs.Count - 1)];
+                            room.RoomPrefab = _bossRoomPrefabs[Random.Range(0, _bossRoomPrefabs.Count)];
                             break;
 
                         default:
@@ -156,16 +161,38 @@ namespace Tech_Dev.Procedural
                 }
             }
 
-            //info Check for all rooms and instantiate
+            
+            
+            //info Instantiate all rooms in world
             for (int i = 0; i < _rooms.Count; i++)
             {
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
                     Room room = _rooms[i][j];
-                    room.RoomInstanceReference = Instantiate(room.RoomPrefab, new Vector3(i * 50, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
-                    room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
+                    room.RoomInstanceReference = Instantiate(room.RoomPrefab, new Vector3(i * 75, 0, j * 75), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    if (room.Type == RoomType.Fight)
+                    {
+                        room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.RoomDifficulty);
+                    }
+                    else
+                    {
+                        room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
+                    }
                 }
             }
+            
+            
+            
+            //info Teleporters binding
+            //info Setup for spawn connection with 1st room
+            /*
+             * Get spawn room exit point
+             * Get 1st room entry point
+             * Bind
+             */
+            //GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>().
+            
+            //info Setup for all rooms
         }
     }
 }
