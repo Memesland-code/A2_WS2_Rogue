@@ -96,7 +96,7 @@ namespace Tech_Dev.Procedural
                     roomChoice2.Type = (RoomType)Random.Range(0, Enum.GetValues(typeof(RoomType)).Length-2);
                 }
                 roomChoice1.RoomId = i;
-                roomChoice2.RoomId = i;
+                roomChoice2.RoomId = i + 100;
                 
                 var rooms = new List<Room>
                 {
@@ -146,7 +146,11 @@ namespace Tech_Dev.Procedural
                             break;
                         
                         case RoomType.Healing:
-                            if (room.RoomId != _roomsNumber - 1) Debug.LogError("Healing room instantiated on other slot than pre-boss!");
+                            if (room.RoomId == (_roomsNumber - 1) || room.RoomId == (_roomsNumber - 1 + 100)) {}
+                            else
+                            {
+                                Debug.LogError("Healing room instantiated on other slot than pre-boss!\nRoom ID: " + room.RoomId);
+                            }
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
@@ -169,30 +173,53 @@ namespace Tech_Dev.Procedural
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
                     Room room = _rooms[i][j];
-                    room.RoomInstanceReference = Instantiate(room.RoomPrefab, new Vector3(i * 75, 0, j * 75), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 75, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     if (room.Type == RoomType.Fight)
                     {
-                        room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.RoomDifficulty);
+                        room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.RoomDifficulty);
                     }
                     else
                     {
-                        room.RoomInstanceReference.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
+                        room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
                     }
                 }
             }
             
             
             
-            //info Teleporters binding
-            //info Setup for spawn connection with 1st room
             /*
              * Get spawn room exit point
              * Get 1st room entry point
              * Bind
              */
-            //GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>().
-            
-            //info Setup for all rooms
+
+            //info Teleporters binding - Loop through all rooms
+            for (int i = 0; i < _rooms.Count - 1; i++)
+            {
+                for (int j = 0; j < _rooms[i].Count; j++)
+                {
+                    Room room = _rooms[i][j];
+                    Room nextRoom = _rooms[i + 1][j];
+                    
+                    //info Check if 1st room
+                    if (i == 0)
+                    {
+                        Teleporter exitPoint = GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>();
+                        exitPoint.SetDestinationEntryPoint(_rooms[i][j].GetRoomEntry());
+                        
+                        room.GetRoomExitTeleporter().SetDestinationEntryPoint(nextRoom.GetRoomEntry());
+                    }
+                    //info if room is boss room
+                    else if (i == _roomsNumber)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        room.GetRoomExitTeleporter().SetDestinationEntryPoint(nextRoom.GetRoomEntry());
+                    }
+                }
+            }
         }
     }
 }

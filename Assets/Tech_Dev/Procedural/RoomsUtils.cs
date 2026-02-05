@@ -24,24 +24,37 @@ namespace Tech_Dev.Procedural
 		Clean,
 		Abandoned
 	}
-	
-	/* todo 
-	 * Object List<List<(GameObject clean, GameObject abandoned)>>
-	 * Select in List a random element.
-	 * Selected element in List is a Tuple
-	 * Tuple.clean is the clean prefab of the room
-	 * Tuple.Abandoned is the abandoned prefab of the room
-	 */
     
 	public class Room
 	{
 		public int RoomId;
 		
 		public RoomType Type;
-		public RoomDifficulty RoomDifficulty; //TODO Select between clean and abandoned
+		public RoomDifficulty RoomDifficulty;
 		
 		public GameObject RoomPrefab;
-		public GameObject RoomInstanceReference;
-		//TODO public (Room room1, Room room2) ExitRooms; //TODO Check with teleporters later
+		public GameObject WorldInstance;
+		public (Room room1, Room room2) ExitRooms;
+
+		public Transform GetRoomEntry()
+		{
+			foreach (Transform roomElement in WorldInstance.transform)
+			{
+				if (roomElement.CompareTag("RoomEntry"))
+				{
+					return roomElement.transform;
+				}
+			}
+			
+			Debug.LogError("No room entry found in room: " + RoomId);
+			return null;
+		}
+
+
+
+		public Teleporter GetRoomExitTeleporter()
+		{
+			return WorldInstance.transform.GetComponentInChildren<Teleporter>();
+		}
 	}
 }
