@@ -1,7 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Tech_Dev.Procedural
 {
+	[System.Serializable]
+	public class RoomDifficultyPrefabs
+	{
+		public List<GameObject> PrefabsChoice;
+	}
+	
 	public enum RoomType
 	{
 		Fight,
