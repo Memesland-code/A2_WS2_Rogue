@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 namespace Tech_Dev.Procedural
@@ -9,7 +10,7 @@ namespace Tech_Dev.Procedural
 		public List<GameObject> PrefabsChoice;
 	}
 	
-	public enum RoomType
+	public enum Type
 	{
 		Fight,
 		Merchant,
@@ -19,22 +20,35 @@ namespace Tech_Dev.Procedural
 		Boss
 	}
 
-	public enum RoomDifficulty
+	public enum Difficulty
 	{
 		Pristine,
-		Ruine
+		Ruin,
+		None
 	}
     
 	public class Room
 	{
 		public int RoomId;
 		
-		public RoomType Type;
-		public RoomDifficulty RoomDifficulty;
+		public Type Type;
+		public Difficulty Difficulty;
 		
 		public GameObject RoomPrefab;
 		public GameObject WorldInstance;
-		public (Room room1, Room room2) ExitRooms;
+
+
+
+		public void SetupRoomScript()
+		{
+			var scriptRef = WorldInstance.AddComponent<RoomDebug>();
+
+			scriptRef.RoomId = RoomId;
+			scriptRef.Type = Type;
+			scriptRef._difficulty = Difficulty;
+		}
+		
+		
 
 		public Transform GetRoomEntry()
 		{
@@ -52,9 +66,16 @@ namespace Tech_Dev.Procedural
 
 
 
-		public Teleporter GetRoomExitTeleporter()
+		public Teleporter GetPristineTeleporter()
 		{
-			return WorldInstance.transform.GetComponentInChildren<Teleporter>();
+			return WorldInstance.transform.GetChild(0).GetChild(0).transform.GetComponentInChildren<Teleporter>();
+		}
+
+
+
+		public Teleporter GetRuinTeleporter()
+		{
+			return WorldInstance.transform.GetChild(0).GetChild(1).transform.GetComponentInChildren<Teleporter>();
 		}
 	}
 }

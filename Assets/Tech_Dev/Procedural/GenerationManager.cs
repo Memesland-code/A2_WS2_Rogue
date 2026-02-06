@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +9,7 @@ namespace Tech_Dev.Procedural
 {
     public class GenerationManager : MonoBehaviour
     {
+        [Tooltip("Does no count the 1st fight room and the last boss room")]
         [SerializeField] private int _roomsNumber;
         
         [SerializeField] private bool _enableSeed;
@@ -28,6 +30,8 @@ namespace Tech_Dev.Procedural
             InitSeed();
             
             _rooms = new List<List<Room>>();
+
+            _roomsNumber += 1;
             
             InitRoomsGeneration();
         }
@@ -76,24 +80,43 @@ namespace Tech_Dev.Procedural
 
                 if (i == 0)
                 {
-                    roomChoice1.Type = RoomType.Fight;
-                    roomChoice2.Type = RoomType.Fight;
+                    roomChoice1.Type = Type.Fight;
+                    roomChoice2.Type = Type.Fight;
                 }
                 else if (i == _roomsNumber) // For last room = boss
                 {
-                    roomChoice1.Type = RoomType.Boss;
-                    roomChoice2.Type = RoomType.Boss;
+                    roomChoice1.Type = Type.Boss;
+                    roomChoice1.Difficulty = Difficulty.Pristine;
+                    
+                    roomChoice2.Type = Type.Boss;
+                    roomChoice2.Difficulty = Difficulty.Ruin;
                 }
                 else if (i == _roomsNumber - 1)
                 {
-                    roomChoice1.Type = RoomType.Healing;
-                    roomChoice2.Type = RoomType.Healing;
+                    roomChoice1.Type = Type.Healing;
+                    roomChoice1.Difficulty = Difficulty.None;
+                    
+                    roomChoice2.Type = Type.Healing;
+                    roomChoice2.Difficulty = Difficulty.None;
                 }
                 else // For others generate random rooms
                 {
-                    // Get random room type in enum
-                    roomChoice1.Type = (RoomType)Random.Range(0, Enum.GetValues(typeof(RoomType)).Length-2);
-                    roomChoice2.Type = (RoomType)Random.Range(0, Enum.GetValues(typeof(RoomType)).Length-2);
+                    roomChoice1.Type = (Type)Random.Range(0, Enum.GetValues(typeof(Type)).Length-2);
+
+                    if (roomChoice1.Type == Type.Fight)
+                    {
+                        roomChoice1.Difficulty = Difficulty.Pristine;
+                        
+                        roomChoice2.Type = Type.Fight;
+                        roomChoice2.Difficulty = Difficulty.Ruin;
+                    }
+                    else
+                    {
+                        roomChoice2.Type = (Type)Random.Range(1, Enum.GetValues(typeof(Type)).Length-2);
+
+                        roomChoice1.Difficulty = roomChoice1.Type == Type.Gambling ? Difficulty.Pristine : Difficulty.None;
+                        roomChoice2.Difficulty = roomChoice2.Type == Type.Gambling ? Difficulty.Ruin : Difficulty.None;
+                    }
                 }
                 roomChoice1.RoomId = i;
                 roomChoice2.RoomId = i + 100;
@@ -121,9 +144,9 @@ namespace Tech_Dev.Procedural
                     // Assign prefab depending on room type
                     switch (room.Type)
                     {
-                        case RoomType.Fight:
-                            //info 0 = clean room ; 1 = abandoned room
-                            if (room.RoomDifficulty == RoomDifficulty.Pristine)
+                        case Type.Fight:
+                            //info 0 = Pristine room ; 1 = Ruin room
+                            if (room.Difficulty == Difficulty.Pristine)
                             {
                                 room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count)].PrefabsChoice[0];
                             }
@@ -133,19 +156,19 @@ namespace Tech_Dev.Procedural
                             }
                             break;
                             
-                        case RoomType.Merchant:
+                        case Type.Merchant:
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
-                        case RoomType.Upgrade:
+                        case Type.Upgrade:
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
-                        case RoomType.Gambling:
+                        case Type.Gambling:
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
-                        case RoomType.Healing:
+                        case Type.Healing:
                             if (room.RoomId == (_roomsNumber - 1) || room.RoomId == (_roomsNumber - 1 + 100)) {}
                             else
                             {
@@ -154,7 +177,7 @@ namespace Tech_Dev.Procedural
                             room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
                             break;
                         
-                        case RoomType.Boss:
+                        case Type.Boss:
                             room.RoomPrefab = _bossRoomPrefabs[Random.Range(0, _bossRoomPrefabs.Count)];
                             break;
 
@@ -174,14 +197,16 @@ namespace Tech_Dev.Procedural
                 {
                     Room room = _rooms[i][j];
                     room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 75, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
-                    if (room.Type == RoomType.Fight)
+                    if (room.Type == Type.Fight)
                     {
-                        room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.RoomDifficulty);
+                        room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.Difficulty);
                     }
                     else
                     {
                         room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
                     }
+                    
+                    room.SetupRoomScript();
                 }
             }
             
@@ -193,7 +218,8 @@ namespace Tech_Dev.Procedural
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
                     Room room = _rooms[i][j];
-                    Room nextRoom = _rooms[i + 1][j];
+                    Room nextPristineRoom = _rooms[i + 1][0];
+                    Room nextRuinRoom = _rooms[i + 1][1];
                     
                     //info Check if 1st room
                     if (i == 0)
@@ -201,7 +227,7 @@ namespace Tech_Dev.Procedural
                         Teleporter exitPoint = GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>();
                         exitPoint.SetDestinationEntryPoint(_rooms[i][j].GetRoomEntry());
                         
-                        room.GetRoomExitTeleporter().SetDestinationEntryPoint(nextRoom.GetRoomEntry());
+                        room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.GetRoomEntry());
                     }
                     //info if room is boss room
                     else if (i == _roomsNumber)
@@ -210,7 +236,26 @@ namespace Tech_Dev.Procedural
                     }
                     else
                     {
-                        room.GetRoomExitTeleporter().SetDestinationEntryPoint(nextRoom.GetRoomEntry());
+                        foreach (Transform roomElement in room.WorldInstance.transform)
+                        {
+                            if (roomElement.CompareTag("TeleportersContainer"))
+                            {
+                                foreach (Transform teleporterGameObject in roomElement.transform)
+                                {
+                                    if (teleporterGameObject.gameObject.TryGetComponent(out Teleporter teleporter))
+                                    {
+                                        if (teleporter.GetTeleporterDifficulty() == Difficulty.Pristine)
+                                        {
+                                            room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.GetRoomEntry());
+                                            continue;
+                                        }
+                                        room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.GetRoomEntry());
+                                        break;
+                                    }
+                                }
+                            }
+                            
+                        }
                     }
                 }
             }
