@@ -206,6 +206,7 @@ namespace Tech_Dev.Procedural
                 {
                     Room room = _rooms[i][j];
                     room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 75, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    /*
                     if (room.Type == Type.Fight)
                     {
                         room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.Difficulty);
@@ -214,6 +215,7 @@ namespace Tech_Dev.Procedural
                     {
                         room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
                     }
+                    */
                     
                     room.SetupRoomScript();
                 }
