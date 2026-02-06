@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &119827361545663595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3028892684352781211}
+  - component: {fileID: 970269019490190625}
+  m_Layer: 0
+  m_Name: GenerationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3028892684352781211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119827361545663595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8052697, y: 15.299473, z: -20.203093}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &970269019490190625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119827361545663595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f367844451e5a3a49b9a9d38756c87d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roomsNumber: 10
+  _enableSeed: 0
+  _seed: 10
+  _fightRoomPrefabs:
+  - PrefabsChoice:
+    - {fileID: 260534034792844701, guid: e61249c903696d148a6a400d4ac976da, type: 3}
+    - {fileID: 260534034792844701, guid: b82366d267a335a43a0792f6d951b51f, type: 3}
+  - PrefabsChoice:
+    - {fileID: 260534034792844701, guid: 9d714945a78428d4d862d15e0c67f7ce, type: 3}
+    - {fileID: 260534034792844701, guid: d9bf04c2446745342a52b22c63712071, type: 3}
+  _notableRoomPrefabs:
+  - {fileID: 260534034792844701, guid: 4978bcac8f4d31a45a6f472e4d534673, type: 3}
+  _bossRoomPrefabs:
+  - {fileID: 5665025917569469222, guid: 8c91c54e89cfb9446a457faf800f19f4, type: 3}

@@ -228,6 +228,7 @@ namespace Tech_Dev.Procedural
                         exitPoint.SetDestinationEntryPoint(_rooms[i][j].GetRoomEntry());
                         
                         room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.GetRoomEntry());
+                        room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.GetRoomEntry());
                     }
                     //info if room is boss room
                     else if (i == _roomsNumber)
