@@ -21,8 +21,8 @@ namespace Tech_Dev.Procedural
 
 	public enum RoomDifficulty
 	{
-		Clean,
-		Abandoned
+		Pristine,
+		Ruine
 	}
     
 	public class Room

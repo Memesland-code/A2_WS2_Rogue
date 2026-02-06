@@ -14,7 +14,7 @@ namespace Tech_Dev.Player
             //Vector3 desiredPosition = _playerTransform.position + _cameraOffset;
             //Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed * Time.deltaTime);
             //transform.position = smoothedPosition;
-            transform.position = _playerTransform.position + _cameraOffset;
+            transform.position = new Vector3(_playerTransform.position.x, _playerTransform.position.y, _playerTransform.position.z) + _cameraOffset;
         }
     }
 }

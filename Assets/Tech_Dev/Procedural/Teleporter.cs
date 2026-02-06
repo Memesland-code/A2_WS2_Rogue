@@ -4,7 +4,8 @@ namespace Tech_Dev.Procedural
 {
 	public class Teleporter : MonoBehaviour
 	{
-		[SerializeField] private Transform _roomEntryPoint;
+		[SerializeField] private RoomDifficulty _teleporterDifficulty;
+		private Transform _roomEntryPoint;
 
 		private void OnDrawGizmos()
 		{
@@ -27,6 +28,11 @@ namespace Tech_Dev.Procedural
 		public void SetDestinationEntryPoint(Transform destinationTeleporter)
 		{
 			_roomEntryPoint = destinationTeleporter;
+		}
+
+		public RoomDifficulty GetTeleporterDifficulty()
+		{
+			return _teleporterDifficulty;
 		}
 	}
 }

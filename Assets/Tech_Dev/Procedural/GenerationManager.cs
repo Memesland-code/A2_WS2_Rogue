@@ -123,7 +123,7 @@ namespace Tech_Dev.Procedural
                     {
                         case RoomType.Fight:
                             //info 0 = clean room ; 1 = abandoned room
-                            if (room.RoomDifficulty == RoomDifficulty.Clean)
+                            if (room.RoomDifficulty == RoomDifficulty.Pristine)
                             {
                                 room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count)].PrefabsChoice[0];
                             }
@@ -186,12 +186,6 @@ namespace Tech_Dev.Procedural
             }
             
             
-            
-            /*
-             * Get spawn room exit point
-             * Get 1st room entry point
-             * Bind
-             */
 
             //info Teleporters binding - Loop through all rooms
             for (int i = 0; i < _rooms.Count - 1; i++)
