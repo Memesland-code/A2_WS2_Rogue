@@ -68,14 +68,57 @@ namespace Tech_Dev.Procedural
 
 		public Teleporter GetPristineTeleporter()
 		{
-			return WorldInstance.transform.GetChild(0).GetChild(0).transform.GetComponentInChildren<Teleporter>();
+			foreach (Transform child in WorldInstance.transform)
+			{
+				if (child.CompareTag("TeleportersContainer"))
+				{
+					foreach (Transform teleporter in child.transform)
+					{
+						if (teleporter.CompareTag("TeleporterPristine"))
+						{
+							return teleporter.GetComponent<Teleporter>();
+						}
+					}
+				}
+			}
+
+			return null;
 		}
 
 
 
 		public Teleporter GetRuinTeleporter()
 		{
-			return WorldInstance.transform.GetChild(0).GetChild(1).transform.GetComponentInChildren<Teleporter>();
+			foreach (Transform child in WorldInstance.transform)
+			{
+				if (child.CompareTag("TeleportersContainer"))
+				{
+					foreach (Transform teleporter in child.transform)
+					{
+						if (teleporter.CompareTag("TeleporterRuin"))
+						{
+							return teleporter.GetComponent<Teleporter>();
+						}
+					}
+				}
+			}
+
+			return null;
+		}
+
+
+
+		public Teleporter GetBossTeleporter()
+		{
+			foreach (Transform child in WorldInstance.transform)
+			{
+				if (child.CompareTag("TeleporterBoss"))
+				{
+					return child.GetComponent<Teleporter>();
+				}
+			}
+
+			return null;
 		}
 	}
 }
