@@ -205,7 +205,7 @@ namespace Tech_Dev.Procedural
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
                     Room room = _rooms[i][j];
-                    room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 75, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 200, j * 200, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     /*
                     if (room.Type == Type.Fight)
                     {
