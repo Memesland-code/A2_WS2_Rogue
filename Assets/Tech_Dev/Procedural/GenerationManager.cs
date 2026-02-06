@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,11 +21,21 @@ namespace Tech_Dev.Procedural
         //TODO Add gambling room
         [Space(5)]
         [SerializeField] private List<GameObject> _bossRoomPrefabs;
+
+        private GameObject hubSpawnPoint;
         
         private List<List<Room>> _rooms;
         
         void Start()
         {
+            foreach (Transform hubElement in GameObject.FindWithTag("Respawn").transform)
+            {
+                if (hubElement.CompareTag("RoomEntry"))
+                {
+                    hubSpawnPoint = hubElement.gameObject;
+                }
+            }
+            
             InitSeed();
             
             _rooms = new List<List<Room>>();
@@ -197,6 +206,7 @@ namespace Tech_Dev.Procedural
                 {
                     Room room = _rooms[i][j];
                     room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 75, j * 50, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    /*
                     if (room.Type == Type.Fight)
                     {
                         room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type + "\n" + room.Difficulty);
@@ -205,6 +215,7 @@ namespace Tech_Dev.Procedural
                     {
                         room.WorldInstance.GetComponentInChildren<TextMeshPro>().SetText(room.Type.ToString());
                     }
+                    */
                     
                     room.SetupRoomScript();
                 }
@@ -233,6 +244,8 @@ namespace Tech_Dev.Procedural
                     //info if room is boss room
                     else if (i == _roomsNumber)
                     {
+                        Teleporter bossTeleporter = room.GetBossTeleporter();
+                        bossTeleporter.SetDestinationEntryPoint(hubSpawnPoint.transform);
                         break;
                     }
                     else
