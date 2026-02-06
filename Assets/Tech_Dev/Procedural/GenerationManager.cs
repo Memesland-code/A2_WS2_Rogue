@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -205,7 +206,7 @@ namespace Tech_Dev.Procedural
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
                     Room room = _rooms[i][j];
-                    room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 200, j * 200, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
+                    room.WorldInstance = Instantiate(room.RoomPrefab, new Vector3(i * 150, j * 150, 0), Quaternion.Euler(0, 0, 0), gameObject.transform);
                     /*
                     if (room.Type == Type.Fight)
                     {
@@ -228,6 +229,7 @@ namespace Tech_Dev.Procedural
             {
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
+                    if (i == _roomsNumber) print("GOOD");
                     Room room = _rooms[i][j];
                     Room nextPristineRoom = _rooms[i + 1][0];
                     Room nextRuinRoom = _rooms[i + 1][1];
@@ -240,13 +242,6 @@ namespace Tech_Dev.Procedural
                         
                         room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.GetRoomEntry());
                         room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.GetRoomEntry());
-                    }
-                    //info if room is boss room
-                    else if (i == _roomsNumber)
-                    {
-                        Teleporter bossTeleporter = room.GetBossTeleporter();
-                        bossTeleporter.SetDestinationEntryPoint(hubSpawnPoint.transform);
-                        break;
                     }
                     else
                     {
@@ -273,6 +268,10 @@ namespace Tech_Dev.Procedural
                     }
                 }
             }
+            
+            //info if room is boss room
+            _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(hubSpawnPoint.transform);
+            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(hubSpawnPoint.transform);
         }
     }
 }
