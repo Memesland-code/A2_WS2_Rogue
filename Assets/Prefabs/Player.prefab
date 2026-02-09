@@ -134,6 +134,7 @@ MonoBehaviour:
   Jump: 0
   Attack: 0
   Interact: 0
+  Dash: 0
 --- !u!114 &3521744246877284185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,10 +151,15 @@ MonoBehaviour:
   _airSpeed: 10
   _jumpForce: 5
   _gravityScale: 7
-  _jumpCooldown: 0.1
   _groundDetector: {fileID: 328647522771395394}
+  _dashForce: 20
+  _dashMultiplierX: 2
+  _dashMultiplierY: 2
   _fastFallingFactor: 1.05
+  _jumpCooldown: 0.1
   _interactCooldown: 0.2
+  _dashCooldown: 0.5
+  _dashTime: 0.1
 --- !u!1 &4803926977503262152
 GameObject:
   m_ObjectHideFlags: 0
