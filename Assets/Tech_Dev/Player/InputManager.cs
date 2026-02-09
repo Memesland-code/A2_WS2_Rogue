@@ -9,6 +9,7 @@ namespace Tech_Dev.Player
         public bool Jump;
         public bool Attack;
         public bool Interact;
+        public bool Dash;
 
         public void OnMove(InputValue value)
         {
@@ -28,6 +29,11 @@ namespace Tech_Dev.Player
         public void OnInteract(InputValue value)
         {
             Interact = value.isPressed;
+        }
+
+        public void OnDash(InputValue value)
+        {
+            Dash = value.isPressed;
         }
     }
 }
