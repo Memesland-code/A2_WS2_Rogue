@@ -28,6 +28,10 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _dashCooldown;
 	    [SerializeField] private float _dashTime;
 	    
+	    [Space(10)]
+	    [SerializeField] private PhysicsMaterial _groundMaterial;
+	    [SerializeField] private PhysicsMaterial _airMaterial;
+	    
 	    private bool _isFacingRight = true;
 	    
 	    private Rigidbody _rb;
@@ -78,6 +82,18 @@ namespace Tech_Dev.Player
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 			    _jumpTimeDelta = _jumpCooldown;
+		    }
+
+		    if (!_groundDetector.Touched)
+		    {
+			    if (_rb.linearVelocity.magnitude > 0.0f)
+			    {
+				    GetComponent<CapsuleCollider>().sharedMaterial = _airMaterial;
+			    }
+		    }
+		    else
+		    {
+			    GetComponent<CapsuleCollider>().sharedMaterial = _groundMaterial;
 		    }
 		    
 		    // Process values
