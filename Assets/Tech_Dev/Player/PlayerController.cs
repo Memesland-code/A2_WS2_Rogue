@@ -20,7 +20,6 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _dashMultiplierX;
 	    [SerializeField] private float _dashMultiplierY;
 
-	    [Obsolete("ddd")]
 	    [SerializeField] private float _fastFallingFactor;
 
 	    [Space(5)]
@@ -145,7 +144,5 @@ namespace Tech_Dev.Player
 	    {
 		    _rb.AddForce(Physics.gravity * ((_gravityScale - 1) * _rb.mass));
 	    }
-	    
-	    //TODO FIX too fast up ; FIX blocked moment when touching back ground after dash
     }
 }
