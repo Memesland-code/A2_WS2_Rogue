@@ -1,5 +1,6 @@
 using System;
 using Tech_Dev.Procedural;
+using UnityEditor.AssetImporters;
 using UnityEngine;
 
 namespace Tech_Dev.Player
@@ -15,6 +16,8 @@ namespace Tech_Dev.Player
 
 	    [SerializeField] private float _fastFallingFactor;
 
+	    [SerializeField] private float _interactCooldown;
+	    
 	    private bool _isFacingRight = true;
 	    
 	    private Rigidbody _rb;
@@ -22,6 +25,8 @@ namespace Tech_Dev.Player
 	    private Vector3 _initialGravity;
 
 	    private float _jumpTimeDelta;
+
+	    private float _interactTimeDelta;
 
 	    private void Start()
 	    {
@@ -82,15 +87,24 @@ namespace Tech_Dev.Player
 
 		    // Apply to physics
 		    _rb.linearVelocity = new Vector3(0, realGravity, 0) + horizontalMove + verticalMove;
-	    }
 
 
-	    private void OnTriggerEnter(Collider other)
-	    {
-		    if (other.TryGetComponent(out Teleporter teleporter))
+
+		    if (_inputs.Interact && _interactTimeDelta <= 0.0f)
 		    {
-			    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
+			    var colliders = Physics.OverlapBox(transform.position, new Vector3(0.5f, 0.5f, 0.5f), Quaternion.Euler(0, 0, 0));
+			    foreach (Collider coll in colliders)
+			    {
+				    if (coll.TryGetComponent(out Teleporter teleporter))
+				    {
+					    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
+				    }
+			    }
+
+			    _interactTimeDelta = _interactCooldown;
 		    }
+		    
+		    _interactTimeDelta -=  Time.deltaTime;
 	    }
     }
 }

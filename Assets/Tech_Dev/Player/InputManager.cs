@@ -7,7 +7,8 @@ namespace Tech_Dev.Player
     {
         public Vector2 Move;
         public bool Jump;
-        public bool Attacking;
+        public bool Attack;
+        public bool Interact;
 
         public void OnMove(InputValue value)
         {
@@ -21,7 +22,12 @@ namespace Tech_Dev.Player
 
         public void OnAttack(InputValue value)
         {
-            Attacking = value.isPressed;
+            Attack = value.isPressed;
+        }
+
+        public void OnInteract(InputValue value)
+        {
+            Interact = value.isPressed;
         }
     }
 }

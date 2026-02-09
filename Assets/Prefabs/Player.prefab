@@ -132,7 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Move: {x: 0, y: 0}
   Jump: 0
-  Attacking: 0
+  Attack: 0
+  Interact: 0
 --- !u!114 &3521744246877284185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +152,7 @@ MonoBehaviour:
   _jumpCooldown: 0.1
   _groundDetector: {fileID: 328647522771395394}
   _fastFallingFactor: 1.05
+  _interactCooldown: 0.2
 --- !u!1 &4803926977503262152
 GameObject:
   m_ObjectHideFlags: 0
