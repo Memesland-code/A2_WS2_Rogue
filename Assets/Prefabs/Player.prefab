@@ -69,7 +69,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865315768279201196}
   serializedVersion: 4
-  m_Mass: 70
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -148,7 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _groundSpeed: 15
   _airSpeed: 10
-  _jumpHeight: 10
+  _jumpForce: 5
+  _gravityScale: 7
   _jumpCooldown: 0.1
   _groundDetector: {fileID: 328647522771395394}
   _fastFallingFactor: 1.05
@@ -197,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb86988db82fff143ad752b20d57ffbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 0.2
+  _distance: 0.4
   Touched: 0
 --- !u!1001 &8035707410151310260
 PrefabInstance:
