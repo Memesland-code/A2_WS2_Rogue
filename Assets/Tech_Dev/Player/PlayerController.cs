@@ -1,6 +1,7 @@
 using System.Collections;
 using Tech_Dev.Procedural;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Tech_Dev.Player
 {
@@ -16,6 +17,7 @@ namespace Tech_Dev.Player
 	    [Space(10), Header("Jump")]
 	    [SerializeField] private float _jumpForce;
 	    [SerializeField] private float _gravityScale;
+	    [SerializeField] private int _maxJumpsNumber;
 	    [SerializeField] private GroundDetector _groundDetector;
 
 	    [Space(5), Header("Dash")]
@@ -24,7 +26,6 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _dashMultiplierY;
 	    
 	    [Space(5), Header("Abilities related")]
-	    [SerializeField] private float _jumpCooldown;
 	    [SerializeField] private float _interactCooldown;
 	    [SerializeField] private float _dashCooldown;
 	    [SerializeField] private float _dashTime;
@@ -42,11 +43,11 @@ namespace Tech_Dev.Player
 	    
 	    private float _fastFallingFactor = 1.05f;
 
-	    private float _jumpTimeDelta;
 	    private float _interactTimeDelta;
 	    private float _dashCooldownTimeDelta;
 	    private float _dashTimeDelta;
-	    
+
+	    private int _currentJumpsCombo;
 	    private bool _isDashing;
 
 	    private void Start()
@@ -78,23 +79,16 @@ namespace Tech_Dev.Player
 			    transform.rotation = Quaternion.Euler(0, 0, 0);
 		    }
 		    
-		    // Check for ground
-		    if (_groundDetector.Touched)
-		    {
-			    _jumpTimeDelta -= Time.deltaTime;
-		    }
-		    else
-		    {
-			    _jumpTimeDelta = _jumpCooldown;
-		    }
-
+		    // Reset jump combo on ground touch
+		    if (_groundDetector.Touched) _currentJumpsCombo = 0;
+		    
 		    float jumpForce = Mathf.Sqrt(_jumpForce * -3 * (Physics.gravity.y * _gravityScale));
-		    // Detect if contact with ground ==> make jump
-		    if (_inputs.Jump && _groundDetector.Touched && _jumpTimeDelta <= 0.0f)
+		    // Check input jump and if on ground and else if max jump count is not exceeded
+		    if (Keyboard.current.spaceKey.wasPressedThisFrame && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
 		    {
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-			    _jumpTimeDelta = _jumpCooldown;
+			    _currentJumpsCombo++;
 		    }
 
 		    if (!_groundDetector.Touched)

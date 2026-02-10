@@ -18,7 +18,7 @@ namespace Tech_Dev.Player
 
         public void OnJump(InputValue value)
         {
-            Jump = value.isPressed;
+            Jump = Keyboard.current.spaceKey.wasPressedThisFrame;
         }
 
         public void OnAttack(InputValue value)
