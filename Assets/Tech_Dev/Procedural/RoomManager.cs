@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Tech_Dev.Procedural
 {
-	public class RoomDebug : MonoBehaviour
+	public class RoomManager : MonoBehaviour
 	{
 		public int RoomId;
 		

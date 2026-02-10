@@ -41,7 +41,7 @@ namespace Tech_Dev.Procedural
 
 		public void SetupRoomScript()
 		{
-			var scriptRef = WorldInstance.AddComponent<RoomDebug>();
+			var scriptRef = WorldInstance.AddComponent<RoomManager>();
 
 			scriptRef.RoomId = RoomId;
 			scriptRef.Type = Type;
