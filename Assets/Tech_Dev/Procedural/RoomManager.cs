@@ -18,16 +18,22 @@ namespace Tech_Dev.Procedural
 			{
 				if (roomElement.CompareTag("EnemiesSpawner"))
 				{
-					spawnersList.Add(roomElement.transform);
+					foreach (Transform spawner in roomElement.transform)
+					{
+						spawnersList.Add(spawner);
+					}
 				}
 			}
 			
+			if (spawnersList.Count == 0) Debug.LogError("Error: No enemies spawner found in room\nRoom ID: " + RoomId + "\nRoom type: " + Type);
 			return spawnersList;
 		}
 
 		public void InitRoom()
 		{
+			var spawners = GetSpawners();
 			
+			//TODO Make enemies spawn
 		}
 	}
 }
