@@ -5,7 +5,7 @@ namespace Tech_Dev.Procedural
 	public class Teleporter : MonoBehaviour
 	{
 		[SerializeField] private Difficulty _teleporterDifficulty;
-		private Transform _roomEntryPoint;
+		[SerializeField] private Transform _roomEntryPoint;
 
 		private void OnDrawGizmos()
 		{
