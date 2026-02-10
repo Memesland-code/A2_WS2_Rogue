@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using Tech_Dev.Procedural;
 using UnityEngine;
@@ -7,28 +6,30 @@ namespace Tech_Dev.Player
 {
     public class PlayerController : MonoBehaviour
     {
+	    [Header("Player stats")]
+	    [SerializeField] private float _maxHealth;
+	    
+	    [Space(10), Header("Ground movements")]
 	    [SerializeField] private float _groundSpeed;
 	    [SerializeField] private float _airSpeed;
 
-	    [Space(10)]
+	    [Space(10), Header("Jump")]
 	    [SerializeField] private float _jumpForce;
 	    [SerializeField] private float _gravityScale;
 	    [SerializeField] private GroundDetector _groundDetector;
 
-	    [Space(5)]
+	    [Space(5), Header("Dash")]
 	    [SerializeField] private float _dashForce;
 	    [SerializeField] private float _dashMultiplierX;
 	    [SerializeField] private float _dashMultiplierY;
-
-	    [SerializeField] private float _fastFallingFactor;
-
-	    [Space(5)]
+	    
+	    [Space(5), Header("Abilities related")]
 	    [SerializeField] private float _jumpCooldown;
 	    [SerializeField] private float _interactCooldown;
 	    [SerializeField] private float _dashCooldown;
 	    [SerializeField] private float _dashTime;
 	    
-	    [Space(10)]
+	    [Space(10), Header("Do not touch! - Surface friction management")]
 	    [SerializeField] private PhysicsMaterial _groundMaterial;
 	    [SerializeField] private PhysicsMaterial _airMaterial;
 	    
@@ -36,6 +37,10 @@ namespace Tech_Dev.Player
 	    
 	    private Rigidbody _rb;
 	    private InputManager _inputs;
+
+	    private float _health;
+	    
+	    private float _fastFallingFactor = 1.05f;
 
 	    private float _jumpTimeDelta;
 	    private float _interactTimeDelta;
@@ -48,9 +53,17 @@ namespace Tech_Dev.Player
 	    {
 		    _rb = GetComponent<Rigidbody>();
 		    _inputs = GetComponent<InputManager>();
-		    _jumpTimeDelta = 0;
 	    }
 
+
+
+	    private void ResetPlayer()
+	    {
+		    _health = _maxHealth;
+	    }
+
+	    
+	    
 	    private void Update()
 	    {
 			// Check player facing direction and change on movement direction 
@@ -159,6 +172,41 @@ namespace Tech_Dev.Player
 	    private void FixedUpdate()
 	    {
 		    _rb.AddForce(Physics.gravity * ((_gravityScale - 1) * _rb.mass));
+	    }
+
+
+
+	    public void Damage(float damage)
+	    {
+		    _health -= damage;
+		    
+		    if (_health <= 0)
+		    {
+			    StartCoroutine(DeathAndRespawn());
+		    }
+	    }
+
+
+
+	    private IEnumerator DeathAndRespawn()
+	    {
+		    GameManager.GetFadeRef().PlayFadeIn();
+
+		    //TODO send info to GameManager? (may avoid bugs)
+		    //TODO reset in-run related elements?
+		    foreach (Transform hubElement in GameObject.FindWithTag("Respawn").transform)
+		    {
+			    if (hubElement.gameObject.CompareTag("RoomEntry"))
+			    {
+				    transform.position = hubElement.position;
+			    }
+		    }
+		    
+		    ResetPlayer();
+		    
+		    yield return new WaitForSeconds(3f);
+		    
+		    GameManager.GetFadeRef().PlayFadeOut();
 	    }
     }
 }

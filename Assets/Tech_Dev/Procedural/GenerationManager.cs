@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,7 +22,7 @@ namespace Tech_Dev.Procedural
         [Space(5)]
         [SerializeField] private List<GameObject> _bossRoomPrefabs;
 
-        private GameObject hubSpawnPoint;
+        private GameObject _hubSpawnPoint;
         
         private List<List<Room>> _rooms;
         
@@ -33,7 +32,7 @@ namespace Tech_Dev.Procedural
             {
                 if (hubElement.CompareTag("RoomEntry"))
                 {
-                    hubSpawnPoint = hubElement.gameObject;
+                    _hubSpawnPoint = hubElement.gameObject;
                 }
             }
             
@@ -270,8 +269,8 @@ namespace Tech_Dev.Procedural
             }
             
             //info if room is boss room
-            _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(hubSpawnPoint.transform);
-            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(hubSpawnPoint.transform);
+            _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(_hubSpawnPoint.transform);
+            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(_hubSpawnPoint.transform);
         }
     }
 }

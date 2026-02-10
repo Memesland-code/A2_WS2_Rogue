@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -7,32 +6,46 @@ namespace Tech_Dev.Enemies
 {
     public class EnemySkull : MonoBehaviour
     {
+        [Header("Health")]
+        [SerializeField] private float _maxHealth;
         private float _health;
-        
-        public NavMeshAgent Agent;
-        public Transform Player;
-        public LayerMask WhatIsGround, WhatIsPlayer;
+
+        [Header("Nav Mesh")]
+        [SerializeField] private NavMeshAgent _agent;
+        private Transform _player;
+        [SerializeField] private LayerMask _whatIsGround, _whatIsPlayer;
         
         // Patrolling
-        public Vector3 WalkPoint;
+        [Header("Patroling")]
+        [SerializeField] private Vector3 _walkPoint;
         private bool _walkPointSet;
-        private float _walkPointRange;
+        [SerializeField] private float _walkPointRange;
         
         // Attacking
-        public float TimeBetweenAttacks;
+        [Header("Attacking")]
+        [SerializeField] private float _timeBetweenAttacks;
         private bool _alreadyAttacked;
-        public GameObject Projectile;
+        [SerializeField] private SkullProjectile _projectile;
+        [SerializeField] private Transform _shootPoint;
+        [SerializeField] private float _bulletForce;
         
         // States
-        public float SightRange, AttackRange;
-        public bool PlayerInSightRange, PlayerInAttackRange;
+        [Header("States")]
+        [SerializeField] private float _sightRange, _attackRange;
+        [SerializeField] private bool _playerInSightRange, _playerInAttackRange;
 
         
         
         private void Awake()
         {
-            Player = GameObject.FindGameObjectWithTag("Player").transform;
-            Agent = GetComponent<NavMeshAgent>();
+            _health = _maxHealth;
+            
+            _player = GameObject.FindGameObjectWithTag("Player").transform;
+            if (_player == null)
+            {
+                Debug.LogError("Player not found by " + gameObject.name);
+            }
+            _agent = GetComponent<NavMeshAgent>();
         }
 
 
@@ -40,12 +53,12 @@ namespace Tech_Dev.Enemies
         private void Update()
         {
             // Check for sight and attack range
-            PlayerInSightRange = Physics.CheckSphere(transform.position, SightRange, WhatIsPlayer);
-            PlayerInAttackRange = Physics.CheckSphere(transform.position, AttackRange, WhatIsPlayer);
+            _playerInSightRange = Physics.CheckSphere(transform.position, _sightRange, _whatIsPlayer);
+            _playerInAttackRange = Physics.CheckSphere(transform.position, _attackRange, _whatIsPlayer);
             
-            if (!PlayerInSightRange && !PlayerInAttackRange) Patroling();
-            if (PlayerInSightRange && !PlayerInAttackRange) ChasePlayer();
-            if (PlayerInAttackRange && PlayerInSightRange) AttackPlayer();
+            if (!_playerInSightRange && !_playerInAttackRange) Patroling();
+            if (_playerInSightRange && !_playerInAttackRange) ChasePlayer();
+            if (_playerInAttackRange && _playerInSightRange) AttackPlayer();
         }
 
 
@@ -56,10 +69,10 @@ namespace Tech_Dev.Enemies
 
             if (_walkPointSet)
             {
-                Agent.SetDestination(WalkPoint);
+                _agent.SetDestination(_walkPoint);
             }
             
-            Vector3 distanceToWalkPoint = transform.position - WalkPoint;
+            Vector3 distanceToWalkPoint = transform.position - _walkPoint;
             
             // Walkpoint reached
             if (distanceToWalkPoint.magnitude < 1f)
@@ -70,9 +83,9 @@ namespace Tech_Dev.Enemies
         {
             float randomX = Random.Range(-_walkPointRange, _walkPointRange);
 
-            WalkPoint = new Vector3(transform.position.x + randomX, transform.position.y, 0);
+            _walkPoint = new Vector3(transform.position.x + randomX, transform.position.y + 1, 0);
 
-            if (Physics.Raycast(WalkPoint, -transform.up, 2f, WhatIsGround))
+            if (Physics.Raycast(_walkPoint, -transform.up, 2f, _whatIsGround))
             {
                 _walkPointSet = true;
             }
@@ -81,7 +94,7 @@ namespace Tech_Dev.Enemies
 
         private void ChasePlayer()
         {
-            Agent.SetDestination(Player.position);
+            _agent.SetDestination(_player.position);
         }
 
 
@@ -89,18 +102,19 @@ namespace Tech_Dev.Enemies
         private void AttackPlayer()
         {
             // Make sure enemy doesn't move
-            Agent.SetDestination(transform.position);
+            _agent.SetDestination(transform.position);
             
-            transform.LookAt(Player);
+            _shootPoint.LookAt(_player);
+            transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 
             if (!_alreadyAttacked)
             {
-                Rigidbody rb = Instantiate(Projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-                rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+                Vector3 direction = (_player.position - transform.position);
+                SkullProjectile projectile = Instantiate(_projectile, _shootPoint.position, Quaternion.identity);
+                projectile.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * _bulletForce * 10);
                 
                 _alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), TimeBetweenAttacks);
+                Invoke(nameof(ResetAttack), _timeBetweenAttacks);
             }
         }
 
@@ -130,9 +144,9 @@ namespace Tech_Dev.Enemies
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, AttackRange);
+            Gizmos.DrawWireSphere(transform.position, _attackRange);
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, SightRange);
+            Gizmos.DrawWireSphere(transform.position, _sightRange);
         }
     }
 }
