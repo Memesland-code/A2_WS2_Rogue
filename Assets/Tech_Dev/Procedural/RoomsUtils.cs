@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 namespace Tech_Dev.Procedural
@@ -41,11 +40,13 @@ namespace Tech_Dev.Procedural
 
 		public void SetupRoomScript()
 		{
-			var scriptRef = WorldInstance.AddComponent<RoomManager>();
+			RoomManager scriptRef = WorldInstance.AddComponent<RoomManager>();
 
 			scriptRef.RoomId = RoomId;
 			scriptRef.Type = Type;
-			scriptRef._difficulty = Difficulty;
+			scriptRef.Difficulty = Difficulty;
+			
+			if (!scriptRef.enabled) scriptRef.enabled = true;
 		}
 		
 		

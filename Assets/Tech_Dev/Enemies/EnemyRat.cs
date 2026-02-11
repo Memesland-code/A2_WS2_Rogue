@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace Tech_Dev.Enemies
 {
-    public class EnemySkull : MonoBehaviour
+    public class EnemyRat : MonoBehaviour
     {
         [Header("Health")]
         [SerializeField] private float _maxHealth;
@@ -26,16 +26,12 @@ namespace Tech_Dev.Enemies
         [Header("Attacking")]
         [SerializeField] private float _timeBetweenAttacks;
         private bool _alreadyAttacked;
-        [SerializeField] private SkullProjectile _projectile;
-        [SerializeField] private Transform _shootPoint;
-        [SerializeField] private float _bulletForce;
         
         // States
         [Header("States")]
         [SerializeField] private float _sightRange, _attackRange;
         [SerializeField] private bool _playerInSightRange, _playerInAttackRange;
 
-        [Header("Do not fill!")]
         public RoomManager RoomManagerReference;
         private bool _isDead;
 
@@ -109,13 +105,11 @@ namespace Tech_Dev.Enemies
             // Make sure enemy doesn't move
             _agent.SetDestination(transform.position);
             
-            _shootPoint.LookAt(_player);
             transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 
             if (!_alreadyAttacked)
             {
-                SkullProjectile projectile = Instantiate(_projectile, _shootPoint.position, Quaternion.identity);
-                projectile.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * _bulletForce * 10);
+                //TODO Do attack
                 
                 _alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), _timeBetweenAttacks);

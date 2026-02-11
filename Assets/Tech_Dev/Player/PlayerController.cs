@@ -1,7 +1,7 @@
 using System.Collections;
+using Tech_Dev.Enemies;
 using Tech_Dev.Procedural;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Tech_Dev.Player
 {
@@ -9,6 +9,12 @@ namespace Tech_Dev.Player
     {
 	    [Header("Player stats")]
 	    [SerializeField] private float _maxHealth;
+	    
+	    [Space(10), Header("Attack system")]
+	    [SerializeField] private float _meleeAttackDamage;
+	    [SerializeField] private float _heavyAttackDamage;
+	    [SerializeField] private float _attackRange;
+	    [SerializeField] private Transform _swordAttackCenter;
 	    
 	    [Space(10), Header("Ground movements")]
 	    [SerializeField] private float _groundSpeed;
@@ -40,8 +46,8 @@ namespace Tech_Dev.Player
 	    private InputManager _inputs;
 
 	    private float _health;
-	    
-	    private float _fastFallingFactor = 1.05f;
+
+	    private const float FastFallingFactor = 1.05f;
 
 	    private float _interactTimeDelta;
 	    private float _dashCooldownTimeDelta;
@@ -49,7 +55,13 @@ namespace Tech_Dev.Player
 
 	    private int _currentJumpsCombo;
 	    private bool _isDashing;
-
+	    
+	    
+	    // Cheat codes
+	    private bool _godMode;
+	    
+	    
+	    
 	    private void Start()
 	    {
 		    _rb = GetComponent<Rigidbody>();
@@ -84,7 +96,7 @@ namespace Tech_Dev.Player
 		    
 		    float jumpForce = Mathf.Sqrt(_jumpForce * -3 * (Physics.gravity.y * _gravityScale));
 		    // Check input jump and if on ground and else if max jump count is not exceeded
-		    if (Keyboard.current.spaceKey.wasPressedThisFrame && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
+		    if (_inputs.Jump && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
 		    {
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -104,7 +116,7 @@ namespace Tech_Dev.Player
 		    }
 		    
 		    // Process values
-		    float realGravity = _rb.linearVelocity.y >= 0 ? _rb.linearVelocity.y : _rb.linearVelocity.y * _fastFallingFactor;
+		    float realGravity = _rb.linearVelocity.y >= 0 ? _rb.linearVelocity.y : _rb.linearVelocity.y * FastFallingFactor;
 		    realGravity = Mathf.Max(realGravity, -15);
 		    
 		    float realSpeed = _groundDetector.Touched ? _groundSpeed : _airSpeed;
@@ -159,6 +171,29 @@ namespace Tech_Dev.Player
 		    {
 			    _isDashing = false;
 		    }
+
+
+
+		    //TODO Check for cooldown: animation time
+		    if (_inputs.MeleeAttack)
+		    {
+			    var colliders = Physics.OverlapSphere(_swordAttackCenter.position, _attackRange, LayerMask.GetMask("Enemy"));
+
+			    foreach (Collider enemy in colliders)
+			    {
+				    ManageEnemyDamage(enemy.gameObject, _meleeAttackDamage);
+			    }
+		    }
+
+		    if (_inputs.HeavyAttack)
+		    {
+			    var colliders = Physics.OverlapSphere(_swordAttackCenter.position, _attackRange, LayerMask.GetMask("Enemy"));
+
+			    foreach (Collider enemy in colliders)
+			    {
+				    ManageEnemyDamage(enemy.gameObject, _heavyAttackDamage);
+			    }
+		    }
 	    }
 
 
@@ -170,19 +205,36 @@ namespace Tech_Dev.Player
 
 
 
-	    public void Damage(float damage)
+	    private static void ManageEnemyDamage(GameObject enemy, float damage)
 	    {
-		    _health -= damage;
-		    
-		    if (_health <= 0)
+		    if (enemy.TryGetComponent(out EnemyRat rat))
 		    {
-			    StartCoroutine(DeathAndRespawn());
+			    rat.TakeDamage(damage);
+		    }
+
+		    if (enemy.TryGetComponent(out EnemySkull skull))
+		    {
+			    skull.TakeDamage(damage);
 		    }
 	    }
 
 
 
-	    private IEnumerator DeathAndRespawn()
+	    public void Damage(float damage)
+	    {
+		    if (_godMode) return;
+		    
+		    _health -= damage;
+		    
+		    if (_health <= 0)
+		    {
+			    StartCoroutine(PlayerDeath());
+		    }
+	    }
+
+
+
+	    private IEnumerator PlayerDeath()
 	    {
 		    GameManager.GetFadeRef().PlayFadeIn();
 
@@ -201,6 +253,13 @@ namespace Tech_Dev.Player
 		    yield return new WaitForSeconds(3f);
 		    
 		    GameManager.GetFadeRef().PlayFadeOut();
+	    }
+	    
+	    
+	    
+	    public void GodMode()
+	    {
+		    _godMode = !_godMode;
 	    }
     }
 }

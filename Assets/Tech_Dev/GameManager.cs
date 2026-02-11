@@ -1,3 +1,4 @@
+using Tech_Dev.Player;
 using Tech_Dev.UI;
 using UnityEngine;
 
@@ -8,6 +9,11 @@ namespace Tech_Dev
         [SerializeField] private Canvas _fadeEffectPrefab;
         private static FadeEffect _fadeEffect;
 
+        [SerializeField] private GameObject _enemyRatPrefab;
+        [SerializeField] private GameObject _enemySkullPrefab;
+
+        private static PlayerController _playerScriptRef;
+        
         
         
         private void Awake()
@@ -20,6 +26,8 @@ namespace Tech_Dev
 
                 _fadeEffect = fadeEffect.transform.GetChild(0).GetComponent<FadeEffect>();
             }
+            
+            _playerScriptRef = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         }
 
         
@@ -27,6 +35,34 @@ namespace Tech_Dev
         public static FadeEffect GetFadeRef()
         {
             return _fadeEffect;
+        }
+
+
+
+        public GameObject GetEnemyRatPrefab()
+        {
+            return _enemyRatPrefab;
+        }
+
+
+
+        public GameObject GetEnemySkullPrefab()
+        {
+            return _enemySkullPrefab;
+        }
+        
+        
+        
+        //INFO CHEAT CODES
+
+
+        private void Update()
+        {
+            // God mode
+            if (Input.GetKeyDown(KeyCode.Keypad0))
+            {
+                _playerScriptRef.GodMode();
+            }
         }
     }
 }

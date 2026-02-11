@@ -218,7 +218,7 @@ namespace Tech_Dev.Procedural
             {
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
-                    if (i == _roomsNumber) print("GOOD");
+                    //! if (i == _roomsNumber) print("GOOD");
                     Room room = _rooms[i][j];
                     Room nextPristineRoom = _rooms[i + 1][0];
                     Room nextRuinRoom = _rooms[i + 1][1];

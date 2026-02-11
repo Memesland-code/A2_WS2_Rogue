@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,35 @@ namespace Tech_Dev.Player
         public bool Attack;
         public bool Interact;
         public bool Dash;
+        public bool MeleeAttack;
+        public bool HeavyAttack;
+
+        [SerializeField] private float _heavyAttackTime;
+        private float _heavyAttackTimeDelta;
+        private bool _attackPressed;
+
+        private void Update()
+        {
+            Jump = false;
+            MeleeAttack = false;
+            HeavyAttack = false;
+            
+            if (_attackPressed)
+            {
+                _heavyAttackTimeDelta -= Time.deltaTime;
+            }
+            
+            if (_heavyAttackTimeDelta <= 0 && Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                HeavyAttack = true;
+                _heavyAttackTimeDelta = _heavyAttackTime;
+            }
+            else if (_heavyAttackTimeDelta > 0 && Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                MeleeAttack = true;
+                _heavyAttackTimeDelta = _heavyAttackTime;
+            }
+        }
 
         public void OnMove(InputValue value)
         {
@@ -23,7 +53,7 @@ namespace Tech_Dev.Player
 
         public void OnAttack(InputValue value)
         {
-            Attack = value.isPressed;
+            _attackPressed = value.isPressed;
         }
 
         public void OnInteract(InputValue value)

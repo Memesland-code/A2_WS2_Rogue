@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Tech_Dev.Enemies;
 using UnityEngine;
 
 namespace Tech_Dev.Procedural
@@ -8,7 +9,29 @@ namespace Tech_Dev.Procedural
 		public int RoomId;
 		
 		public Type Type;
-		public Difficulty _difficulty;
+		public Difficulty Difficulty;
+
+		public List<object> RoomEnemies = new();
+
+		private GameObject _ratPrefab;
+		private GameObject _skullPrefab;
+		
+		private GameManager _gameManager;
+		
+		private void Awake()
+		{
+			_gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+			
+			_ratPrefab = _gameManager.GetEnemyRatPrefab();
+			_skullPrefab = _gameManager.GetEnemySkullPrefab();
+
+			if (Type == Type.Fight)
+			{
+				InitFightRoom();
+			}
+		}
+
+		
 		
 		public List<Transform> GetSpawners()
 		{
@@ -29,11 +52,50 @@ namespace Tech_Dev.Procedural
 			return spawnersList;
 		}
 
-		public void InitRoom()
+		
+		
+		private void InitFightRoom()
 		{
 			var spawners = GetSpawners();
+
+			// Spawn enemies and register in list
+			foreach (Transform spawner in spawners)
+			{
+				Transform enemy;
+				if (spawner.CompareTag("RatSpawner"))
+				{
+					enemy = Instantiate(_ratPrefab.transform, spawner.position, Quaternion.Euler(0, 0, 0));
+					//TODO add rat script enemy.gameObject.GetComponent<>();
+				}
+				else if (spawner.CompareTag("SkullSpawner"))
+				{
+					enemy = Instantiate(_skullPrefab.transform, spawner.position, Quaternion.Euler(0, 0, 0));
+					enemy.gameObject.GetComponent<EnemySkull>().RoomManagerReference = this;
+				}
+				else
+				{
+					// If error spawn rat by default
+					Debug.LogError("Wrong spawner settings found!\nRoom ID: " + RoomId + "\nRoom type: " + Type + "\nSpawner tag: " + spawner.tag + "\nGameObject name: " + spawner.name);
+					enemy = Instantiate(_ratPrefab.transform, spawner.position, Quaternion.Euler(0, 0, 0));
+					//TODO add rat script enemy.gameObject.GetComponent<>();
+				}
+
+				RoomEnemies.Add(enemy);
+			}
+		}
+
+
+
+		public void RegisterEnemyDeath(object enemyRef)
+		{
+			RoomEnemies.Remove(enemyRef);
+		}
+
+
+
+		public void UnlockTeleporters()
+		{
 			
-			//TODO Make enemies spawn
 		}
 	}
 }
