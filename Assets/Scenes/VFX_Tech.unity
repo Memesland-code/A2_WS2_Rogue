@@ -119,75 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &45124773
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Cel_Shading_01
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: 0.5628674, g: -0.510543, b: -0.6500201, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &307309254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5210,7 +5141,7 @@ Transform:
   m_GameObject: {fileID: 388462728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.646, y: 1.116, z: -6.451}
+  m_LocalPosition: {x: -2.646, y: 1.116, z: -6.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5305,6 +5236,75 @@ Transform:
   - {fileID: 1724478246}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &530283574
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Cel_Shading_01
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: -0, b: -1, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &571465588
 GameObject:
   m_ObjectHideFlags: 0
@@ -10223,7 +10223,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 883332609}
+  - {fileID: 530283574}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15101,75 +15101,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!21 &883332609
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Cel_Shading_01
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: 0.5628674, g: -0.510543, b: -0.6500201, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &904775074
 GameObject:
   m_ObjectHideFlags: 0
@@ -20177,6 +20108,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!21 &949476142
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Cel_Shading_01
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 8522d5089f3420849b6e07b6aae6e645, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: -0, b: -1, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1095937878
 GameObject:
   m_ObjectHideFlags: 0
@@ -44868,13 +44868,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912752465}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.24803975, y: -0.33684745, z: -0.09246708, w: 0.90358174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -30.7, y: 679.11, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1912752468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54685,7 +54685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 45124773}
+  - {fileID: 949476142}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
