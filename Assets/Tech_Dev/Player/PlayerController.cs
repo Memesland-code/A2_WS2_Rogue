@@ -9,6 +9,8 @@ namespace Tech_Dev.Player
     {
 	    [Header("Player stats")]
 	    [SerializeField] private float _maxHealth;
+	    [SerializeField] private float _healthRecoverPercentage;
+	    [SerializeField] private float _woundBarThreshold;
 	    
 	    [Space(10), Header("Attack system")]
 	    [SerializeField] private float _meleeAttackDamage;
@@ -56,6 +58,10 @@ namespace Tech_Dev.Player
 
 	    private int _currentJumpsCombo;
 	    private bool _isDashing;
+
+	    private bool _woundBarActive;
+	    private float _woundBarTimer;
+	    private float _woundDamageAmount;
 	    
 	    
 	    // Cheat codes
@@ -186,7 +192,12 @@ namespace Tech_Dev.Player
 
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
-				    ManageEnemyDamage(enemy, _meleeAttackDamage);
+				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
+
+				    if (damagedEnemy)
+				    {
+					    _health += _healthRecoverPercentage * _woundDamageAmount / 100;
+				    }
 			    }
 		    }
 
@@ -196,8 +207,27 @@ namespace Tech_Dev.Player
 
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
-				    ManageEnemyDamage(enemy, _heavyAttackDamage);
+				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
+
+				    if (damagedEnemy)
+				    {
+					    _health += _healthRecoverPercentage * _woundDamageAmount / 100;
+				    }
 			    }
+		    }
+		    
+		    
+		    
+		    // Wound system
+		    if (_woundBarActive)
+		    {
+			    _woundBarTimer -= Time.deltaTime;
+		    }
+
+		    if (_woundBarTimer <= 0.0f)
+		    {
+			    _woundBarActive = false;
+			    _woundBarTimer = 0.1f;
 		    }
 	    }
 
@@ -209,17 +239,21 @@ namespace Tech_Dev.Player
 
 
 
-	    private static void ManageEnemyDamage(GameObject enemy, float damage)
+	    private static bool ManageEnemyDamage(GameObject enemy, float damage)
 	    {
 		    if (enemy.TryGetComponent(out EnemyRat rat))
 		    {
 			    rat.TakeDamage(damage);
+			    return true;
 		    }
 
 		    if (enemy.TryGetComponent(out EnemySkull skull))
 		    {
 			    skull.TakeDamage(damage);
+			    return true;
 		    }
+
+		    return false;
 	    }
 
 
@@ -229,6 +263,10 @@ namespace Tech_Dev.Player
 		    if (_godMode) return;
 		    
 		    _health -= damage;
+
+		    _woundBarActive = true;
+		    _woundBarTimer = _woundBarThreshold;
+		    _woundDamageAmount = damage;
 		    
 		    if (_health <= 0)
 		    {
