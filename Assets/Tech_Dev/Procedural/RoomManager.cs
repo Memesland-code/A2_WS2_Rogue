@@ -18,7 +18,7 @@ namespace Tech_Dev.Procedural
 		
 		private GameManager _gameManager;
 		
-		private void Awake()
+		private void Start()
 		{
 			_gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 			
