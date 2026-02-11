@@ -17,6 +17,8 @@ namespace Tech_Dev.Procedural
 		private GameObject _skullPrefab;
 		
 		private GameManager _gameManager;
+
+		private GameObject _roomTeleporters;
 		
 		private void Start()
 		{
@@ -24,6 +26,17 @@ namespace Tech_Dev.Procedural
 			
 			_ratPrefab = _gameManager.GetEnemyRatPrefab();
 			_skullPrefab = _gameManager.GetEnemySkullPrefab();
+
+			foreach (GameObject go in transform)
+			{
+				if (go.CompareTag("TeleportersContainer"))
+				{
+					_roomTeleporters = go;
+					break;
+				}
+			}
+			
+			_roomTeleporters.SetActive(false);
 
 			if (Type == Type.Fight)
 			{
@@ -65,7 +78,7 @@ namespace Tech_Dev.Procedural
 				if (spawner.CompareTag("RatSpawner"))
 				{
 					enemy = Instantiate(_ratPrefab.transform, spawner.position, Quaternion.Euler(0, 0, 0));
-					//TODO add rat script enemy.gameObject.GetComponent<>();
+					enemy.gameObject.GetComponent<EnemyRat>().RoomManagerReference = this;
 				}
 				else if (spawner.CompareTag("SkullSpawner"))
 				{
@@ -77,7 +90,7 @@ namespace Tech_Dev.Procedural
 					// If error spawn rat by default
 					Debug.LogError("Wrong spawner settings found!\nRoom ID: " + RoomId + "\nRoom type: " + Type + "\nSpawner tag: " + spawner.tag + "\nGameObject name: " + spawner.name);
 					enemy = Instantiate(_ratPrefab.transform, spawner.position, Quaternion.Euler(0, 0, 0));
-					//TODO add rat script enemy.gameObject.GetComponent<>();
+					enemy.gameObject.GetComponent<EnemyRat>().RoomManagerReference = this;
 				}
 
 				RoomEnemies.Add(enemy);
@@ -89,13 +102,19 @@ namespace Tech_Dev.Procedural
 		public void RegisterEnemyDeath(object enemyRef)
 		{
 			RoomEnemies.Remove(enemyRef);
+
+			if (RoomEnemies.Count == 0)
+			{
+				print("Room cleared!");
+				UnlockTeleporters();
+			}
 		}
 
 
 
 		public void UnlockTeleporters()
 		{
-			
+			_roomTeleporters.SetActive(true);
 		}
 	}
 }

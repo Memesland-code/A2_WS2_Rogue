@@ -1,3 +1,4 @@
+using Tech_Dev.Player;
 using Tech_Dev.Procedural;
 using UnityEngine;
 using UnityEngine.AI;
@@ -26,6 +27,9 @@ namespace Tech_Dev.Enemies
         [Header("Attacking")]
         [SerializeField] private float _timeBetweenAttacks;
         private bool _alreadyAttacked;
+        [SerializeField] private float _damage;
+        [SerializeField] private Transform _attackPoint;
+        [SerializeField] private float _damageRange;
         
         // States
         [Header("States")]
@@ -35,11 +39,23 @@ namespace Tech_Dev.Enemies
         public RoomManager RoomManagerReference;
         private bool _isDead;
 
+        private float _baseSpeed;
+        private float _baseAcceleration;
+        
+        private float _boostSpeed;
+        private float _boostAcceleration;
+
         
         
         private void Awake()
         {
             _health = _maxHealth;
+            
+            _baseSpeed = _agent.speed;
+            _baseAcceleration = _agent.acceleration;
+
+            _boostSpeed = _baseSpeed * 2;
+            _boostAcceleration = _baseAcceleration * 2;
             
             _player = GameObject.FindGameObjectWithTag("Player").transform;
             if (_player == null)
@@ -103,16 +119,30 @@ namespace Tech_Dev.Enemies
         private void AttackPlayer()
         {
             // Make sure enemy doesn't move
-            _agent.SetDestination(transform.position);
             
             transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 
             if (!_alreadyAttacked)
             {
-                //TODO Do attack
+                _agent.speed = _boostSpeed;
+                _agent.acceleration = _boostAcceleration;
+                _agent.SetDestination(_player.position);
                 
-                _alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), _timeBetweenAttacks);
+                if (Physics.Raycast(_attackPoint.position, transform.forward, out RaycastHit hit, _damageRange))
+                {
+                    Debug.DrawRay(transform.position, transform.forward * _damageRange, Color.red, 5f);
+                    
+                    if (hit.collider.CompareTag("Player"))
+                    {
+                        hit.transform.gameObject.GetComponent<PlayerController>().Damage(_damage);
+                        _alreadyAttacked = true;
+                        
+                        _agent.speed = _baseSpeed;
+                        _agent.acceleration = _baseAcceleration;
+                        
+                        Invoke(nameof(ResetAttack), _timeBetweenAttacks);
+                    }
+                }
             }
         }
 

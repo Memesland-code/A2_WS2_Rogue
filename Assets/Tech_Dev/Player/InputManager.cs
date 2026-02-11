@@ -18,12 +18,8 @@ namespace Tech_Dev.Player
         private float _heavyAttackTimeDelta;
         private bool _attackPressed;
 
-        private void Update()
+        private void LateUpdate()
         {
-            Jump = false;
-            MeleeAttack = false;
-            HeavyAttack = false;
-            
             if (_attackPressed)
             {
                 _heavyAttackTimeDelta -= Time.deltaTime;
@@ -39,6 +35,13 @@ namespace Tech_Dev.Player
                 MeleeAttack = true;
                 _heavyAttackTimeDelta = _heavyAttackTime;
             }
+        }
+
+        private void Update()
+        {
+            Jump = false;
+            MeleeAttack = false;
+            HeavyAttack = false;
         }
 
         public void OnMove(InputValue value)

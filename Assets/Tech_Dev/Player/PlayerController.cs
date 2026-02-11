@@ -13,7 +13,6 @@ namespace Tech_Dev.Player
 	    [Space(10), Header("Attack system")]
 	    [SerializeField] private float _meleeAttackDamage;
 	    [SerializeField] private float _heavyAttackDamage;
-	    [SerializeField] private float _attackRange;
 	    [SerializeField] private Transform _swordAttackCenter;
 	    
 	    [Space(10), Header("Ground movements")]
@@ -46,6 +45,8 @@ namespace Tech_Dev.Player
 	    private InputManager _inputs;
 
 	    private float _health;
+	    
+	    private SwordDamager _swordDamager;
 
 	    private const float FastFallingFactor = 1.05f;
 
@@ -66,6 +67,9 @@ namespace Tech_Dev.Player
 	    {
 		    _rb = GetComponent<Rigidbody>();
 		    _inputs = GetComponent<InputManager>();
+		    _swordDamager = GetComponentInChildren<SwordDamager>();
+		    
+		    ResetPlayer();
 	    }
 
 
@@ -174,30 +178,30 @@ namespace Tech_Dev.Player
 
 
 
+		    // Attack system
 		    //TODO Check for cooldown: animation time
 		    if (_inputs.MeleeAttack)
 		    {
-			    var colliders = Physics.OverlapSphere(_swordAttackCenter.position, _attackRange, LayerMask.GetMask("Enemy"));
+			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
-			    foreach (Collider enemy in colliders)
+			    foreach (GameObject enemy in enemiesInRange)
 			    {
-				    ManageEnemyDamage(enemy.gameObject, _meleeAttackDamage);
+				    ManageEnemyDamage(enemy, _meleeAttackDamage);
 			    }
 		    }
 
 		    if (_inputs.HeavyAttack)
 		    {
-			    var colliders = Physics.OverlapSphere(_swordAttackCenter.position, _attackRange, LayerMask.GetMask("Enemy"));
+			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
-			    foreach (Collider enemy in colliders)
+			    foreach (GameObject enemy in enemiesInRange)
 			    {
-				    ManageEnemyDamage(enemy.gameObject, _heavyAttackDamage);
+				    ManageEnemyDamage(enemy, _heavyAttackDamage);
 			    }
 		    }
 	    }
 
 
-	    
 	    private void FixedUpdate()
 	    {
 		    _rb.AddForce(Physics.gravity * ((_gravityScale - 1) * _rb.mass));
