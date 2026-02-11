@@ -119,6 +119,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!21 &45124773
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Cel_Shading_01
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: 0.5628674, g: -0.510543, b: -0.6500201, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &307309254
 GameObject:
   m_ObjectHideFlags: 0
@@ -10154,7 +10223,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1172562403}
+  - {fileID: 883332609}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15032,6 +15101,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!21 &883332609
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Cel_Shading_01
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: 0.5628674, g: -0.510543, b: -0.6500201, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &904775074
 GameObject:
   m_ObjectHideFlags: 0
@@ -20129,75 +20267,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19cb6afaf866f342a071c8853fcdd3d, type: 3}
---- !u!21 &1172562403
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Cel_Shading_01
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: 0.5628674, g: -0.510543, b: -0.6500201, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1252538439
 GameObject:
   m_ObjectHideFlags: 0
@@ -20231,75 +20300,6 @@ Transform:
   - {fileID: 2056742413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1302376548
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Cel_Shading_01
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 8522d5089f3420849b6e07b6aae6e645, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 0.9670815, g: 1, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: 0.5628674, g: -0.510543, b: -0.6500201, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1427045874
 GameObject:
   m_ObjectHideFlags: 0
@@ -25166,6 +25166,63 @@ Transform:
   - {fileID: 2074679223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1591429616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.1513915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4249521
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009681448892400212, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_Name
+      value: VFX_Bats_End_test_LA (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
 --- !u!1 &1595940100
 GameObject:
   m_ObjectHideFlags: 0
@@ -54628,7 +54685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1302376548}
+  - {fileID: 45124773}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59506,6 +59563,63 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1001 &5627860797362568380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.055006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6567426
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.263686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846254625306382255, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009681448892400212, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
+      propertyPath: m_Name
+      value: VFX_Bats_End_test_LA
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 106a4d046654c1d4e975d6c8b7c24a4d, type: 3}
 --- !u!1001 &5997636317724984612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59586,3 +59700,5 @@ SceneRoots:
   - {fileID: 388462731}
   - {fileID: 605429486}
   - {fileID: 434802706}
+  - {fileID: 5627860797362568380}
+  - {fileID: 1591429616}
