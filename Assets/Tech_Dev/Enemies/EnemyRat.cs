@@ -30,6 +30,7 @@ namespace Tech_Dev.Enemies
         [SerializeField] private float _damage;
         [SerializeField] private Transform _attackPoint;
         [SerializeField] private float _damageRange;
+        [SerializeField] private float _attackCooldown;
         
         // States
         [Header("States")]
@@ -45,6 +46,8 @@ namespace Tech_Dev.Enemies
         private float _boostSpeed;
         private float _boostAcceleration;
 
+        private float _attackTimer;
+
         
         
         private void Awake()
@@ -56,6 +59,8 @@ namespace Tech_Dev.Enemies
 
             _boostSpeed = _baseSpeed * 2;
             _boostAcceleration = _baseAcceleration * 2;
+
+            _attackTimer = _attackCooldown;
             
             _player = GameObject.FindGameObjectWithTag("Player").transform;
             if (_player == null)
@@ -69,13 +74,15 @@ namespace Tech_Dev.Enemies
 
         private void Update()
         {
+            _attackTimer -= Time.deltaTime;
+            
             // Check for sight and attack range
             _playerInSightRange = Physics.CheckSphere(transform.position, _sightRange, _whatIsPlayer);
             _playerInAttackRange = Physics.CheckSphere(transform.position, _attackRange, _whatIsPlayer);
             
             if (!_playerInSightRange && !_playerInAttackRange) Patroling();
             if (_playerInSightRange && !_playerInAttackRange) ChasePlayer();
-            if (_playerInAttackRange && _playerInSightRange) AttackPlayer();
+            if (_playerInAttackRange && _playerInSightRange && _attackTimer <= 0) AttackPlayer();
         }
 
 
@@ -118,37 +125,26 @@ namespace Tech_Dev.Enemies
 
         private void AttackPlayer()
         {
-            // Make sure enemy doesn't move
-            
             transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 
-            if (!_alreadyAttacked)
+            _agent.speed = _boostSpeed;
+            _agent.acceleration = _boostAcceleration;
+            _agent.SetDestination(_player.position);
+            
+            if (Physics.Raycast(_attackPoint.position, transform.forward, out RaycastHit hit, _damageRange))
             {
-                _agent.speed = _boostSpeed;
-                _agent.acceleration = _boostAcceleration;
-                _agent.SetDestination(_player.position);
+                Debug.DrawRay(transform.position, transform.forward * _damageRange, Color.red, 5f);
                 
-                if (Physics.Raycast(_attackPoint.position, transform.forward, out RaycastHit hit, _damageRange))
+                if (hit.collider.CompareTag("Player"))
                 {
-                    Debug.DrawRay(transform.position, transform.forward * _damageRange, Color.red, 5f);
+                    hit.transform.gameObject.GetComponent<PlayerController>().Damage(_damage);
                     
-                    if (hit.collider.CompareTag("Player"))
-                    {
-                        hit.transform.gameObject.GetComponent<PlayerController>().Damage(_damage);
-                        _alreadyAttacked = true;
-                        
-                        _agent.speed = _baseSpeed;
-                        _agent.acceleration = _baseAcceleration;
-                        
-                        Invoke(nameof(ResetAttack), _timeBetweenAttacks);
-                    }
+                    _agent.speed = _baseSpeed;
+                    _agent.acceleration = _baseAcceleration;
                 }
             }
-        }
-
-        private void ResetAttack()
-        {
-            _alreadyAttacked = false;
+            
+            _attackTimer = _attackCooldown;
         }
 
         
