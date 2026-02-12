@@ -1,6 +1,4 @@
-using System;
 using Tech_Dev.Player;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Tech_Dev.Enemies
@@ -14,7 +12,7 @@ namespace Tech_Dev.Enemies
         private Vector3 _lastVelocity;
         private float _curSpeed;
         private Vector3 _direction;
-        private int _curBounces = 0;
+        private int _curBounces;
 
         private void Awake()
         {
