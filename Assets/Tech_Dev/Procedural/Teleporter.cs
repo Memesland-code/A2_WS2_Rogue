@@ -5,13 +5,14 @@ namespace Tech_Dev.Procedural
 	public class Teleporter : MonoBehaviour
 	{
 		[SerializeField] private Difficulty _teleporterDifficulty;
-		[SerializeField] private Transform _roomEntryPoint;
+		[SerializeField] private Transform _nextRoomEntryPoint;
+		private GameObject _nextRoomRef;
 
 		private void OnDrawGizmos()
 		{
-			if (_roomEntryPoint != null)
+			if (_nextRoomEntryPoint != null)
 			{
-				Gizmos.DrawLine(transform.position, _roomEntryPoint.transform.position);
+				Gizmos.DrawLine(transform.position, _nextRoomEntryPoint.transform.position);
 			}
 			else
 			{
@@ -22,17 +23,23 @@ namespace Tech_Dev.Procedural
 
 		public Transform GetDestination()
 		{
-			return _roomEntryPoint;
+			return _nextRoomEntryPoint;
 		}
 
-		public void SetDestinationEntryPoint(Transform destinationTeleporter)
+		public void SetDestinationEntryPoint(GameObject nextRoomRef, Transform destinationTeleportPoint)
 		{
-			_roomEntryPoint = destinationTeleporter;
+			_nextRoomRef = nextRoomRef;
+			_nextRoomEntryPoint = destinationTeleportPoint;
 		}
 
 		public Difficulty GetTeleporterDifficulty()
 		{
 			return _teleporterDifficulty;
+		}
+		
+		public RoomManager GetNextRoomRef()
+		{
+			return _nextRoomRef.GetComponent<RoomManager>();
 		}
 	}
 }

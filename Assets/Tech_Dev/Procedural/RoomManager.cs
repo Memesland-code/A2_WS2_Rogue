@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Tech_Dev.Enemies;
 using UnityEngine;
@@ -18,26 +19,43 @@ namespace Tech_Dev.Procedural
 		
 		private GameManager _gameManager;
 
-		private GameObject _roomTeleporters;
-		
+		private GameObject _roomEntry;
+		private GameObject _roomTeleporter;
+
 		private void Start()
 		{
+			foreach (Transform el in transform)
+			{
+				if (el.CompareTag("RoomEntry")) _roomEntry = el.gameObject;
+			}
 			_gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 			
 			_ratPrefab = _gameManager.GetEnemyRatPrefab();
 			_skullPrefab = _gameManager.GetEnemySkullPrefab();
 
-			foreach (GameObject go in transform)
+			foreach (Transform go in transform)
 			{
-				if (go.CompareTag("TeleportersContainer"))
+				if (go.CompareTag("TeleportersContainer") || go.CompareTag("TeleporterBoss"))
 				{
-					_roomTeleporters = go;
+					_roomTeleporter = go.gameObject;
 					break;
 				}
 			}
-			
-			_roomTeleporters.SetActive(false);
 
+			if (_roomTeleporter != null)
+			{
+				_roomTeleporter.SetActive(false);
+			}
+			else
+			{
+				Debug.LogError("No room teleporter found in room ID: " + RoomId);
+			}
+		}
+
+
+
+		public void InitRoom()
+		{
 			if (Type == Type.Fight)
 			{
 				InitFightRoom();
@@ -112,9 +130,16 @@ namespace Tech_Dev.Procedural
 
 
 
+		public Transform GetRoomEntry()
+		{
+			return _roomEntry.transform;
+		}
+
+
+
 		public void UnlockTeleporters()
 		{
-			_roomTeleporters.SetActive(true);
+			_roomTeleporter.SetActive(true);
 		}
 	}
 }

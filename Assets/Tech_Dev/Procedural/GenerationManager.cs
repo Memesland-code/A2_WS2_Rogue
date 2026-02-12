@@ -22,13 +22,16 @@ namespace Tech_Dev.Procedural
         [Space(5)]
         [SerializeField] private List<GameObject> _bossRoomPrefabs;
 
+        private GameObject _hubRoom;
         private GameObject _hubSpawnPoint;
         
         private List<List<Room>> _rooms;
         
         void Start()
         {
-            foreach (Transform hubElement in GameObject.FindWithTag("Respawn").transform)
+            _hubRoom = GameObject.FindWithTag("Respawn");
+            
+            foreach (Transform hubElement in _hubRoom.transform)
             {
                 if (hubElement.CompareTag("RoomEntry"))
                 {
@@ -218,7 +221,6 @@ namespace Tech_Dev.Procedural
             {
                 for (int j = 0; j < _rooms[i].Count; j++)
                 {
-                    //! if (i == _roomsNumber) print("GOOD");
                     Room room = _rooms[i][j];
                     Room nextPristineRoom = _rooms[i + 1][0];
                     Room nextRuinRoom = _rooms[i + 1][1];
@@ -226,11 +228,13 @@ namespace Tech_Dev.Procedural
                     //info Check if 1st room
                     if (i == 0)
                     {
+                        // Hub to 1st room
                         Teleporter exitPoint = GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>();
-                        exitPoint.SetDestinationEntryPoint(_rooms[i][j].GetRoomEntry());
+                        exitPoint.SetDestinationEntryPoint(_rooms[i][j].WorldInstance, _rooms[i][j].GetRoomEntry());
                         
-                        room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.GetRoomEntry());
-                        room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.GetRoomEntry());
+                        // 1st room to 2nd
+                        room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.WorldInstance, nextPristineRoom.GetRoomEntry());
+                        room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.WorldInstance, nextRuinRoom.GetRoomEntry());
                     }
                     else
                     {
@@ -244,10 +248,10 @@ namespace Tech_Dev.Procedural
                                     {
                                         if (teleporter.GetTeleporterDifficulty() == Difficulty.Pristine)
                                         {
-                                            room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.GetRoomEntry());
+                                            room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.WorldInstance, nextPristineRoom.GetRoomEntry());
                                             continue;
                                         }
-                                        room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.GetRoomEntry());
+                                        room.GetRuinTeleporter().SetDestinationEntryPoint(nextRuinRoom.WorldInstance, nextRuinRoom.GetRoomEntry());
                                         break;
                                     }
                                 }
@@ -259,8 +263,8 @@ namespace Tech_Dev.Procedural
             }
             
             //info if room is boss room
-            _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(_hubSpawnPoint.transform);
-            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(_hubSpawnPoint.transform);
+            _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform);
+            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform);
         }
     }
 }

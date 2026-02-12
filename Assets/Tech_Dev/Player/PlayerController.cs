@@ -40,6 +40,8 @@ namespace Tech_Dev.Player
 	    [Space(10), Header("Do not touch! - Surface friction management")]
 	    [SerializeField] private PhysicsMaterial _groundMaterial;
 	    [SerializeField] private PhysicsMaterial _airMaterial;
+
+	    private RoomManager _currentRoom;
 	    
 	    private bool _isFacingRight = true;
 	    
@@ -153,7 +155,7 @@ namespace Tech_Dev.Player
 			    {
 				    if (coll.TryGetComponent(out Teleporter teleporter))
 				    {
-					    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
+					    StartCoroutine(EnterNewRoom(teleporter));
 				    }
 			    }
 			    _interactTimeDelta = _interactCooldown;
@@ -231,10 +233,23 @@ namespace Tech_Dev.Player
 		    }
 	    }
 
+	    
 
 	    private void FixedUpdate()
 	    {
 		    _rb.AddForce(Physics.gravity * ((_gravityScale - 1) * _rb.mass));
+	    }
+
+
+
+	    private IEnumerator EnterNewRoom(Teleporter teleporter)
+	    {
+		    GameManager.GetFadeRef().PlayFadeIn();
+		    yield return new WaitForSeconds(0.4f);
+		    _currentRoom = teleporter.GetNextRoomRef();
+		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
+		    _currentRoom.InitRoom();
+		    GameManager.GetFadeRef().PlayFadeOut();
 	    }
 
 
