@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _healthRecoverPercentage: 15
+  _woundBarExpireTime: 5
   _meleeAttackDamage: 30
   _heavyAttackDamage: 50
   _swordAttackCenter: {fileID: 1154505659140929774}
@@ -170,6 +172,7 @@ MonoBehaviour:
   _dashTime: 0.1
   _groundMaterial: {fileID: 13400000, guid: b0f38ab0861d08548b7cfdca135749b4, type: 2}
   _airMaterial: {fileID: 13400000, guid: 09c644450a5473746bc465706ab87b01, type: 2}
+  _teleportationFadeTime: 0.75
 --- !u!1 &4803926977503262152
 GameObject:
   m_ObjectHideFlags: 0
