@@ -132,7 +132,7 @@ namespace Tech_Dev.Enemies
         public void TakeDamage(float damage)
         {
             _health -= damage;
-
+            
             if (_health <= 0)
             {
                 Invoke(nameof(EnemyDeath), 0.5f);

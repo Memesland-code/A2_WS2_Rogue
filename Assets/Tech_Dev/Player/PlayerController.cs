@@ -213,7 +213,7 @@ namespace Tech_Dev.Player
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
 				    if (!enemy) return;
-				    
+
 				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
 
 				    if (damagedEnemy)
@@ -259,7 +259,7 @@ namespace Tech_Dev.Player
 
 
 
-	    private static bool ManageEnemyDamage(GameObject enemy, float damage)
+	    private bool ManageEnemyDamage(GameObject enemy, float damage)
 	    {
 		    if (enemy.TryGetComponent(out EnemyRat rat))
 		    {
