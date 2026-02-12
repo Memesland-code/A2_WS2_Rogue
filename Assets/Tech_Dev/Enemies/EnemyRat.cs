@@ -168,7 +168,7 @@ namespace Tech_Dev.Enemies
 
             if (RoomManagerReference != null)
             {
-                RoomManagerReference.RegisterEnemyDeath(this);
+                RoomManagerReference.RegisterEnemyDeath(gameObject);
             }
             else
             {

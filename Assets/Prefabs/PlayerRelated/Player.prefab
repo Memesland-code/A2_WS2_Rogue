@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1154505659140929774}
   - component: {fileID: 6780520542764403524}
-  - component: {fileID: 8684527312023302015}
+  - component: {fileID: 3116907633525925660}
   m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _detectionRadius: 1
---- !u!135 &8684527312023302015
-SphereCollider:
+--- !u!65 &3116907633525925660
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -284,7 +284,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Size: {x: 2, y: 2, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1231909129995643767
 PrefabInstance:

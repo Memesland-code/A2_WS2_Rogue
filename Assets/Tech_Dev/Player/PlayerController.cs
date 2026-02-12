@@ -191,13 +191,16 @@ namespace Tech_Dev.Player
 		    //TODO Check for cooldown: animation time
 		    if (_inputs.MeleeAttack)
 		    {
+			    print("Melee attack");
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
 				    if (!enemy) return;
+				    print("Enemy detected in collider" + enemy.name);
 				    
 				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
+				    print(enemy.name + " - " + damagedEnemy);
 
 				    if (damagedEnemy)
 				    {
@@ -263,6 +266,7 @@ namespace Tech_Dev.Player
 	    {
 		    if (enemy.TryGetComponent(out EnemyRat rat))
 		    {
+			    print("Damage to rat");
 			    rat.TakeDamage(damage);
 			    return true;
 		    }

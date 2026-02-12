@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Tech_Dev.Enemies;
 using UnityEngine;
@@ -12,7 +11,7 @@ namespace Tech_Dev.Procedural
 		public Type Type;
 		public Difficulty Difficulty;
 
-		public List<object> RoomEnemies = new();
+		public List<GameObject> RoomEnemies;
 
 		private GameObject _ratPrefab;
 		private GameObject _skullPrefab;
@@ -24,6 +23,8 @@ namespace Tech_Dev.Procedural
 
 		private void Start()
 		{
+			RoomEnemies = new List<GameObject>();
+			
 			foreach (Transform el in transform)
 			{
 				if (el.CompareTag("RoomEntry")) _roomEntry = el.gameObject;
@@ -111,13 +112,13 @@ namespace Tech_Dev.Procedural
 					enemy.gameObject.GetComponent<EnemyRat>().RoomManagerReference = this;
 				}
 
-				RoomEnemies.Add(enemy);
+				RoomEnemies.Add(enemy.gameObject);
 			}
 		}
 
 
 
-		public void RegisterEnemyDeath(object enemyRef)
+		public void RegisterEnemyDeath(GameObject enemyRef)
 		{
 			RoomEnemies.Remove(enemyRef);
 
