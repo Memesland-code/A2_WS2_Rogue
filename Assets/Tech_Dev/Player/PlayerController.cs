@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Tech_Dev.Enemies;
 using Tech_Dev.Procedural;
@@ -9,6 +10,7 @@ namespace Tech_Dev.Player
     {
 	    [Header("Player stats")]
 	    [SerializeField] private float _maxHealth;
+	    private float _health;
 	    [SerializeField] private float _healthRecoverPercentage;
 	    [SerializeField] private float _woundBarExpireTime;
 	    
@@ -48,8 +50,6 @@ namespace Tech_Dev.Player
 	    
 	    private Rigidbody _rb;
 	    private InputManager _inputs;
-
-	    private float _health;
 	    
 	    private SwordDamager _swordDamager;
 
@@ -191,7 +191,7 @@ namespace Tech_Dev.Player
 		    //TODO Check for cooldown: animation time
 		    if (_inputs.MeleeAttack)
 		    {
-			    print("Melee attack");
+			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
 			    foreach (GameObject enemy in enemiesInRange)
@@ -199,30 +199,34 @@ namespace Tech_Dev.Player
 				    if (!enemy) return;
 				    print("Enemy detected in collider" + enemy.name);
 				    
-				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
+				    damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
 				    print(enemy.name + " - " + damagedEnemy);
 
-				    if (damagedEnemy)
-				    {
-					    _health += _healthRecoverPercentage * _woundDamageAmount / 100;
-				    }
+			    }
+			    
+			    if (damagedEnemy && _woundBarActive)
+			    {
+				    _health += Math.Clamp(_healthRecoverPercentage * _woundDamageAmount / 100, -1, _maxHealth);
+				    _woundBarActive = false;
 			    }
 		    }
 
 		    if (_inputs.HeavyAttack)
 		    {
+			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
 				    if (!enemy) return;
 
-				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
-
-				    if (damagedEnemy)
-				    {
-					    _health += _healthRecoverPercentage * _woundDamageAmount / 100;
-				    }
+				    damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
+			    }
+			    
+			    if (damagedEnemy && _woundBarActive)
+			    {
+				    _health += _healthRecoverPercentage * _woundDamageAmount / 100;
+				    _woundBarActive = false;
 			    }
 		    }
 		    

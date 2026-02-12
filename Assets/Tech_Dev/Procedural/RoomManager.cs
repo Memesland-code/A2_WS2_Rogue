@@ -42,15 +42,6 @@ namespace Tech_Dev.Procedural
 					break;
 				}
 			}
-
-			if (_roomTeleporter != null)
-			{
-				_roomTeleporter.SetActive(false);
-			}
-			else
-			{
-				Debug.LogError("No room teleporter found in room ID: " + RoomId);
-			}
 		}
 
 
@@ -88,6 +79,15 @@ namespace Tech_Dev.Procedural
 		
 		private void InitFightRoom()
 		{
+			if (_roomTeleporter != null)
+			{
+				_roomTeleporter.SetActive(false);
+			}
+			else
+			{
+				Debug.LogError("No room teleporter found in room ID: " + RoomId);
+			}
+			
 			var spawners = GetSpawners();
 
 			// Spawn enemies and register in list
@@ -127,13 +127,6 @@ namespace Tech_Dev.Procedural
 				print("Room cleared!");
 				UnlockTeleporters();
 			}
-		}
-
-
-
-		public Transform GetRoomEntry()
-		{
-			return _roomEntry.transform;
 		}
 
 
