@@ -40,10 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5598083193721475626}
+  - component: {fileID: 6589141397789174487}
   - component: {fileID: 6759317158681684405}
   - component: {fileID: 4420694500576946635}
   - component: {fileID: 5030284152939483332}
-  - component: {fileID: 6344853936680949223}
   m_Layer: 8
   m_Name: Enemy_Skull
   m_TagString: Untagged
@@ -68,6 +68,27 @@ Transform:
   - {fileID: 8752294725222263843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &6589141397789174487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3957470295548005880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!54 &6759317158681684405
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,28 +169,6 @@ MonoBehaviour:
   _playerInSightRange: 0
   _playerInAttackRange: 0
   RoomManagerReference: {fileID: 0}
---- !u!64 &6344853936680949223
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3957470295548005880}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1282930103858047403, guid: d84ab3c3d20a66d4d916b9948281c94d, type: 3}
 --- !u!1001 &3004281356331795768
 PrefabInstance:
   m_ObjectHideFlags: 0

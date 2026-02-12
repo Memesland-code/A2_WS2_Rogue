@@ -144,6 +144,7 @@ namespace Tech_Dev.Enemies
             if (_isDead) return;
 
             _isDead = true;
+            GetComponent<BoxCollider>().enabled = false;
             
             if (RoomManagerReference != null)
             {

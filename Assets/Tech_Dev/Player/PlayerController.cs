@@ -10,7 +10,7 @@ namespace Tech_Dev.Player
 	    [Header("Player stats")]
 	    [SerializeField] private float _maxHealth;
 	    [SerializeField] private float _healthRecoverPercentage;
-	    [SerializeField] private float _woundBarThreshold;
+	    [SerializeField] private float _woundBarExpireTime;
 	    
 	    [Space(10), Header("Attack system")]
 	    [SerializeField] private float _meleeAttackDamage;
@@ -37,9 +37,10 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _dashCooldown;
 	    [SerializeField] private float _dashTime;
 	    
-	    [Space(10), Header("Do not touch! - Surface friction management")]
+	    [Space(10), Header("Do not touch! - tech references")]
 	    [SerializeField] private PhysicsMaterial _groundMaterial;
 	    [SerializeField] private PhysicsMaterial _airMaterial;
+	    [SerializeField] private float _teleportationFadeTime;
 
 	    private RoomManager _currentRoom;
 	    
@@ -194,6 +195,8 @@ namespace Tech_Dev.Player
 
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
+				    if (!enemy) return;
+				    
 				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
 
 				    if (damagedEnemy)
@@ -209,6 +212,8 @@ namespace Tech_Dev.Player
 
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
+				    if (!enemy) return;
+				    
 				    bool damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
 
 				    if (damagedEnemy)
@@ -245,7 +250,7 @@ namespace Tech_Dev.Player
 	    private IEnumerator EnterNewRoom(Teleporter teleporter)
 	    {
 		    GameManager.GetFadeRef().PlayFadeIn();
-		    yield return new WaitForSeconds(0.4f);
+		    yield return new WaitForSeconds(_teleportationFadeTime);
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
 		    _currentRoom.InitRoom();
@@ -280,7 +285,7 @@ namespace Tech_Dev.Player
 		    _health -= damage;
 
 		    _woundBarActive = true;
-		    _woundBarTimer = _woundBarThreshold;
+		    _woundBarTimer = _woundBarExpireTime;
 		    _woundDamageAmount = damage;
 		    
 		    if (_health <= 0)
