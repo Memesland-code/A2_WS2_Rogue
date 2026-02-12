@@ -145,7 +145,14 @@ namespace Tech_Dev.Enemies
 
             _isDead = true;
             
-            RoomManagerReference.RegisterEnemyDeath(this);
+            if (RoomManagerReference != null)
+            {
+                RoomManagerReference.RegisterEnemyDeath(this);
+            }
+            else
+            {
+                Debug.LogWarning("Enemy is not belonging to a room");
+            }
             
             Destroy(gameObject);
         }
