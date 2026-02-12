@@ -13,9 +13,7 @@ namespace Tech_Dev.GameplayElement
         {
             _plank = transform.GetChild(0).gameObject;
             _rotation = _plank.transform.rotation.eulerAngles;
-
-            print(_rotation.z);
-
+            
             if (_rotation.z < 360 - _rotationLimit && _rotation.z > 180)
             {
                 _plank.transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, 360 - _rotationLimit);
