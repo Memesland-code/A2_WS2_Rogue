@@ -65,6 +65,8 @@ namespace Tech_Dev.Player
 	    private bool _woundBarActive;
 	    private float _woundBarTimer;
 	    private float _woundDamageAmount;
+
+	    private GameObject _camera;
 	    
 	    
 	    // Cheat codes
@@ -77,6 +79,7 @@ namespace Tech_Dev.Player
 		    _rb = GetComponent<Rigidbody>();
 		    _inputs = GetComponent<InputManager>();
 		    _swordDamager = GetComponentInChildren<SwordDamager>();
+		    _camera = GameManager.GetCamera();
 		    
 		    ResetPlayer();
 	    }
@@ -214,6 +217,7 @@ namespace Tech_Dev.Player
 
 		    if (_inputs.HeavyAttack)
 		    {
+			    print("heavy");
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
@@ -258,11 +262,22 @@ namespace Tech_Dev.Player
 	    private IEnumerator EnterNewRoom(Teleporter teleporter)
 	    {
 		    GameManager.GetFadeRef().PlayFadeIn();
-		    yield return new WaitForSeconds(_teleportationFadeTime);
+		    
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
+		    SetNewCameraBounds();
+		    
+		    yield return new WaitForSeconds(_teleportationFadeTime);
 		    _currentRoom.InitRoom();
+		    
 		    GameManager.GetFadeRef().PlayFadeOut();
+	    }
+
+
+
+	    private void SetNewCameraBounds()
+	    {
+		    
 	    }
 
 

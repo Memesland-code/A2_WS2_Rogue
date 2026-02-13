@@ -24,12 +24,12 @@ namespace Tech_Dev.Player
                 _heavyAttackTimeDelta -= Time.deltaTime;
             }
             
-            if (_heavyAttackTimeDelta <= 0 && Mouse.current.leftButton.wasReleasedThisFrame)
+            if (_heavyAttackTimeDelta <= 0 && (Mouse.current.leftButton.wasReleasedThisFrame || Gamepad.current.buttonWest.wasReleasedThisFrame))
             {
                 HeavyAttack = true;
                 _heavyAttackTimeDelta = _heavyAttackTime;
             }
-            else if (_heavyAttackTimeDelta > 0 && Mouse.current.leftButton.wasReleasedThisFrame)
+            else if (_heavyAttackTimeDelta > 0 && (Mouse.current.leftButton.wasReleasedThisFrame || Gamepad.current.buttonWest.wasReleasedThisFrame))
             {
                 MeleeAttack = true;
                 _heavyAttackTimeDelta = _heavyAttackTime;
@@ -50,7 +50,7 @@ namespace Tech_Dev.Player
 
         public void OnJump(InputValue value)
         {
-            Jump = Keyboard.current.spaceKey.wasPressedThisFrame;
+            Jump = Keyboard.current.spaceKey.wasPressedThisFrame || Gamepad.current.buttonSouth.wasPressedThisFrame;
         }
 
         public void OnAttack(InputValue value)

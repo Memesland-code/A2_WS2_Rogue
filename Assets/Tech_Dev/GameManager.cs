@@ -51,6 +51,13 @@ namespace Tech_Dev
         {
             return _enemySkullPrefab;
         }
+
+
+
+        public static GameObject GetCamera()
+        {
+            return GameObject.FindWithTag("MainCamera");
+        }
         
         
         

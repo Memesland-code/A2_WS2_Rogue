@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3730036240237625550}
   - component: {fileID: 301126841095749471}
+  - component: {fileID: -1792707257390806675}
   m_Layer: 0
   m_Name: Trap_Wall
   m_TagString: Untagged
@@ -51,6 +52,27 @@ MonoBehaviour:
   _arrowShootForce: 50
   _arrowsDamage: 10
   _shootCooldown: 5
+--- !u!65 &-1792707257390806675
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186648974094220850}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.69104, y: 3.1931982, z: 0.5080433}
+  m_Center: {x: 0.84552, y: -0.90667677, z: 1.3935766}
 --- !u!1 &821163665051959040
 GameObject:
   m_ObjectHideFlags: 0

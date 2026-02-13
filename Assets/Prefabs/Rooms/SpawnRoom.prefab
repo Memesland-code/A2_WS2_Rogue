@@ -170,7 +170,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f8c9f53347cc8ae47a506ed51cc3f5d1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a16eddf9c279f1f4d87c1828134842b1, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &2016882554116515333
 GameObject:
@@ -200,8 +200,8 @@ Transform:
   m_GameObject: {fileID: 2016882554116515333}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071069}
-  m_LocalPosition: {x: -15.450001, y: 4.97, z: 0}
-  m_LocalScale: {x: 11.97641, y: 1, z: 2.5368}
+  m_LocalPosition: {x: -15.450001, y: 7.17, z: 0}
+  m_LocalScale: {x: 16.248394, y: 1, z: 2.5368}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5595320487549362171}
@@ -402,7 +402,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _teleporterDifficulty: 0
-  _roomEntryPoint: {fileID: 0}
+  _nextRoomEntryPoint: {fileID: 0}
+--- !u!1 &2983235669600188527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296196870947810100}
+  - component: {fileID: 6774012637870846837}
+  m_Layer: 0
+  m_Name: CameraBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296196870947810100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983235669600188527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7651756568316525145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6774012637870846837
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983235669600188527}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -2.5919724, y: 7.2826686}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 26.641525, y: 17.43247}
+  m_EdgeRadius: 0
 --- !u!1 &3669022922684400544
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 3669022922684400544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4436302, y: 10.74, z: 0}
+  m_LocalPosition: {x: -2.4436302, y: 15.48, z: 0}
   m_LocalScale: {x: 26.705294, y: 1, z: 2.5368}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -576,6 +654,7 @@ Transform:
   - {fileID: 5595320487549362171}
   - {fileID: 4741857425749033202}
   - {fileID: 6044347509929863091}
+  - {fileID: 1296196870947810100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6868383244834936476
@@ -641,8 +720,8 @@ Transform:
   m_GameObject: {fileID: 6885454304160182942}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071069}
-  m_LocalPosition: {x: 10.220001, y: 4.97, z: 0}
-  m_LocalScale: {x: 11.97641, y: 1, z: 2.5368}
+  m_LocalPosition: {x: 10.220001, y: 7.03, z: 0}
+  m_LocalScale: {x: 16.91069, y: 1, z: 2.5368}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5595320487549362171}
