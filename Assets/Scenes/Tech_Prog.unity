@@ -1109,30 +1109,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &157628588 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7315334538021626268, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
-  m_PrefabInstance: {fileID: 5821813596835678854}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &157628594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157628588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrackerSettings:
-    BindingMode: 5
-    PositionDamping: {x: 1, y: 1, z: 1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
 --- !u!43 &164754096
 Mesh:
   m_ObjectHideFlags: 0
@@ -3651,11 +3627,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &489959605 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6833196506537375265, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
-  m_PrefabInstance: {fileID: 6235307873924286065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &503559038
 Mesh:
   m_ObjectHideFlags: 0
@@ -8060,11 +8031,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!61 &1216083542 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8325159894955032222, guid: c4a1f0999ea48944e992c84855639c15, type: 3}
-  m_PrefabInstance: {fileID: 6961852820973553459}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1240670170
 Mesh:
   m_ObjectHideFlags: 0
@@ -13450,11 +13416,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2586390769932756847, guid: d10a30ad3837c304a964289d2b69d662, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -242.64526
+      value: -248.92499
       objectReference: {fileID: 0}
     - target: {fileID: 2586390769932756847, guid: d10a30ad3837c304a964289d2b69d662, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1694431
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 2586390769932756847, guid: d10a30ad3837c304a964289d2b69d662, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13545,29 +13511,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2236085111680212949, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
-      propertyPath: _playerTransform
-      value: 
-      objectReference: {fileID: 489959605}
-    - target: {fileID: 5359570162605489275, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
-      propertyPath: Target.TrackingTarget
-      value: 
-      objectReference: {fileID: 489959605}
     - target: {fileID: 7315334538021626268, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
       propertyPath: m_Name
       value: CinemachineCamera
       objectReference: {fileID: 0}
-    - target: {fileID: 8386872999329686759, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
-      propertyPath: BoundingShape2D
-      value: 
-      objectReference: {fileID: 1216083542}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7315334538021626268, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 157628594}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad44a4af24dd24b4097d97962a4b844f, type: 3}
 --- !u!1001 &6235307873924286065
 PrefabInstance:
