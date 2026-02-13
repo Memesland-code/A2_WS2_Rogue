@@ -1,6 +1,7 @@
 using Tech_Dev.Player;
 using Tech_Dev.Procedural;
 using Tech_Dev.UI;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Tech_Dev
@@ -13,6 +14,7 @@ namespace Tech_Dev
         [SerializeField] private GameObject _enemyRatPrefab;
         [SerializeField] private GameObject _enemySkullPrefab;
 
+        private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
         
         
@@ -28,7 +30,15 @@ namespace Tech_Dev
                 _fadeEffect = fadeEffect.transform.GetChild(0).GetComponent<FadeEffect>();
             }
             
-            _playerScriptRef = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            _playerRef = GameObject.FindWithTag("Player");
+            _playerScriptRef = _playerRef.GetComponent<PlayerController>();
+        }
+
+
+
+        private void Start()
+        {
+            GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
         }
 
         

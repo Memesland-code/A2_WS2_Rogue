@@ -244,10 +244,8 @@ namespace Tech_Dev.Procedural
                             return;
                         }
                         
-                        print(teleportersContainerRef.GetChild(0).name + " - " + teleportersContainerRef.GetChild(1).name);
-
-                        teleportersContainerRef.GetChild(0).GetComponent<Teleporter>().SetDestinationEntryPoint(_rooms[i][j].WorldInstance, _rooms[i][j].GetRoomEntry());
-                        teleportersContainerRef.GetChild(1).GetComponent<Teleporter>().SetDestinationEntryPoint(_rooms[i][j + 1].WorldInstance, _rooms[i][j + 1].GetRoomEntry());
+                        teleportersContainerRef.GetChild(0).GetComponent<Teleporter>().SetDestinationEntryPoint(_rooms[i][0].WorldInstance, _rooms[i][0].GetRoomEntry());
+                        teleportersContainerRef.GetChild(1).GetComponent<Teleporter>().SetDestinationEntryPoint(_rooms[i][1].WorldInstance, _rooms[i][1].GetRoomEntry());
                         
                         // 1st room to 2nd
                         room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.WorldInstance, nextPristineRoom.GetRoomEntry());
