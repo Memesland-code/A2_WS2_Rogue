@@ -10,7 +10,7 @@ namespace Tech_Dev.Player
 
 		private void Update()
 		{
-			Touched = Physics.Raycast(transform.position, Vector3.down, _distance);
+			Touched = Physics.Raycast(transform.position + new Vector3(0, 1, 0), Vector3.down, _distance + 1);
 		}
 
 		private void OnDrawGizmos()
