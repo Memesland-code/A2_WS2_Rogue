@@ -268,10 +268,11 @@ namespace Tech_Dev.Player
 	    private IEnumerator EnterNewRoom(Teleporter teleporter)
 	    {
 		    GameManager.GetFadeRef().PlayFadeIn();
+		    yield return new WaitForSeconds(1f);
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
-		    SetNewCameraBounds();
+		    SetNewCameraBounds(_currentRoom.GetRoomBounds());
 		    
 		    yield return new WaitForSeconds(_teleportationFadeTime);
 		    _currentRoom.InitRoom();
@@ -281,9 +282,9 @@ namespace Tech_Dev.Player
 
 
 
-	    private void SetNewCameraBounds()
+	    private void SetNewCameraBounds(Collider2D newCollider)
 	    {
-		    throw new NotImplementedException("TODO SetNewCameraBounds");
+		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = newCollider;
 	    }
 
 
