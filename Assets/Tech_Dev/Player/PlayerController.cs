@@ -191,6 +191,7 @@ namespace Tech_Dev.Player
 		    //TODO Check for cooldown: animation time
 		    if (_inputs.MeleeAttack)
 		    {
+			    
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
