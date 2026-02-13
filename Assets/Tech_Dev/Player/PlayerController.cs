@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Tech_Dev.Enemies;
 using Tech_Dev.Procedural;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Tech_Dev.Player
@@ -89,6 +90,10 @@ namespace Tech_Dev.Player
 	    private void ResetPlayer()
 	    {
 		    _health = _maxHealth;
+
+		    _currentRoom = GameObject.FindWithTag("Respawn").GetComponent<RoomManager>();
+
+		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = _currentRoom.GetRoomBounds();
 	    }
 
 	    
@@ -217,7 +222,6 @@ namespace Tech_Dev.Player
 
 		    if (_inputs.HeavyAttack)
 		    {
-			    print("heavy");
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 

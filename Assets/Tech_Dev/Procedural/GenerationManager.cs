@@ -113,7 +113,7 @@ namespace Tech_Dev.Procedural
                 }
                 else // For others generate random rooms
                 {
-                    roomChoice1.Type = (Type)Random.Range(0, Enum.GetValues(typeof(Type)).Length-2);
+                    roomChoice1.Type = (Type)Random.Range(1, Enum.GetValues(typeof(Type)).Length-2);
 
                     if (roomChoice1.Type == Type.Fight)
                     {
@@ -124,7 +124,7 @@ namespace Tech_Dev.Procedural
                     }
                     else
                     {
-                        roomChoice2.Type = (Type)Random.Range(1, Enum.GetValues(typeof(Type)).Length-2);
+                        roomChoice2.Type = (Type)Random.Range(2, Enum.GetValues(typeof(Type)).Length-2);
 
                         roomChoice1.Difficulty = roomChoice1.Type == Type.Gambling ? Difficulty.Pristine : Difficulty.None;
                         roomChoice2.Difficulty = roomChoice2.Type == Type.Gambling ? Difficulty.Ruin : Difficulty.None;

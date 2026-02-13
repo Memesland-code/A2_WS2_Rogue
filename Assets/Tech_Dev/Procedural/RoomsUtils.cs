@@ -11,6 +11,7 @@ namespace Tech_Dev.Procedural
 	
 	public enum Type
 	{
+		Spawn,
 		Fight,
 		Merchant,
 		Upgrade,

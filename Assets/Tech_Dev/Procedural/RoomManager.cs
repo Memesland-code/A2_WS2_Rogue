@@ -18,17 +18,12 @@ namespace Tech_Dev.Procedural
 		
 		private GameManager _gameManager;
 
-		private GameObject _roomEntry;
 		private GameObject _roomTeleporter;
 
 		private void Start()
 		{
 			RoomEnemies = new List<GameObject>();
 			
-			foreach (Transform el in transform)
-			{
-				if (el.CompareTag("RoomEntry")) _roomEntry = el.gameObject;
-			}
 			_gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 			
 			_ratPrefab = _gameManager.GetEnemyRatPrefab();
@@ -134,6 +129,30 @@ namespace Tech_Dev.Procedural
 		public void UnlockTeleporters()
 		{
 			_roomTeleporter.SetActive(true);
+		}
+
+
+
+		public Collider2D GetRoomBounds()
+		{
+			BoxCollider2D bounds = null;
+			foreach (Transform el in transform)
+			{
+				if (el.CompareTag("CameraBounds"))
+				{
+					bounds = el.GetComponent<BoxCollider2D>();
+				}
+			}
+
+			if (bounds == null)
+			{
+				Debug.LogError("No camera bounds found in room ID: " + RoomId + " of type: " + Type);
+				return null;
+			}
+			else
+			{
+				return bounds;
+			}
 		}
 	}
 }
