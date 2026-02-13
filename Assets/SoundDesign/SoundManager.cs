@@ -28,18 +28,22 @@ public enum SoundType
     PlatformDown,
     PlatformUp,
     MerchantBuy,
-    MerchantBlood,
-    
-    
-    
+    MerchantBlood
 }
+
+
+    
+    
+    
+
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private SoundList[] soundList;
     private static SoundManager instance;
     private AudioSource audioSource;
-
+    [Range(0f,1f)] public float volume = 1f;
+    [Range(0f,1f)] public float pitch = 1f;
     private void Awake()
     {
         instance = this;
