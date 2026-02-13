@@ -229,7 +229,7 @@ namespace Tech_Dev.Procedural
                     if (i == 0)
                     {
                         // Hub to 1st room
-                        Teleporter exitPoint = GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>();
+                        Teleporter exitPoints = GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>();
                         exitPoint.SetDestinationEntryPoint(_rooms[i][j].WorldInstance, _rooms[i][j].GetRoomEntry());
                         
                         // 1st room to 2nd
