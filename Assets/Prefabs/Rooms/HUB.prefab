@@ -2142,6 +2142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756852828509062217}
+  - component: {fileID: 1926906033995030758}
   m_Layer: 0
   m_Name: HUB
   m_TagString: Respawn
@@ -2169,6 +2170,22 @@ Transform:
   - {fileID: 5030461016097708043}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926906033995030758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011622336708211379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a9e8877f6c3ea47b2473c3c3880ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomId: -1
+  Type: 0
+  Difficulty: 2
+  RoomEnemies: []
 --- !u!1 &2116888820051856772
 GameObject:
   m_ObjectHideFlags: 0
@@ -9165,15 +9182,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8555824201795813286, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 543.2
+      value: 2.69
       objectReference: {fileID: 0}
     - target: {fileID: 8555824201795813286, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.36
+      value: -6.45
       objectReference: {fileID: 0}
     - target: {fileID: 8555824201795813286, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.77
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8555824201795813286, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9202,6 +9219,22 @@ PrefabInstance:
     - target: {fileID: 8555824201795813286, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704113677879136406, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
+      propertyPath: m_Size.x
+      value: 26.705292
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704113677879136406, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
+      propertyPath: m_Size.y
+      value: 13.423081
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704113677879136406, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
+      propertyPath: m_Offset.x
+      value: -2.2123108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704113677879136406, guid: ed02f72c3a92d9845a17805bbbf4d03f, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.618353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

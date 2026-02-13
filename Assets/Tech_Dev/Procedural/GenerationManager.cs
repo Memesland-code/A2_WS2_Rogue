@@ -229,8 +229,25 @@ namespace Tech_Dev.Procedural
                     if (i == 0)
                     {
                         // Hub to 1st room
-                        Teleporter exitPoints = GameObject.FindWithTag("Respawn").transform.GetComponentInChildren<Teleporter>();
-                        exitPoint.SetDestinationEntryPoint(_rooms[i][j].WorldInstance, _rooms[i][j].GetRoomEntry());
+                        Transform teleportersContainerRef = null;
+                        foreach (Transform roomElement in GameObject.FindWithTag("Respawn").transform)
+                        {
+                            if (roomElement.CompareTag("TeleportersContainer"))
+                            {
+                                teleportersContainerRef = roomElement;
+                            }
+                        }
+
+                        if (teleportersContainerRef == null)
+                        {
+                            Debug.LogError("TeleportersContainerRef is null in spawn room. Stopping process!");
+                            return;
+                        }
+                        
+                        print(teleportersContainerRef.GetChild(0).name + " - " + teleportersContainerRef.GetChild(1).name);
+
+                        teleportersContainerRef.GetChild(0).GetComponent<Teleporter>().SetDestinationEntryPoint(_rooms[i][j].WorldInstance, _rooms[i][j].GetRoomEntry());
+                        teleportersContainerRef.GetChild(1).GetComponent<Teleporter>().SetDestinationEntryPoint(_rooms[i][j + 1].WorldInstance, _rooms[i][j + 1].GetRoomEntry());
                         
                         // 1st room to 2nd
                         room.GetPristineTeleporter().SetDestinationEntryPoint(nextPristineRoom.WorldInstance, nextPristineRoom.GetRoomEntry());

@@ -154,5 +154,18 @@ namespace Tech_Dev.Procedural
 				return bounds;
 			}
 		}
+
+
+
+		public Vector3 GetRoomEntryCoord()
+		{
+			foreach (Transform el in transform)
+			{
+				if (el.CompareTag("RoomEntry")) return el.transform.position;
+			}
+
+			Debug.LogError("No room entry found in room ID: " + RoomId + " of type: " + Type);
+			return Vector3.zero;
+		}
 	}
 }

@@ -93,6 +93,8 @@ namespace Tech_Dev.Player
 
 		    _currentRoom = GameObject.FindWithTag("Respawn").GetComponent<RoomManager>();
 
+		    transform.position = _currentRoom.GetRoomEntryCoord();
+
 		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = _currentRoom.GetRoomBounds();
 	    }
 
@@ -281,7 +283,7 @@ namespace Tech_Dev.Player
 
 	    private void SetNewCameraBounds()
 	    {
-		    
+		    throw new NotImplementedException("TODO SetNewCameraBounds");
 	    }
 
 
