@@ -1439,6 +1439,82 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &230443880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230443882}
+  - component: {fileID: 230443881}
+  - component: {fileID: 230443883}
+  m_Layer: 0
+  m_Name: QA_Tools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &230443881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230443880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16096a39a9fa88146b8df57f6ea2e7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackKeybord: 323
+  AttackControler: 332
+  Sword: {fileID: 0}
+  mAttack: {fileID: 2100000, guid: fb44e725d3a318e40823c2fa29ac529e, type: 2}
+  mBase: {fileID: 2100000, guid: 1ab654be493ccb940acc4ce380465d12, type: 2}
+  swordRenderer: {fileID: 0}
+--- !u!4 &230443882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230443880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.74071, y: 123.07846, z: 194.71626}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230443883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230443880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591345bdd96c5e248a29f50aaf553610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kcFightRoomTP: 0
+  kcTrialRoomTP: 0
+  kcShopTP: 0
+  kcUpgradeTP: 0
+  kcHealTP: 0
+  kcBossTP: 0
+  kcReturnTP: 0
+  FightRoom: {fileID: 0}
+  TrialRoom: {fileID: 0}
+  Shop: {fileID: 0}
+  Upgrade: {fileID: 0}
+  Heal: {fileID: 0}
+  Boss: {fileID: 0}
 --- !u!43 &281521910
 Mesh:
   m_ObjectHideFlags: 0
@@ -5131,7 +5207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7343011523534207947, guid: ec537e3f01a538e41ae9a3fb2f8d1aab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -716.38226
+      value: -711.2
       objectReference: {fileID: 0}
     - target: {fileID: 7343011523534207947, guid: ec537e3f01a538e41ae9a3fb2f8d1aab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14251,3 +14327,4 @@ SceneRoots:
   - {fileID: 960234235}
   - {fileID: 7601739269191104939}
   - {fileID: 1091803020}
+  - {fileID: 230443882}
