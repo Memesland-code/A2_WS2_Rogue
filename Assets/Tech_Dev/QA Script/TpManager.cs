@@ -1,4 +1,7 @@
 using System;
+using Tech_Dev;
+using Tech_Dev.Player;
+using Tech_Dev.Procedural;
 using UnityEngine;
 
 public class TpManager : MonoBehaviour
@@ -23,6 +26,7 @@ public class TpManager : MonoBehaviour
     
     private int FightRoomCount = 1;
 
+    private GameObject _currentRoomEntry;
     private GameObject Player;
 
     private Vector3 originalPlayerPosition;
@@ -52,16 +56,19 @@ public class TpManager : MonoBehaviour
         {
             if (FightRoomCount == 1)
             {
+                _currentRoomEntry = FightRoom1;
                 Player.transform.position = FightRoom1.transform.position;
             }
 
             if (FightRoomCount == 2)
             {
+                _currentRoomEntry = FightRoom2;
                 Player.transform.position = FightRoom2.transform.position;
             }
 
             if (FightRoomCount == 3)
             {
+                _currentRoomEntry = FightRoom3;
                 Player.transform.position = FightRoom3.transform.position;
                 FightRoomCount = 0;
             }
@@ -70,29 +77,36 @@ public class TpManager : MonoBehaviour
 
         if (Input.GetKeyDown(kcTrialRoomTP))
         {
+            _currentRoomEntry = TrialRoom;
             Player.transform.position = TrialRoom.transform.position;
         }
 
         if (Input.GetKeyDown(kcShopTP))
         {
+            _currentRoomEntry = Shop;
             Player.transform.position = Shop.transform.position;
         }
 
         if (Input.GetKeyDown(kcUpgradeTP))
         {
+            _currentRoomEntry = Upgrade;
             Player.transform.position = Upgrade.transform.position;
         }
 
         if (Input.GetKeyDown(kcHealTP))
         {
+            _currentRoomEntry = Heal;
             Player.transform.position = Heal.transform.position;
         }
 
         if (Input.GetKeyDown(kcBossTP))
         {
+            _currentRoomEntry = Boss;
             Player.transform.position = Boss.transform.position;
         }
 
+        
+        Player.GetComponent<PlayerController>().SetNewCameraBounds(_currentRoomEntry.transform.parent.GetComponent<RoomManager>().GetRoomBounds());
 
     }
 }

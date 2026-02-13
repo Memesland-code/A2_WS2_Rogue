@@ -282,7 +282,7 @@ namespace Tech_Dev.Player
 
 
 
-	    private void SetNewCameraBounds(Collider2D newCollider)
+	    public void SetNewCameraBounds(Collider2D newCollider)
 	    {
 		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = newCollider;
 	    }
