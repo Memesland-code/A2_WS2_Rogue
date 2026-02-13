@@ -12,12 +12,16 @@ public class TpManager : MonoBehaviour
     [SerializeField] private KeyCode kcBossTP; //6
     [SerializeField] private KeyCode kcReturnTP; //9
 
-    [SerializeField] GameObject FightRoom;
+    [SerializeField] GameObject FightRoom1;
+    [SerializeField] GameObject FightRoom2;
+    [SerializeField] GameObject FightRoom3;
     [SerializeField] GameObject TrialRoom;
     [SerializeField] GameObject Shop;
     [SerializeField] GameObject Upgrade;
     [SerializeField] GameObject Heal;
     [SerializeField] GameObject Boss;
+    
+    private int FightRoomCount = 1;
 
     private GameObject Player;
 
@@ -32,7 +36,7 @@ public class TpManager : MonoBehaviour
             Player = GameObject.FindGameObjectWithTag("Player");
         }
 
-        if (Input.GetKeyDown(kcFightRoomTP) || Input.GetKeyDown(kcTrialRoomTP) || Input.GetKeyDown(kcShopTP) ||
+        if (Input.GetKeyDown(kcFightRoomTP) || Input.GetKeyDown(kcTrialRoomTP) || Input.GetKeyDown(kcShopTP) || 
             Input.GetKeyDown(kcUpgradeTP) || Input.GetKeyDown(kcHealTP) || Input.GetKeyDown(kcBossTP) && firstTime)
         {
             firstTime = false;
@@ -46,37 +50,46 @@ public class TpManager : MonoBehaviour
 
         if (Input.GetKeyDown(kcFightRoomTP))
         {
-            originalPlayerPosition = Player.transform.position;
-            Player.transform.position = FightRoom.transform.position;
+            if (FightRoomCount == 1)
+            {
+                Player.transform.position = FightRoom1.transform.position;
+            }
+
+            if (FightRoomCount == 2)
+            {
+                Player.transform.position = FightRoom2.transform.position;
+            }
+
+            if (FightRoomCount == 3)
+            {
+                Player.transform.position = FightRoom3.transform.position;
+                FightRoomCount = 0;
+            }
+            FightRoomCount = FightRoomCount + 1;
         }
 
         if (Input.GetKeyDown(kcTrialRoomTP))
         {
-            originalPlayerPosition = Player.transform.position;
             Player.transform.position = TrialRoom.transform.position;
         }
 
         if (Input.GetKeyDown(kcShopTP))
         {
-            originalPlayerPosition = Player.transform.position;
             Player.transform.position = Shop.transform.position;
         }
 
         if (Input.GetKeyDown(kcUpgradeTP))
         {
-            originalPlayerPosition = Player.transform.position;
             Player.transform.position = Upgrade.transform.position;
         }
 
         if (Input.GetKeyDown(kcHealTP))
         {
-            originalPlayerPosition = Player.transform.position;
             Player.transform.position = Heal.transform.position;
         }
 
         if (Input.GetKeyDown(kcBossTP))
         {
-            originalPlayerPosition = Player.transform.position;
             Player.transform.position = Boss.transform.position;
         }
 
