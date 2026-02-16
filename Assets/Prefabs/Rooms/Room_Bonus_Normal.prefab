@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8bca95f7c947b4db5fb152a0d693d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anisotropy: 0.25
-  scattering: 16
-  radius: 0.2
+  anisotropy: 0.77
+  scattering: 5.6
+  radius: 0
 --- !u!1 &175687660182951171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,9 +2999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8bca95f7c947b4db5fb152a0d693d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anisotropy: 0.25
-  scattering: 16
-  radius: 0.2
+  anisotropy: 0.77
+  scattering: 5.6
+  radius: 0
 --- !u!1 &3280945497492533454
 GameObject:
   m_ObjectHideFlags: 0
@@ -13101,7 +13101,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6991381605986783032, guid: 99cf2f354a32d0c4d89a1806c59309a8, type: 3}
+    - {fileID: 5944006011829355203, guid: 99cf2f354a32d0c4d89a1806c59309a8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99cf2f354a32d0c4d89a1806c59309a8, type: 3}
