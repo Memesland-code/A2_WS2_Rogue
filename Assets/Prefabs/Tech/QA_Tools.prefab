@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1059170209101739117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6148592963540452439}
+  - component: {fileID: 6741103636521987530}
+  - component: {fileID: 6078048140867985268}
+  m_Layer: 0
+  m_Name: QA_Tools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6148592963540452439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059170209101739117}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.740723, y: 123.07846, z: 194.71626}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6741103636521987530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059170209101739117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16096a39a9fa88146b8df57f6ea2e7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackKeybord: 323
+  AttackControler: 332
+  Sword: {fileID: 0}
+  mAttack: {fileID: 2100000, guid: fb44e725d3a318e40823c2fa29ac529e, type: 2}
+  mBase: {fileID: 2100000, guid: 1ab654be493ccb940acc4ce380465d12, type: 2}
+  swordRenderer: {fileID: 0}
+--- !u!114 &6078048140867985268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059170209101739117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591345bdd96c5e248a29f50aaf553610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kcFightRoomTP: 257
+  kcTrialRoomTP: 258
+  kcShopTP: 259
+  kcUpgradeTP: 260
+  kcHealTP: 261
+  kcBossTP: 262
+  kcReturnTP: 265
+  FightRoom1: {fileID: 0}
+  FightRoom2: {fileID: 0}
+  FightRoom3: {fileID: 0}
+  TrialRoom: {fileID: 0}
+  Shop: {fileID: 0}
+  Upgrade: {fileID: 0}
+  Heal: {fileID: 0}
+  Boss: {fileID: 0}

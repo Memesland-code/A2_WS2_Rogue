@@ -2,6 +2,7 @@ using System;
 using Tech_Dev;
 using Tech_Dev.Player;
 using Tech_Dev.Procedural;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TpManager : MonoBehaviour
@@ -25,6 +26,8 @@ public class TpManager : MonoBehaviour
     [SerializeField] GameObject Boss;
     
     private int FightRoomCount = 1;
+    
+    private bool Security;
 
     private GameObject _currentRoomEntry;
     private GameObject Player;
@@ -43,6 +46,7 @@ public class TpManager : MonoBehaviour
         if (Input.GetKeyDown(kcFightRoomTP) || Input.GetKeyDown(kcTrialRoomTP) || Input.GetKeyDown(kcShopTP) || 
             Input.GetKeyDown(kcUpgradeTP) || Input.GetKeyDown(kcHealTP) || Input.GetKeyDown(kcBossTP) && firstTime)
         {
+            Security = true;
             firstTime = false;
             originalPlayerPosition = Player.transform.position;
         }
@@ -105,8 +109,17 @@ public class TpManager : MonoBehaviour
             Player.transform.position = Boss.transform.position;
         }
 
+        if (Security)
+        {
+        if (_currentRoomEntry == null) return;
+        print(_currentRoomEntry.transform.parent.name);
+        Player.GetComponent<PlayerController>().SetNewCameraBounds(_currentRoomEntry.transform.parent.GameObject().GetComponent<RoomManager>().GetRoomBounds());
+        Security = false;
+            
+        }
         
-        Player.GetComponent<PlayerController>().SetNewCameraBounds(_currentRoomEntry.transform.parent.GetComponent<RoomManager>().GetRoomBounds());
+        
+
 
     }
 }
