@@ -23,7 +23,6 @@ namespace Tech_Dev.Player
             CleanList();
             if (other.TryGetComponent(out EnemyRat _) || other.TryGetComponent(out EnemySkull _))
             {
-                print(other.gameObject.name);
                 if (_enemiesInCollider.Contains(other.gameObject)) return;
                 _enemiesInCollider.Add(other.gameObject);
             }

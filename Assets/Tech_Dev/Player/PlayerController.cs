@@ -209,10 +209,8 @@ namespace Tech_Dev.Player
 			    foreach (GameObject enemy in enemiesInRange)
 			    {
 				    if (!enemy) return;
-				    print("Enemy detected in collider" + enemy.name);
 				    
 				    damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
-				    print(enemy.name + " - " + damagedEnemy);
 
 			    }
 			    
@@ -298,7 +296,6 @@ namespace Tech_Dev.Player
 	    {
 		    if (enemy.TryGetComponent(out EnemyRat rat))
 		    {
-			    print("Damage to rat");
 			    rat.TakeDamage(damage);
 			    return true;
 		    }

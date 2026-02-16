@@ -148,7 +148,6 @@ namespace Tech_Dev.Procedural
 
 			if (RoomEnemies.Count == 0)
 			{
-				print("Room cleared!");
 				UnlockTeleporters();
 			}
 		}
