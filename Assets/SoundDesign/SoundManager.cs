@@ -28,7 +28,10 @@ public enum SoundType
     PlatformDown,
     PlatformUp,
     MerchantBuy,
-    MerchantBlood
+    MerchantBlood,
+    MusicMainMenu,
+    MusicCombat,
+    MusicWin
 }
 
 
@@ -44,6 +47,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource audioSource;
     [Range(0f,1f)] public float volume = 1f;
     [Range(0f,1f)] public float pitch = 1f;
+    private AudioSource OldTrack, CurrentTrack; //Faire le fade in fade out depuis le old track jusqu'au current
     private void Awake()
     {
         instance = this;
@@ -58,8 +62,15 @@ public class SoundManager : MonoBehaviour
     {
         AudioClip[] clips = instance.soundList[(int)sound].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+        //Randomize pitch
+        instance.audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
         instance.audioSource.PlayOneShot(randomClip, volume);
         //instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+    }
+
+    public static void PlayMusic(SoundType sound, float volume = 1)
+    {
+        
     }
     
 #if UNITY_EDITOR
