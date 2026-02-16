@@ -349,6 +349,20 @@ namespace Tech_Dev.Player
 		    
 		    GameManager.GetFadeRef().PlayFadeOut();
 	    }
+
+
+
+	    public float GetHealth()
+	    {
+		    return _health;
+	    }
+
+
+
+	    public float GetMaxHealth()
+	    {
+		    return _maxHealth;
+	    }
 	    
 	    
 	    
