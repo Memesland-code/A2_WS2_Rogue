@@ -19,6 +19,8 @@ namespace Tech_Dev
         private static PlayerController _playerScriptRef;
 
         private static GenerationManager _generationManager;
+
+        private bool _noClip;
         
         
         
@@ -123,6 +125,38 @@ namespace Tech_Dev
             if (Input.GetKeyDown(KeyCode.Keypad1))
             {
                 _playerScriptRef.GetCurrentRoom().KillAllEnemies();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Keypad2))
+            {
+                if (!_noClip)
+                {
+                    _playerRef.GetComponent<CapsuleCollider>().enabled = false;
+                    _playerRef.GetComponent<Rigidbody>().isKinematic = true;
+                    _playerScriptRef.NoClip = true;
+                    
+                    GetCamera().GetComponent<CinemachineConfiner2D>().BoundingShape2D = null;
+                    
+                    _noClip = true;
+                }
+                else
+                {
+                    _playerRef.GetComponent<CapsuleCollider>().enabled = true;
+                    _playerRef.GetComponent<Rigidbody>().isKinematic = false;
+                    _playerScriptRef.NoClip = false;
+                    
+                    _noClip = false;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Keypad9))
+            {
+                StartCoroutine(_playerScriptRef.PlayerDeath());
+            }
+
+            if (Input.GetKeyDown(KeyCode.Keypad4))
+            {
+                _playerScriptRef.GoBackToRoomEntry();
             }
         }
     }

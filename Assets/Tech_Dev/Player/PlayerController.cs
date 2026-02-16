@@ -52,6 +52,7 @@ namespace Tech_Dev.Player
 	    
 	    private Rigidbody _rb;
 	    private InputManager _inputs;
+	    private bool _isDead;
 	    
 	    private SwordDamager _swordDamager;
 
@@ -73,6 +74,8 @@ namespace Tech_Dev.Player
 	    
 	    // Cheat codes
 	    private bool _godMode;
+
+	    public bool NoClip;
 	    
 	    
 	    
@@ -97,6 +100,8 @@ namespace Tech_Dev.Player
 		    transform.position = _currentRoom.GetRoomEntryCoord();
 
 		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = _currentRoom.GetRoomBounds();
+
+		    _isDead = false;
 	    }
 
 	    
@@ -139,6 +144,7 @@ namespace Tech_Dev.Player
 			    GetComponent<CapsuleCollider>().sharedMaterial = _groundMaterial;
 		    }
 		    
+		    
 		    // Process values
 		    float realGravity = _rb.linearVelocity.y >= 0 ? _rb.linearVelocity.y : _rb.linearVelocity.y * FastFallingFactor;
 		    realGravity = Mathf.Max(realGravity, -15);
@@ -147,8 +153,12 @@ namespace Tech_Dev.Player
 		    
 		    Vector3 horizontalMove = new(_inputs.Move.x * realSpeed, 0, 0);
 
-		    // Apply to physics
-		    if (_isDashing)
+
+		    if (NoClip)
+		    {
+			    transform.position += new Vector3(_inputs.Move.x, _inputs.Move.y, 0);
+		    }
+		    else if (_isDashing) // Apply to physics
 		    {
 			    Vector3 dashVelocity = new(_inputs.Move.x * _dashForce * _dashMultiplierX, _inputs.Move.y * _dashForce * _dashMultiplierY, 0);
 			    _rb.linearVelocity = new Vector3(0, 0, 0) + horizontalMove + dashVelocity;
@@ -269,7 +279,7 @@ namespace Tech_Dev.Player
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    yield return new WaitForSeconds(1f);
 
-		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().InitRoomsGeneration();
+		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().ResetDungeon(false);
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
@@ -333,12 +343,20 @@ namespace Tech_Dev.Player
 
 
 
-	    private IEnumerator PlayerDeath()
+	    public IEnumerator PlayerDeath()
 	    {
+		    if (!_isDead) _isDead = true;
 		    GameManager.GetFadeRef().PlayFadeIn();
+		    
+		    yield return new WaitForSeconds(1f);
 
 		    //TODO send info to GameManager? (may avoid bugs)
 		    //TODO reset in-run related elements?
+		    
+		    _currentRoom.KillAllEnemies();
+		    
+		    GameManager.GetGenerationManagerRef().ResetDungeon(false);
+		    
 		    foreach (Transform hubElement in GameObject.FindWithTag("Respawn").transform)
 		    {
 			    if (hubElement.gameObject.CompareTag("RoomEntry"))
@@ -349,9 +367,8 @@ namespace Tech_Dev.Player
 		    
 		    ResetPlayer();
 		    
-		    yield return new WaitForSeconds(3f);
-		    
-		    GameManager.GetFadeRef().PlayFadeOut();
+		    //TODO show defeat screen
+		    GameManager.GetFadeRef().PlayFadeOut(); //! TO REMOVE LATER
 	    }
 
 
@@ -378,6 +395,11 @@ namespace Tech_Dev.Player
 	    public RoomManager GetCurrentRoom()
 	    {
 		    return _currentRoom;
+	    }
+
+	    public void GoBackToRoomEntry()
+	    {
+		    transform.position = _currentRoom.GetRoomEntryCoord();
 	    }
     }
 }

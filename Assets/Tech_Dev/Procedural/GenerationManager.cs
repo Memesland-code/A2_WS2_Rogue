@@ -61,9 +61,9 @@ namespace Tech_Dev.Procedural
 
 
 
-        public void ResetDungeon(bool enableSeed)
+        public void ResetDungeon(bool enableSetSeed)
         {
-            InitSeed(enableSeed);
+            InitSeed(enableSetSeed);
             print("Generating new dungeon with parameters:" + "\nSeed: " + _seed);
                 
             _rooms.Clear();
@@ -78,9 +78,9 @@ namespace Tech_Dev.Procedural
 
 
         // Set random seed or selected seed depending on user choice
-        private void InitSeed(bool enableSeed)
+        private void InitSeed(bool enableSetSeed)
         {
-            if (!enableSeed)
+            if (!enableSetSeed)
             {
                 _seed = (int)DateTime.Now.Ticks;
             }
