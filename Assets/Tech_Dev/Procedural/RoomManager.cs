@@ -137,6 +137,8 @@ namespace Tech_Dev.Procedural
 			
 			Transform enemy = Instantiate(_bossPrefab.transform, spawners[0].transform.position, Quaternion.Euler(0, 0, 0));
 			
+			enemy.gameObject.GetComponent<BossSkull>().RoomManagerReference = this;
+			
 			RoomEnemies.Add(enemy.gameObject);
 		}
 
@@ -200,10 +202,10 @@ namespace Tech_Dev.Procedural
 		
 		public void KillAllEnemies()
 		{
-			foreach (GameObject enemy in RoomEnemies)
+			while (RoomEnemies.Count > 0)
 			{
-				RegisterEnemyDeath(enemy);
-				Destroy(enemy);
+				Destroy(RoomEnemies[0]);
+				RegisterEnemyDeath(RoomEnemies[0]);
 			}
 		}
 	}

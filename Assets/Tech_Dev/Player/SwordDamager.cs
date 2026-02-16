@@ -21,7 +21,7 @@ namespace Tech_Dev.Player
         private void OnTriggerEnter(Collider other)
         {
             CleanList();
-            if (other.TryGetComponent(out EnemyRat _) || other.TryGetComponent(out EnemySkull _))
+            if (other.TryGetComponent(out EnemyRat _) || other.TryGetComponent(out EnemySkull _) || other.TryGetComponent(out BossSkull _))
             {
                 if (_enemiesInCollider.Contains(other.gameObject)) return;
                 _enemiesInCollider.Add(other.gameObject);
@@ -31,7 +31,7 @@ namespace Tech_Dev.Player
         private void OnTriggerExit(Collider other)
         {
             CleanList();
-            if (other.TryGetComponent(out EnemyRat _) || other.TryGetComponent(out EnemySkull _))
+            if (other.TryGetComponent(out EnemyRat _) || other.TryGetComponent(out EnemySkull _) || other.TryGetComponent(out BossSkull _))
             {
                 _enemiesInCollider.Remove(other.gameObject);
             }

@@ -269,8 +269,7 @@ namespace Tech_Dev.Player
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    yield return new WaitForSeconds(1f);
 
-		    //TODO test if room regen good when taking teleporter
-		    print(_currentRoom.RoomId);
+		    print("Previous room: " + _currentRoom.RoomId);
 		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().InitRoomsGeneration();
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
@@ -279,6 +278,7 @@ namespace Tech_Dev.Player
 		    
 		    yield return new WaitForSeconds(_teleportationFadeTime);
 		    _currentRoom.InitRoom();
+		    print("New room: " + _currentRoom.RoomId);
 		    
 		    GameManager.GetFadeRef().PlayFadeOut();
 	    }
@@ -303,6 +303,12 @@ namespace Tech_Dev.Player
 		    if (enemy.TryGetComponent(out EnemySkull skull))
 		    {
 			    skull.TakeDamage(damage);
+			    return true;
+		    }
+
+		    if (enemy.TryGetComponent(out BossSkull bossSkull))
+		    {
+			    bossSkull.TakeDamage(damage);
 			    return true;
 		    }
 

@@ -42,6 +42,8 @@ namespace Tech_Dev
         private void Start()
         {
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
+
+            _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
         }
 
         
