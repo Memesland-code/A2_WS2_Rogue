@@ -269,7 +269,6 @@ namespace Tech_Dev.Player
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    yield return new WaitForSeconds(1f);
 
-		    print("Previous room: " + _currentRoom.RoomId);
 		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().InitRoomsGeneration();
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
@@ -278,7 +277,6 @@ namespace Tech_Dev.Player
 		    
 		    yield return new WaitForSeconds(_teleportationFadeTime);
 		    _currentRoom.InitRoom();
-		    print("New room: " + _currentRoom.RoomId);
 		    
 		    GameManager.GetFadeRef().PlayFadeOut();
 	    }
