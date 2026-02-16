@@ -20,6 +20,7 @@ namespace Tech_Dev.Procedural
         [SerializeField] private List<GameObject> _shopRoomPrefabs;
         [SerializeField] private List<GameObject> _upgradeRoomPrefabs;
         [SerializeField] private List<GameObject> _trialRoomPrefabs;
+        [SerializeField] private List<GameObject> _healRoomPrefabs;
         [Space(5)]
         [SerializeField] private List<GameObject> _bossRoomPrefabs;
 
@@ -86,10 +87,23 @@ namespace Tech_Dev.Procedural
             Random.InitState(_seed);
         }
         
+        /*
+         * HUB
+         * 2 fight rooms
+         * shop - heal
+         * 1/2 fight random
+         * bonus/upgrade - trial/gambling
+         * 1/2 fight random (depends on previous spawn)
+         * bonus - trial/gambling
+         * shop - heal
+         * BOSS
+         */
         
+        // 5 fight room max
 
         public void InitRoomsGeneration()
         {
+            //TODO Rework to correspond v2
             //info First rooms init of types
             for (int i = 0; i <= _roomsNumber; i++)
             {
@@ -150,7 +164,7 @@ namespace Tech_Dev.Procedural
             
             
             
-            //TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements
+            //!TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements
 
             
             
