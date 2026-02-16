@@ -12,7 +12,7 @@ namespace Tech_Dev.GameplayElement
 
         private void Awake()
         {
-            Destroy(gameObject, 5);
+            Destroy(gameObject, 3);
         }
 
         private void OnTriggerEnter(Collider other)
