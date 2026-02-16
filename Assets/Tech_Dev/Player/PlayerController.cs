@@ -356,5 +356,10 @@ namespace Tech_Dev.Player
 	    {
 		    _godMode = !_godMode;
 	    }
+
+	    public RoomManager GetCurrentRoom()
+	    {
+		    return _currentRoom;
+	    }
     }
 }

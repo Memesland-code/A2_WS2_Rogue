@@ -103,6 +103,11 @@ namespace Tech_Dev
             {
                 _fadeEffect.PlayFadeOut();
             }
+
+            if (Input.GetKeyDown(KeyCode.Keypad1))
+            {
+                _playerScriptRef.GetCurrentRoom().KillAllEnemies();
+            }
         }
     }
 }

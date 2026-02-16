@@ -195,5 +195,16 @@ namespace Tech_Dev.Procedural
 			Debug.LogError("No room entry found in room ID: " + RoomId + " of type: " + Type);
 			return Vector3.zero;
 		}
+		
+		
+		
+		public void KillAllEnemies()
+		{
+			foreach (GameObject enemy in RoomEnemies)
+			{
+				RegisterEnemyDeath(enemy);
+				Destroy(enemy);
+			}
+		}
 	}
 }
