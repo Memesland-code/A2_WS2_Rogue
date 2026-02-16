@@ -5,9 +5,7 @@ using Slider = UnityEngine.UI.Slider;
 
 public class UI_PV : MonoBehaviour
 {
-
-  [SerializeField]
-  private  float _health;  
+//  [SerializeField]
   [SerializeField] private RectTransform _barRect;
   
   [SerializeField] private RectMask2D _mask;
@@ -27,11 +25,11 @@ public class UI_PV : MonoBehaviour
 
   public void SetValue(int newValue)
   {
-      var targetWidth = newValue * _maxRightMask / _health.MaxHp ; // remplacez MaxHp par l'équivalant dans le script de Kilyan
-      var newRightMask = _maxRightMask + _InitialRightMask - targetWidth;
-      var padding = _mask.padding;
-      padding.z = newRightMask;
-      _mask.padding = padding;
+ //     var targetWidth = newValue * _maxRightMask / _health.MaxHp;
+   //   var newRightMask = _maxRightMask + _InitialRightMask - targetWidth;
+     // var padding = _mask.padding;
+      //padding.z = newRightMask;
+      //_mask.padding = padding;
       
   }
 }
