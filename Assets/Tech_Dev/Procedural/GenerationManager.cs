@@ -17,8 +17,9 @@ namespace Tech_Dev.Procedural
         [Space(10)]
         [SerializeField] private List<RoomDifficultyPrefabs> _fightRoomPrefabs;
         [Space(5)]
-        [SerializeField] private List<GameObject> _notableRoomPrefabs;
-        //TODO Add gambling room
+        [SerializeField] private List<GameObject> _shopRoomPrefabs;
+        [SerializeField] private List<GameObject> _upgradeRoomPrefabs;
+        [SerializeField] private List<GameObject> _trialRoomPrefabs;
         [Space(5)]
         [SerializeField] private List<GameObject> _bossRoomPrefabs;
 
@@ -39,7 +40,7 @@ namespace Tech_Dev.Procedural
                 }
             }
             
-            InitSeed();
+            InitSeed(_enableSeed);
             
             _rooms = new List<List<Room>>();
 
@@ -53,27 +54,32 @@ namespace Tech_Dev.Procedural
         {
             if (Input.GetKeyDown(KeyCode.N))
             {
-                Console.Clear();
-                
-                InitSeed();
-                print("Generating new dungeon with parameters:" + "\nSeed: " + _seed);
-                
-                _rooms.Clear();
-                foreach (Transform tr in gameObject.transform)
-                {
-                    Destroy(tr.gameObject);
-                }
-                InitRoomsGeneration();
-                
-                print("Room Generation Complete!");
+                ResetDungeon(_enableSeed);
             }
         }
 
 
-        // Set random seed or selected seed depending on user choice
-        private void InitSeed()
+
+        public void ResetDungeon(bool enableSeed)
         {
-            if (!_enableSeed)
+            InitSeed(enableSeed);
+            print("Generating new dungeon with parameters:" + "\nSeed: " + _seed);
+                
+            _rooms.Clear();
+            foreach (Transform tr in gameObject.transform)
+            {
+                Destroy(tr.gameObject);
+            }
+            InitRoomsGeneration();
+                
+            print("Room Generation Complete!");
+        }
+
+
+        // Set random seed or selected seed depending on user choice
+        private void InitSeed(bool enableSeed)
+        {
+            if (!enableSeed)
             {
                 _seed = (int)DateTime.Now.Ticks;
             }
@@ -169,15 +175,15 @@ namespace Tech_Dev.Procedural
                             break;
                             
                         case Type.Merchant:
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
+                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
                             break;
                         
                         case Type.Upgrade:
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
+                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
                             break;
                         
                         case Type.Gambling:
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
+                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
                             break;
                         
                         case Type.Healing:
@@ -186,7 +192,7 @@ namespace Tech_Dev.Procedural
                             {
                                 Debug.LogError("Healing room instantiated on other slot than pre-boss!\nRoom ID: " + room.RoomId);
                             }
-                            room.RoomPrefab = _notableRoomPrefabs[Random.Range(0, _notableRoomPrefabs.Count)];
+                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
                             break;
                         
                         case Type.Boss:
