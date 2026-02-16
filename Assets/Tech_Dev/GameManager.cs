@@ -88,14 +88,14 @@ namespace Tech_Dev
 
 
 
-        public GameObject GetPlayerRef()
+        public static GameObject GetPlayerRef()
         {
             return _playerRef;
         }
 
 
 
-        public PlayerController GetPlayerScriptRef()
+        public static PlayerController GetPlayerScriptRef()
         {
             return _playerScriptRef;
         }
