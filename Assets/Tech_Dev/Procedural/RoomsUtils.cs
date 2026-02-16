@@ -13,9 +13,9 @@ namespace Tech_Dev.Procedural
 	{
 		Spawn,
 		Fight,
-		Merchant,
+		Shop,
 		Upgrade,
-		Gambling,
+		Trial,
 		Healing,
 		Boss
 	}
@@ -23,7 +23,7 @@ namespace Tech_Dev.Procedural
 	public enum Difficulty
 	{
 		Pristine,
-		Ruin,
+		Ruins,
 		None
 	}
     

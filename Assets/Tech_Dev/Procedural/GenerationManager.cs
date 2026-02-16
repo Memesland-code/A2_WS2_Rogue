@@ -91,10 +91,10 @@ namespace Tech_Dev.Procedural
          * HUB
          * 2 fight rooms
          * shop - heal
-         * 1/2 fight random
+         * 1 fight random
          * bonus/upgrade - trial/gambling
-         * 1/2 fight random (depends on previous spawn)
-         * bonus - trial/gambling
+         * 2 fight random
+         * bonus - trial
          * shop - heal
          * BOSS
          */
@@ -103,36 +103,47 @@ namespace Tech_Dev.Procedural
 
         public void InitRoomsGeneration()
         {
-            //TODO Rework to correspond v2
             //info First rooms init of types
             for (int i = 0; i <= _roomsNumber; i++)
             {
                 Room roomChoice1 = new();
                 Room roomChoice2 = new();
 
-                if (i == 0)
+                if (i is 0 or 1 or 3 or 5 or 6) // Room 1, 2, 4, 6 and 7  = fight
                 {
                     roomChoice1.Type = Type.Fight;
+                    roomChoice1.Difficulty = Difficulty.Pristine;
+                    
                     roomChoice2.Type = Type.Fight;
+                    roomChoice2.Difficulty = Difficulty.Ruins;
                 }
-                else if (i == _roomsNumber) // For last room = boss
+                else if (i == 2 || i == _roomsNumber - 1) // Room 3 and last before BOSS = Healing and Shop
+                {
+                    roomChoice1.Type = Type.Healing;
+                    roomChoice1.Difficulty = Difficulty.Pristine;
+                    
+                    roomChoice2.Type = Type.Shop;
+                    roomChoice2.Difficulty = Difficulty.Ruins;
+                }
+                else if (i is 4 or 7) // Room 5 and 8 = Trial and Upgrade
+                {
+                    roomChoice1.Type = Type.Upgrade;
+                    roomChoice1.Difficulty = Difficulty.Pristine;
+                    
+                    roomChoice2.Type = Type.Trial;
+                    roomChoice2.Difficulty = Difficulty.Ruins;
+                }
+                else if (i == _roomsNumber) // Last room = boss
                 {
                     roomChoice1.Type = Type.Boss;
                     roomChoice1.Difficulty = Difficulty.Pristine;
                     
                     roomChoice2.Type = Type.Boss;
-                    roomChoice2.Difficulty = Difficulty.Ruin;
+                    roomChoice2.Difficulty = Difficulty.Ruins;
                 }
-                else if (i == _roomsNumber - 1)
+                else // For others generate random rooms (should not happen wih v2)
                 {
-                    roomChoice1.Type = Type.Healing;
-                    roomChoice1.Difficulty = Difficulty.None;
-                    
-                    roomChoice2.Type = Type.Healing;
-                    roomChoice2.Difficulty = Difficulty.None;
-                }
-                else // For others generate random rooms
-                {
+                    Debug.LogWarning("Check for correct room generation, code should not pass in last else case room room gen step 1!");
                     roomChoice1.Type = (Type)Random.Range(1, Enum.GetValues(typeof(Type)).Length-2);
 
                     if (roomChoice1.Type == Type.Fight)
@@ -140,14 +151,14 @@ namespace Tech_Dev.Procedural
                         roomChoice1.Difficulty = Difficulty.Pristine;
                         
                         roomChoice2.Type = Type.Fight;
-                        roomChoice2.Difficulty = Difficulty.Ruin;
+                        roomChoice2.Difficulty = Difficulty.Ruins;
                     }
                     else
                     {
                         roomChoice2.Type = (Type)Random.Range(2, Enum.GetValues(typeof(Type)).Length-2);
 
-                        roomChoice1.Difficulty = roomChoice1.Type == Type.Gambling ? Difficulty.Pristine : Difficulty.None;
-                        roomChoice2.Difficulty = roomChoice2.Type == Type.Gambling ? Difficulty.Ruin : Difficulty.None;
+                        roomChoice1.Difficulty = roomChoice1.Type == Type.Trial ? Difficulty.Pristine : Difficulty.None;
+                        roomChoice2.Difficulty = roomChoice2.Type == Type.Trial ? Difficulty.Ruins : Difficulty.None;
                     }
                 }
                 roomChoice1.RoomId = i;
@@ -164,51 +175,52 @@ namespace Tech_Dev.Procedural
             
             
             
-            //!TODO [v2] - Iterate on rooms to correspond to rooms types and number requirements
-
-            
-            
+            bool previousPoolSwitch = false;
             //info Setting room prefab for all rooms depending on their type
             foreach (var roomsChoice in _rooms)
             {
+                previousPoolSwitch = !previousPoolSwitch;
                 foreach (var room in roomsChoice)
                 {
                     // Assign prefab depending on room type
                     switch (room.Type)
                     {
                         case Type.Fight:
-                            //info 0 = Pristine room ; 1 = Ruin room
+                            //info [0] = Pristine room ; [1] = Ruin room
                             if (room.Difficulty == Difficulty.Pristine)
                             {
-                                room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count)].PrefabsChoice[0];
+                                if (!previousPoolSwitch)
+                                {
+                                    room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count - 2)].PrefabsChoice[0];
+                                }
+                                else
+                                {
+                                    room.RoomPrefab = _fightRoomPrefabs[Random.Range(2, _fightRoomPrefabs.Count)].PrefabsChoice[0];
+                                }
                             }
                             else
                             {
-                                room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count)].PrefabsChoice[1];
+                                if (!previousPoolSwitch)
+                                {
+                                    room.RoomPrefab = _fightRoomPrefabs[Random.Range(0, _fightRoomPrefabs.Count - 2)].PrefabsChoice[1];
+                                }
+                                else
+                                { 
+                                    room.RoomPrefab = _fightRoomPrefabs[Random.Range(2, _fightRoomPrefabs.Count)].PrefabsChoice[1];
+                                }
                             }
                             break;
                             
-                        case Type.Merchant:
-                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
-                            break;
+                        case Type.Shop:
                         
                         case Type.Upgrade:
-                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
-                            break;
                         
-                        case Type.Gambling:
-                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
-                            break;
+                        case Type.Trial:
                         
                         case Type.Healing:
-                            if (room.RoomId == (_roomsNumber - 1) || room.RoomId == (_roomsNumber - 1 + 100)) {}
-                            else
-                            {
-                                Debug.LogError("Healing room instantiated on other slot than pre-boss!\nRoom ID: " + room.RoomId);
-                            }
                             room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
                             break;
-                        
+
                         case Type.Boss:
                             room.RoomPrefab = _bossRoomPrefabs[Random.Range(0, _bossRoomPrefabs.Count)];
                             break;
@@ -299,7 +311,7 @@ namespace Tech_Dev.Procedural
             
             //info if room is boss room
             _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform);
-            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform);
+            _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform); 
         }
     }
 }
