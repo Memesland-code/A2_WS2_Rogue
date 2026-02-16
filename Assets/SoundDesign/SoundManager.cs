@@ -1,4 +1,6 @@
 using System;
+using System.Transactions;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -35,19 +37,20 @@ public enum SoundType
 }
 
 
-    
-    
-    
-
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private SoundList[] soundList;
     private static SoundManager instance;
     private AudioSource audioSource;
-    [Range(0f,1f)] public float volume = 1f;
-    [Range(0f,1f)] public float pitch = 1f;
-    private AudioSource OldTrack, CurrentTrack; //Faire le fade in fade out depuis le old track jusqu'au current
+
+
+    [Range(0f, 1f)] public float volume = 1f;
+    [Range(0f, 1f)] public float pitch = 1f;
+    
+
+
+
     private void Awake()
     {
         instance = this;
@@ -68,11 +71,11 @@ public class SoundManager : MonoBehaviour
         //instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
     }
 
-    public static void PlayMusic(SoundType sound, float volume = 1)
+    /*public static void PlayMusic(SoundType sound, float volume = 1)
     {
-        
-    }
-    
+
+    }*/
+
 #if UNITY_EDITOR
     private void OnEnable()
     {
@@ -83,7 +86,7 @@ public class SoundManager : MonoBehaviour
             soundList[i].name = names[i];
         }
     }
-    #endif
+#endif
 
     [Serializable]
     public struct SoundList
@@ -92,7 +95,10 @@ public class SoundManager : MonoBehaviour
         {
             get => sounds;
         }
+
         [HideInInspector] public string name;
         [SerializeField] private AudioClip[] sounds;
     }
-}
+    }
+    
+
