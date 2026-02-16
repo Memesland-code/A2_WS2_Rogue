@@ -15,6 +15,7 @@ namespace Tech_Dev.Procedural
 
 		private GameObject _ratPrefab;
 		private GameObject _skullPrefab;
+		private GameObject _bossPrefab;
 		
 		private GameManager _gameManager;
 
@@ -28,6 +29,7 @@ namespace Tech_Dev.Procedural
 			
 			_ratPrefab = _gameManager.GetEnemyRatPrefab();
 			_skullPrefab = _gameManager.GetEnemySkullPrefab();
+			_bossPrefab = _gameManager.GetBossPrefab();
 
 			foreach (Transform go in transform)
 			{
@@ -43,9 +45,15 @@ namespace Tech_Dev.Procedural
 
 		public void InitRoom()
 		{
-			if (Type == Type.Fight)
+			switch (Type)
 			{
-				InitFightRoom();
+				case Type.Fight:
+					InitFightRoom();
+					break;
+				
+				case Type.Boss:
+					InitBossRoom();
+					break;
 			}
 		}
 
@@ -109,6 +117,27 @@ namespace Tech_Dev.Procedural
 
 				RoomEnemies.Add(enemy.gameObject);
 			}
+		}
+
+
+
+		private void InitBossRoom()
+		{
+			if (_roomTeleporter != null)
+			{
+				_roomTeleporter.GetComponent<Teleporter>().TeleportToHub = true;
+				_roomTeleporter.SetActive(false);
+			}
+			else
+			{
+				Debug.LogError("No room teleporter found in room ID: " + RoomId);
+			}
+
+			var spawners = GetSpawners();
+			
+			Transform enemy = Instantiate(_bossPrefab.transform, spawners[0].transform.position, Quaternion.Euler(0, 0, 0));
+			
+			RoomEnemies.Add(enemy.gameObject);
 		}
 
 

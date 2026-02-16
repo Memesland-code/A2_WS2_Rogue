@@ -661,6 +661,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd7fadda86059944bfd031dc36e7b4a, type: 3}
+--- !u!1001 &1373516015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 598714406051557755, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_Name
+      value: Room_Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -160.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
 --- !u!1001 &1390206552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,14 +1060,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GenerationManager
       objectReference: {fileID: 0}
-    - target: {fileID: 970269019490190625, guid: 182ff8a7326b54e40a71759c63c37f7e, type: 3}
-      propertyPath: '_fightRoomPrefabs.Array.data[1].PrefabsChoice.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8632120265011129213, guid: ba2db603d15a3574594ff6a51691a916, type: 3}
-    - target: {fileID: 970269019490190625, guid: 182ff8a7326b54e40a71759c63c37f7e, type: 3}
-      propertyPath: '_fightRoomPrefabs.Array.data[2].PrefabsChoice.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8870304329520367606, guid: e73f61ca958d3fa4c96949dde6c724e6, type: 3}
     - target: {fileID: 3028892684352781211, guid: 182ff8a7326b54e40a71759c63c37f7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8052697
@@ -1450,6 +1499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
+      propertyPath: _bossPrefab
+      value: 
+      objectReference: {fileID: 5585818214824933734, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
     - target: {fileID: 3778439703684701780, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -1482,3 +1535,4 @@ SceneRoots:
   - {fileID: 11087331}
   - {fileID: 851208373}
   - {fileID: 960234235}
+  - {fileID: 1373516015}

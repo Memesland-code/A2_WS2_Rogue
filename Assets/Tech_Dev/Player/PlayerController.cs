@@ -4,6 +4,7 @@ using Tech_Dev.Enemies;
 using Tech_Dev.Procedural;
 using Unity.Cinemachine;
 using UnityEngine;
+using Type = Tech_Dev.Procedural.Type;
 
 namespace Tech_Dev.Player
 {
@@ -269,6 +270,10 @@ namespace Tech_Dev.Player
 	    {
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    yield return new WaitForSeconds(1f);
+
+		    //TODO test if room regen good when taking teleporter
+		    print(_currentRoom.RoomId);
+		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().InitRoomsGeneration();
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;

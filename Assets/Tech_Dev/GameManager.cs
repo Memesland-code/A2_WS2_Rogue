@@ -13,9 +13,12 @@ namespace Tech_Dev
 
         [SerializeField] private GameObject _enemyRatPrefab;
         [SerializeField] private GameObject _enemySkullPrefab;
+        [SerializeField] private GameObject _bossPrefab;
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
+
+        private static GenerationManager _generationManager;
         
         
         
@@ -64,9 +67,23 @@ namespace Tech_Dev
 
 
 
+        public GameObject GetBossPrefab()
+        {
+            return _bossPrefab;
+        }
+
+
+
         public static GameObject GetCamera()
         {
             return GameObject.FindWithTag("MainCamera");
+        }
+
+
+
+        public static GenerationManager GetGenerationManagerRef()
+        {
+            return _generationManager;
         }
         
         
@@ -80,6 +97,11 @@ namespace Tech_Dev
             if (Input.GetKeyDown(KeyCode.Keypad0))
             {
                 _playerScriptRef.GodMode();
+            }
+
+            if (Input.GetKeyDown(KeyCode.KeypadMinus))
+            {
+                _fadeEffect.PlayFadeOut();
             }
         }
     }

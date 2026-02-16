@@ -7,6 +7,7 @@ namespace Tech_Dev.Procedural
 		[SerializeField] private Difficulty _teleporterDifficulty;
 		[SerializeField] private Transform _nextRoomEntryPoint;
 		private GameObject _nextRoomRef;
+		public bool TeleportToHub;
 
 		private void OnDrawGizmos()
 		{
