@@ -85,6 +85,20 @@ namespace Tech_Dev
         {
             return _generationManager;
         }
+
+
+
+        public GameObject GetPlayerRef()
+        {
+            return _playerRef;
+        }
+
+
+
+        public PlayerController GetPlayerScriptRef()
+        {
+            return _playerScriptRef;
+        }
         
         
         
