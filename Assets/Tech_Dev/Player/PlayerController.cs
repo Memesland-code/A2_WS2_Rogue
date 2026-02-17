@@ -36,6 +36,7 @@ namespace Tech_Dev.Player
 	    [SerializeField] private GroundDetector _groundDetector;
 
 	    [Space(5), Header("Dash")]
+	    [SerializeField] private int _maxDashesNumber;
 	    [SerializeField] private float _dashForce;
 	    [SerializeField] private float _dashMultiplierX;
 	    [SerializeField] private float _dashMultiplierY;
@@ -67,12 +68,14 @@ namespace Tech_Dev.Player
 	    private float _interactTimeDelta;
 	    private float _dashCooldownTimeDelta;
 	    private float _dashTimeDelta;
+	    private float _fastDashAvoid;
 	    private float _meleeTimeDelta;
 	    private float _heavyTimeDelta;
 	    private float _skillTimeDelta;
 
 	    private int _currentJumpsCombo;
 	    private bool _isDashing;
+	    private int _currentDashesNumber;
 	    public bool HasProjectileStunUpgrade;
 	    public bool HasProjectileTpUpgrade;
 
@@ -215,14 +218,22 @@ namespace Tech_Dev.Player
 		    
 		    
 		    // Dash system
-		    if (_inputs.Dash && _dashCooldownTimeDelta <= 0.0f)
+		    if (_dashCooldownTimeDelta <= 0.0f)
+		    {
+			    _currentDashesNumber = 0;
+		    }
+		    
+		    if (_inputs.Dash && (_dashCooldownTimeDelta <= 0.0f || (_currentDashesNumber < _maxDashesNumber && _fastDashAvoid <= 0.0f)))
 		    {
 			    _rb.linearVelocity = Vector3.zero;
 			    _dashCooldownTimeDelta = _dashCooldown;
 			    _isDashing = true;
 			    _dashTimeDelta = _dashTime;
+			    _currentDashesNumber++;
+			    _fastDashAvoid = 0.3f;
 		    }
 		    _dashCooldownTimeDelta -= Time.deltaTime;
+		    _fastDashAvoid -= Time.deltaTime;
 
 		    if (_isDashing)
 		    {
