@@ -20,6 +20,7 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _meleeAttackDamage;
 	    [SerializeField] private float _heavyAttackDamage;
 	    [SerializeField] private Transform _swordAttackCenter;
+	    [SerializeField] private float _attackCooldown;
 	    
 	    [Space(10), Header("Ground movements")]
 	    [SerializeField] private float _groundSpeed;
@@ -61,6 +62,7 @@ namespace Tech_Dev.Player
 	    private float _interactTimeDelta;
 	    private float _dashCooldownTimeDelta;
 	    private float _dashTimeDelta;
+	    private float _attackTimeDelta;
 
 	    private int _currentJumpsCombo;
 	    private bool _isDashing;
@@ -154,11 +156,12 @@ namespace Tech_Dev.Player
 		    Vector3 horizontalMove = new(_inputs.Move.x * realSpeed, 0, 0);
 
 
+		    // Physics and noclip
 		    if (NoClip)
 		    {
 			    transform.position += new Vector3(_inputs.Move.x, _inputs.Move.y, 0);
 		    }
-		    else if (_isDashing) // Apply to physics
+		    else if (_isDashing)
 		    {
 			    Vector3 dashVelocity = new(_inputs.Move.x * _dashForce * _dashMultiplierX, _inputs.Move.y * _dashForce * _dashMultiplierY, 0);
 			    _rb.linearVelocity = new Vector3(0, 0, 0) + horizontalMove + dashVelocity;
@@ -178,6 +181,11 @@ namespace Tech_Dev.Player
 				    if (coll.TryGetComponent(out Teleporter teleporter))
 				    {
 					    StartCoroutine(EnterNewRoom(teleporter));
+				    }
+
+				    if (coll.TryGetComponent(out ShopMerchant merchant))
+				    {
+					    merchant.ShopCanvas.gameObject.SetActive(true);
 				    }
 			    }
 			    _interactTimeDelta = _interactCooldown;
@@ -210,9 +218,8 @@ namespace Tech_Dev.Player
 
 		    // Attack system
 		    //TODO Check for cooldown: animation time
-		    if (_inputs.MeleeAttack)
+		    if (_inputs.MeleeAttack && _attackTimeDelta <= 0.0f)
 		    {
-			    
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
@@ -221,7 +228,6 @@ namespace Tech_Dev.Player
 				    if (!enemy) return;
 				    
 				    damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
-
 			    }
 			    
 			    if (damagedEnemy && _woundBarActive)
@@ -229,9 +235,11 @@ namespace Tech_Dev.Player
 				    _health += Math.Clamp(_healthRecoverPercentage * _woundDamageAmount / 100, -1, _maxHealth);
 				    _woundBarActive = false;
 			    }
+
+			    _attackTimeDelta = _attackCooldown;
 		    }
 
-		    if (_inputs.HeavyAttack)
+		    if (_inputs.HeavyAttack && _attackTimeDelta <= 0.0f)
 		    {
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
@@ -248,7 +256,11 @@ namespace Tech_Dev.Player
 				    _health += _healthRecoverPercentage * _woundDamageAmount / 100;
 				    _woundBarActive = false;
 			    }
+			    
+			    _attackTimeDelta = _attackCooldown;
 		    }
+		    
+		    _attackTimeDelta -= Time.deltaTime;
 		    
 		    
 		    

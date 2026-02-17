@@ -3,6 +3,7 @@ using Tech_Dev.Procedural;
 using Tech_Dev.UI;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Tech_Dev
 {
@@ -43,9 +44,13 @@ namespace Tech_Dev
 
         private void Start()
         {
+            //_playerRef.GetComponent<PlayerInput>().enabled = false;
+            
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
 
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
+
+            //GameObject.FindWithTag("SarcophagusTop").GetComponent<Animation>().Play();
         }
 
         

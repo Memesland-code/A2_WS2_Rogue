@@ -212,13 +212,19 @@ namespace Tech_Dev.Procedural
                             break;
                             
                         case Type.Shop:
+                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
+                            break;
                         
                         case Type.Upgrade:
+                            room.RoomPrefab = _upgradeRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
+                            break;
                         
                         case Type.Trial:
+                            room.RoomPrefab = _trialRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
+                            break;
                         
                         case Type.Healing:
-                            room.RoomPrefab = _shopRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
+                            room.RoomPrefab = _healRoomPrefabs[Random.Range(0, _shopRoomPrefabs.Count)];
                             break;
 
                         case Type.Boss:

@@ -144,6 +144,27 @@ namespace Tech_Dev.Procedural
 
 
 
+		private void InitTrialRoom()
+		{
+			//TODO spawn random trinket and generate enemies when taken
+		}
+
+
+
+		private void InitShopRoom()
+		{
+			//TODO Choose random selling items
+		}
+
+
+
+		private void InitUpgradeRoom()
+		{
+			//TODO choose random upgrade
+		}
+
+
+
 		public void RegisterEnemyDeath(GameObject enemyRef)
 		{
 			RoomEnemies.Remove(enemyRef);
