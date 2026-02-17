@@ -43,6 +43,8 @@ namespace Tech_Dev.Player
 	    
 	    [Space(5), Header("Abilities related")]
 	    [SerializeField] private PlayerSpell _spellProjectile;
+	    [SerializeField] private float _spellDamage;
+	    [SerializeField] private float _spellStunTime;
 	    [SerializeField] private float _projectileForce;
 	    [SerializeField] private Transform _shootPoint;
 	    [SerializeField] private float _dashCooldown;
@@ -88,6 +90,12 @@ namespace Tech_Dev.Player
 
 	    private int _gold;
 	    private int _souls;
+
+
+	    public float RunSpecialAttackCooldown;
+	    public float RunSpellProjectileDamage;
+	    public float RunStunTime;
+	    public float RunSpellProjectileSpeed;
 	    
 	    
 	    // Cheat codes
@@ -127,6 +135,11 @@ namespace Tech_Dev.Player
 		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = _currentRoom.GetRoomBounds();
 
 		    _isDead = false;
+
+		    RunSpecialAttackCooldown = _heavyCooldown;
+		    RunSpellProjectileDamage = _spellDamage;
+		    RunStunTime = _spellStunTime;
+		    RunSpellProjectileSpeed = _projectileForce;
 	    }
 
 	    
@@ -306,7 +319,7 @@ namespace Tech_Dev.Player
 				    _woundBarActive = false;
 			    }
 			    
-			    _heavyTimeDelta = _heavyCooldown;
+			    _heavyTimeDelta = RunSpecialAttackCooldown;
 		    }
 		    _heavyTimeDelta -= Time.deltaTime;
 
@@ -315,9 +328,11 @@ namespace Tech_Dev.Player
 		    if (_inputs.Skill && _skillTimeDelta <= 0.0f)
 		    {
 			    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
-			    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (_projectileForce * 10));
+			    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (RunSpellProjectileSpeed * 10));
 			    spell.HasStunUpgrade = HasProjectileStunUpgrade;
 			    spell.HasTeleportUpgrade = HasProjectileTpUpgrade;
+			    spell.Damage = RunSpellProjectileDamage;
+			    spell.StunTime = RunStunTime;
 			    
 			    _skillTimeDelta = _skillCooldown;
 		    }
@@ -525,6 +540,11 @@ namespace Tech_Dev.Player
 	    public float GetCurrentWound() // Modification de Baptiste pour récupérer les wound pour la barre de vie
 	    {
 		    return _woundDamageAmount;
+	    }
+
+	    public void AddDashMaxNumber()
+	    {
+		    _maxDashesNumber++;
 	    }
 	    
 	    

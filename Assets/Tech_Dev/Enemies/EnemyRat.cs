@@ -11,7 +11,6 @@ namespace Tech_Dev.Enemies
         [Header("Health")]
         [SerializeField] private float _maxHealth;
         private float _health;
-        [SerializeField] private float _stunCooldown;
 
         [Header("Nav Mesh")]
         [SerializeField] private NavMeshAgent _agent;
@@ -190,10 +189,10 @@ namespace Tech_Dev.Enemies
 
 
 
-        public void Stun()
+        public void Stun(float stunTime)
         {
             _isStun = true;
-            _stunTimer = _stunCooldown;
+            _stunTimer = stunTime;
         }
 
 

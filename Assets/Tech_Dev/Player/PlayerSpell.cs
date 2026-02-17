@@ -8,7 +8,8 @@ namespace Tech_Dev.Player
     public class PlayerSpell : MonoBehaviour
     {
         private Rigidbody _rb;
-        [SerializeField] private float _damage;
+        public float Damage;
+        public float StunTime;
         public bool HasStunUpgrade;
         public bool HasTeleportUpgrade;
         
@@ -24,17 +25,17 @@ namespace Tech_Dev.Player
             {
                 if (other.gameObject.TryGetComponent(out EnemyRat rat))
                 {
-                    rat.TakeDamage(_damage);
+                    rat.TakeDamage(Damage);
                 }
 
                 if (other.gameObject.TryGetComponent(out EnemySkull skull))
                 {
-                    skull.TakeDamage(_damage);
+                    skull.TakeDamage(Damage);
                 }
 
                 if (other.gameObject.TryGetComponent(out BossSkull bossSkull))
                 {
-                    bossSkull.TakeDamage(_damage);
+                    bossSkull.TakeDamage(Damage);
                 }
                 
                 if (HasStunUpgrade)
@@ -45,17 +46,17 @@ namespace Tech_Dev.Player
                     {
                         if (col.TryGetComponent(out EnemyRat rat1))
                         {
-                            rat1.Stun();
+                            rat1.Stun(StunTime);
                         }
 
                         if (col.TryGetComponent(out EnemySkull skull1))
                         {
-                            skull1.Stun();
+                            skull1.Stun(StunTime);
                         }
 
                         if (col.TryGetComponent(out BossSkull bossSkull1))
                         {
-                            bossSkull1.Stun();
+                            bossSkull1.Stun(StunTime);
                         }
                     }
                 }

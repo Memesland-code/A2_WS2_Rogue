@@ -126,6 +126,49 @@ namespace Tech_Dev
         
         
         
+        //INFO upgrades, trinkets, and relics apply
+
+
+
+        public void SetRelicSpellprojectileTeleport()
+        {
+            _playerScriptRef.HasProjectileTpUpgrade = true;
+        }
+
+        public void SetRelicSpellProjectileStun()
+        {
+            _playerScriptRef.HasProjectileStunUpgrade = true;
+        }
+
+        public void SetRelicDoubleDash()
+        {
+            _playerScriptRef.AddDashMaxNumber();
+        }
+
+
+
+        public void TrinketSpecialAttackCooldown()
+        {
+            _playerScriptRef.RunSpecialAttackCooldown *= 0.8f;
+        }
+
+        public void TrinketSpellProjectileDamage()
+        {
+            _playerScriptRef.RunSpecialAttackCooldown *= 1.25f;
+        }
+
+        public void TrinketSpellStun()
+        {
+            _playerScriptRef.RunStunTime *= 1.5f;
+        }
+
+        public void SpellProjectileSpeed()
+        {
+            _playerScriptRef.RunSpellProjectileSpeed *= 1.3f;
+        }
+        
+        
+        
         //INFO CHEAT CODES
 
 
