@@ -46,6 +46,8 @@ namespace Tech_Dev
 
         private void Start()
         {
+            _playerRef.GetComponent<Rigidbody>().isKinematic = true;
+            
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
 
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
@@ -55,7 +57,9 @@ namespace Tech_Dev
 
         public static void StartGame()
         {
-            GameObject.FindWithTag("SarcophagusTop").GetComponent<Animation>().Play();
+            GameObject.FindWithTag("SarcophagusTop").GetComponent<Animator>().SetTrigger("Open");
+            
+            _playerRef.GetComponent<Rigidbody>().isKinematic = false;
             
             IsGameLaunch = false;
         }
