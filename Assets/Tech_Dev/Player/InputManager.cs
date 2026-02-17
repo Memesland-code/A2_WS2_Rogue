@@ -12,6 +12,7 @@ namespace Tech_Dev.Player
         public bool Dash;
         public bool MeleeAttack;
         public bool HeavyAttack;
+        public bool Skill;
 
         [SerializeField] private float _heavyAttackTime;
         private float _heavyAttackTimeDelta;
@@ -19,6 +20,7 @@ namespace Tech_Dev.Player
 
         private void LateUpdate()
         {
+            /*
             if (_attackPressed)
             {
                 _heavyAttackTimeDelta -= Time.deltaTime;
@@ -34,13 +36,14 @@ namespace Tech_Dev.Player
                 MeleeAttack = true;
                 _heavyAttackTimeDelta = _heavyAttackTime;
             }
+            */
         }
 
         private void Update()
         {
             Jump = false;
-            MeleeAttack = false;
-            HeavyAttack = false;
+            //MeleeAttack = false;
+            //HeavyAttack = false;
         }
 
         public void OnMove(InputValue value)
@@ -55,7 +58,12 @@ namespace Tech_Dev.Player
 
         public void OnAttack(InputValue value)
         {
-            _attackPressed = value.isPressed;
+            MeleeAttack = value.isPressed;
+        }
+
+        public void OnSpecialAttack(InputValue value)
+        {
+            HeavyAttack = value.isPressed;
         }
 
         public void OnInteract(InputValue value)
@@ -66,6 +74,11 @@ namespace Tech_Dev.Player
         public void OnDash(InputValue value)
         {
             Dash = value.isPressed;
+        }
+
+        public void OnSkill(InputValue value)
+        {
+            Skill = value.isPressed;
         }
     }
 }

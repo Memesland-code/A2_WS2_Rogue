@@ -20,7 +20,9 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _meleeAttackDamage;
 	    [SerializeField] private float _heavyAttackDamage;
 	    [SerializeField] private Transform _swordAttackCenter;
-	    [SerializeField] private float _attackCooldown;
+	    [SerializeField] private float _meleeCooldown;
+	    [SerializeField] private float _heavyCooldown;
+	    [SerializeField] private float _skillCooldown;
 	    
 	    [Space(10), Header("Ground movements")]
 	    [SerializeField] private float _groundSpeed;
@@ -62,7 +64,9 @@ namespace Tech_Dev.Player
 	    private float _interactTimeDelta;
 	    private float _dashCooldownTimeDelta;
 	    private float _dashTimeDelta;
-	    private float _attackTimeDelta;
+	    private float _meleeTimeDelta;
+	    private float _heavyTimeDelta;
+	    private float _skillTimeDelta;
 
 	    private int _currentJumpsCombo;
 	    private bool _isDashing;
@@ -225,8 +229,9 @@ namespace Tech_Dev.Player
 
 		    // Attack system
 		    //TODO Check for cooldown: animation time
-		    if (_inputs.MeleeAttack && _attackTimeDelta <= 0.0f)
+		    if (_inputs.MeleeAttack && _meleeTimeDelta <= 0.0f)
 		    {
+			    print("melee");
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
@@ -243,11 +248,13 @@ namespace Tech_Dev.Player
 				    _woundBarActive = false;
 			    }
 
-			    _attackTimeDelta = _attackCooldown;
+			    _meleeTimeDelta = _meleeCooldown;
 		    }
+		    _meleeTimeDelta -= Time.deltaTime;
 
-		    if (_inputs.HeavyAttack && _attackTimeDelta <= 0.0f)
+		    if (_inputs.HeavyAttack && _heavyTimeDelta <= 0.0f)
 		    {
+			    print("heavy");
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
@@ -264,10 +271,17 @@ namespace Tech_Dev.Player
 				    _woundBarActive = false;
 			    }
 			    
-			    _attackTimeDelta = _attackCooldown;
+			    _heavyTimeDelta = _heavyCooldown;
 		    }
-		    
-		    _attackTimeDelta -= Time.deltaTime;
+		    _heavyTimeDelta -= Time.deltaTime;
+
+		    if (_inputs.Skill && _skillTimeDelta <= 0.0f)
+		    {
+			    //TODO Spawn projectile
+
+			    print("Test");
+			    _skillTimeDelta = _skillCooldown;
+		    }
 		    
 		    
 		    
