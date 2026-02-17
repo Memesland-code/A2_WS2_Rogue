@@ -39,8 +39,25 @@ namespace Tech_Dev.Player
                 
                 if (HasStunUpgrade)
                 {
-                    Debug.LogWarning("Stun not implemented!");
-                    //TODO stun enemies with AOE
+                    Collider[] stunnedEnemies = Physics.OverlapSphere(transform.position, 3f);
+
+                    foreach (Collider col in stunnedEnemies)
+                    {
+                        if (col.TryGetComponent(out EnemyRat rat1))
+                        {
+                            rat1.Stun();
+                        }
+
+                        if (col.TryGetComponent(out EnemySkull skull1))
+                        {
+                            skull1.Stun();
+                        }
+
+                        if (col.TryGetComponent(out BossSkull bossSkull1))
+                        {
+                            bossSkull1.Stun();
+                        }
+                    }
                 }
                 
                 if (HasTeleportUpgrade)

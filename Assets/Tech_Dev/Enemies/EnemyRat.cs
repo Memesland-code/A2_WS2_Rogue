@@ -11,6 +11,7 @@ namespace Tech_Dev.Enemies
         [Header("Health")]
         [SerializeField] private float _maxHealth;
         private float _health;
+        [SerializeField] private float _stunCooldown;
 
         [Header("Nav Mesh")]
         [SerializeField] private NavMeshAgent _agent;
@@ -47,8 +48,8 @@ namespace Tech_Dev.Enemies
         private float _boostAcceleration;
 
         private float _attackTimer;
-
-        
+        private bool _isStun;
+        private float _stunTimer;
         
         private void Awake()
         {
@@ -74,6 +75,15 @@ namespace Tech_Dev.Enemies
 
         private void Update()
         {
+            if (_isStun)
+            {
+                _stunTimer -= Time.deltaTime;
+                
+                if (_stunTimer <= 0f) _isStun = false;
+                
+                return;
+            }
+            
             _attackTimer -= Time.deltaTime;
             
             // Check for sight and attack range
@@ -176,6 +186,14 @@ namespace Tech_Dev.Enemies
             }
             
             Destroy(gameObject);
+        }
+
+
+
+        public void Stun()
+        {
+            _isStun = true;
+            _stunTimer = _stunCooldown;
         }
 
 
