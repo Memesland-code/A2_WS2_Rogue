@@ -5232,6 +5232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5639456277844869653}
   - component: {fileID: 1647367912040928503}
+  - component: {fileID: 1323651819547357303}
   m_Layer: 0
   m_Name: BonusInteraction
   m_TagString: Untagged
@@ -5275,6 +5276,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.849731, y: 9.591082, z: 16.509087}
   m_Center: {x: 2.1729736, y: 4.295541, z: -1.1597519}
+--- !u!114 &1323651819547357303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064296987206974571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ead3bef7e2712e42bb579e01fd7a3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeCanvas: {fileID: 0}
 --- !u!1 &6162245354558199479
 GameObject:
   m_ObjectHideFlags: 0

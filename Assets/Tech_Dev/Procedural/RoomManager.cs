@@ -59,11 +59,14 @@ namespace Tech_Dev.Procedural
 					break;
 				
 				case Type.Trial:
-					InitTrialRoom();
-					break;
-				
-				case Type.Upgrade:
-					InitUpgradeRoom();
+					if (RoomTeleporter != null)
+					{
+						RoomTeleporter.SetActive(false);
+					}
+					else
+					{
+						Debug.LogError("No room teleporter found in room ID: " + RoomId);
+					}
 					break;
 			}
 		}
@@ -155,9 +158,9 @@ namespace Tech_Dev.Procedural
 
 
 
-		private void InitTrialRoom()
+		public void StartTrial()
 		{
-			
+			InitFightRoom();
 		}
 
 
@@ -165,13 +168,6 @@ namespace Tech_Dev.Procedural
 		private void InitShopRoom()
 		{
 			GetComponentInChildren<ShopMerchant>().ShopNumber = RoomInternalNb;
-		}
-
-
-
-		private void InitUpgradeRoom()
-		{
-			
 		}
 
 

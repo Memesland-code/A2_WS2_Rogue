@@ -18,6 +18,7 @@ namespace Tech_Dev
         public GameObject Shop1Screen;
         public GameObject Shop2Screen;
         public GameObject UpgradeScreen;
+        public GameObject TrialScreen;
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
