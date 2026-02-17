@@ -22,6 +22,8 @@ namespace Tech_Dev
         private static GenerationManager _generationManager;
 
         private bool _noClip;
+
+        public static bool IsGameLaunch = true;
         
         
         
@@ -44,13 +46,18 @@ namespace Tech_Dev
 
         private void Start()
         {
-            //_playerRef.GetComponent<PlayerInput>().enabled = false;
-            
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
 
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
+        }
 
-            //GameObject.FindWithTag("SarcophagusTop").GetComponent<Animation>().Play();
+
+
+        public static void StartGame()
+        {
+            GameObject.FindWithTag("SarcophagusTop").GetComponent<Animation>().Play();
+            
+            IsGameLaunch = false;
         }
 
         

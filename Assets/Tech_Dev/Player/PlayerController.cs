@@ -99,7 +99,14 @@ namespace Tech_Dev.Player
 
 		    _currentRoom = GameObject.FindWithTag("Respawn").GetComponent<RoomManager>();
 
-		    transform.position = _currentRoom.GetRoomEntryCoord();
+		    if (GameManager.IsGameLaunch)
+		    {
+			    transform.position = GameObject.FindWithTag("GameStart").transform.position;
+		    }
+		    else
+		    {
+				transform.position = _currentRoom.GetRoomEntryCoord();
+		    }
 
 		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = _currentRoom.GetRoomBounds();
 
@@ -292,6 +299,10 @@ namespace Tech_Dev.Player
 		    yield return new WaitForSeconds(1f);
 
 		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().ResetDungeon(false);
+		    
+		    // 100 gold pristine
+		    // 2 souls ruin
+		    // 5 souls boss
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
