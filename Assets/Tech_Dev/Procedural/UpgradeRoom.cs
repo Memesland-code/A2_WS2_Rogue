@@ -14,7 +14,7 @@ namespace Tech_Dev.Procedural
             UpgradeCanvas.SetActive(false);
         }
 
-        public void OpenShop()
+        public void OpenUpgradeChoice()
         {
             UpgradeCanvas.SetActive(true);
         }

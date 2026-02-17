@@ -14,7 +14,7 @@ namespace Tech_Dev.Procedural
             TrialCanvas.SetActive(false);
         }
 
-        public void OpenShop()
+        public void OpenTrialChoice()
         {
             TrialCanvas.SetActive(true);
             Debug.LogWarning("Ne pas oublier de lancer les trials à la fermeture ==> Voir TrialRoom.cs");

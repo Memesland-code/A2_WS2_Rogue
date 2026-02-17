@@ -213,7 +213,17 @@ namespace Tech_Dev.Player
 
 				    if (coll.TryGetComponent(out UpgradeRoom upgradeRoom))
 				    {
-					    //upgradeRoom;
+					    upgradeRoom.OpenUpgradeChoice();
+				    }
+
+				    if (coll.TryGetComponent(out TrialRoom trialRoom))
+				    {
+					    trialRoom.OpenTrialChoice();
+				    }
+
+				    if (coll.TryGetComponent(out HealingRoomFountain healingFountain))
+				    {
+					    _health += healingFountain.GetFountainHeal();
 				    }
 			    }
 			    _interactTimeDelta = _interactCooldown;
