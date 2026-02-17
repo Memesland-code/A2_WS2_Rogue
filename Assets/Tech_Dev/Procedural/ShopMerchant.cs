@@ -4,13 +4,14 @@ namespace Tech_Dev.Procedural
 {
     public class ShopMerchant : MonoBehaviour
     {
+        [Header("Do not fill, automatically filled")]
         public GameObject ShopCanvas;
-
         public int ShopNumber;
+        public RoomManager RoomManagerRef;
 
         private void Start()
         {
-            ShopNumber = GameManager.GetPlayerScriptRef().GetCurrentRoom().GetRoomInternalNb();
+            ShopNumber = RoomManagerRef.GetRoomInternalNb();
             
             if (ShopNumber == 1)
             {

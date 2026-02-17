@@ -55,6 +55,18 @@ namespace Tech_Dev.Procedural
 				case Type.Boss:
 					InitBossRoom();
 					break;
+				
+				case Type.Shop:
+					InitShopRoom();
+					break;
+				
+				case Type.Trial:
+					InitTrialRoom();
+					break;
+				
+				case Type.Upgrade:
+					InitUpgradeRoom();
+					break;
 			}
 		}
 
@@ -154,7 +166,7 @@ namespace Tech_Dev.Procedural
 
 		private void InitShopRoom()
 		{
-			//TODO Choose random selling items
+			GetComponentInChildren<ShopMerchant>().RoomManagerRef = this;
 		}
 
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354113975374770880}
   - component: {fileID: 2104389309376607787}
+  - component: {fileID: 502062452290391571}
   m_Layer: 0
   m_Name: ShopMerchant
   m_TagString: Untagged
@@ -47,9 +48,23 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &502062452290391571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873420118008565189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023d95cd37e0b9a48be787dd0de2f7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShopCanvas: {fileID: 0}
+  ShopNumber: 0
