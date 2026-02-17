@@ -10,6 +10,7 @@ namespace Tech_Dev.Procedural
 		
 		public Type Type;
 		public Difficulty Difficulty;
+		public int RoomInternalNb;
 
 		public List<GameObject> RoomEnemies;
 
@@ -217,6 +218,13 @@ namespace Tech_Dev.Procedural
 
 			Debug.LogError("No room entry found in room ID: " + RoomId + " of type: " + Type);
 			return Vector3.zero;
+		}
+
+
+
+		public int GetRoomInternalNb()
+		{
+			return RoomInternalNb;
 		}
 		
 		

@@ -33,6 +33,7 @@ namespace Tech_Dev.Procedural
 		
 		public Type Type;
 		public Difficulty Difficulty;
+		public int RoomInternalNb;
 		
 		public GameObject RoomPrefab;
 		public GameObject WorldInstance;
@@ -46,6 +47,7 @@ namespace Tech_Dev.Procedural
 			scriptRef.RoomId = RoomId;
 			scriptRef.Type = Type;
 			scriptRef.Difficulty = Difficulty;
+			scriptRef.RoomInternalNb = RoomInternalNb;
 			
 			if (!scriptRef.enabled) scriptRef.enabled = true;
 		}

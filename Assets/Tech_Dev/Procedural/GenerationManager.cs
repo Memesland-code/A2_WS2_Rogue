@@ -103,6 +103,8 @@ namespace Tech_Dev.Procedural
 
         public void InitRoomsGeneration()
         {
+            int shopRoomNumber = 1;
+            
             //info First rooms init of types
             for (int i = 0; i <= _roomsNumber; i++)
             {
@@ -124,6 +126,8 @@ namespace Tech_Dev.Procedural
                     
                     roomChoice2.Type = Type.Shop;
                     roomChoice2.Difficulty = Difficulty.Ruins;
+                    roomChoice2.RoomInternalNb = shopRoomNumber;
+                    shopRoomNumber++;
                 }
                 else if (i is 4 or 7) // Room 5 and 8 = Trial and Upgrade
                 {
