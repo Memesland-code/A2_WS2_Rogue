@@ -11,7 +11,14 @@ namespace Tech_Dev.Procedural
         {
             TrialCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().TrialScreen;
             
-            TrialCanvas.SetActive(false);
+            if (TrialCanvas)
+            {
+                TrialCanvas.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError("Error: No Trial Canvas found in game manager!");
+            }
         }
 
         public void OpenTrialChoice()

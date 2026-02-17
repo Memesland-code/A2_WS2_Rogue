@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Tech_Dev.Enemies;
 using Tech_Dev.Procedural;
+using Tech_Dev.UI.Script_UI;
 using Unity.Cinemachine;
 using UnityEngine;
 using Type = Tech_Dev.Procedural.Type;
@@ -62,6 +63,7 @@ namespace Tech_Dev.Player
 	    private Rigidbody _rb;
 	    private InputManager _inputs;
 	    private bool _isDead;
+	    public bool IsVictory;
 	    
 	    private SwordDamager _swordDamager;
 
@@ -86,7 +88,7 @@ namespace Tech_Dev.Player
 	    private float _woundDamageAmount;
 
 	    private GameObject _camera;
-
+	    
 
 	    private int _gold;
 	    private int _souls;
@@ -96,6 +98,11 @@ namespace Tech_Dev.Player
 	    public float RunSpellProjectileDamage;
 	    public float RunStunTime;
 	    public float RunSpellProjectileSpeed;
+
+	    //Run related
+	    public int TotalGoldGain;
+	    public int TotalSoulGain;
+	    public float RunTimer;
 	    
 	    
 	    // Cheat codes
@@ -140,12 +147,19 @@ namespace Tech_Dev.Player
 		    RunSpellProjectileDamage = _spellDamage;
 		    RunStunTime = _spellStunTime;
 		    RunSpellProjectileSpeed = _projectileForce;
+
+		    TotalGoldGain = 0;
+		    TotalSoulGain = 0;
+		    RunTimer = 0;
+		    GameObject.FindWithTag("GameManager").GetComponent<GameManager>().RunTotalPlayerKills = 0;
 	    }
 
 	    
 	    
 	    private void Update()
 	    {
+		    if (_currentRoom.Type != Type.Spawn) RunTimer += Time.deltaTime;
+		    
 			// Check player facing direction and change on movement direction 
 		    if (_inputs.Move.x < 0 && _isFacingRight)
 		    {
@@ -379,6 +393,8 @@ namespace Tech_Dev.Player
 		    {
 			    AddSouls(5);
 			    GameManager.GetGenerationManagerRef().ResetDungeon(false);
+			    DungeonEndScreen(true);
+			    ResetPlayer();
 		    }
 		    else if (_currentRoom.Type == Type.Fight)
 		    {
@@ -474,10 +490,9 @@ namespace Tech_Dev.Player
 			    }
 		    }
 		    
-		    ResetPlayer();
+		    DungeonEndScreen(false);
 		    
-		    //TODO show defeat screen
-		    GameManager.GetFadeRef().PlayFadeOut(); //! TO REMOVE LATER
+		    ResetPlayer();
 	    }
 
 
@@ -485,6 +500,7 @@ namespace Tech_Dev.Player
 	    public void AddGold(int amount)
 	    {
 		    _gold += amount;
+		    TotalGoldGain += amount;
 	    }
 
 	    public bool RemoveGold(int amount)
@@ -501,6 +517,7 @@ namespace Tech_Dev.Player
 	    public void AddSouls(int amount)
 	    {
 		    _souls += amount;
+		    TotalSoulGain += amount;
 	    }
 
 	    public bool RemoveSoul(int amount)
@@ -545,6 +562,21 @@ namespace Tech_Dev.Player
 	    public void AddDashMaxNumber()
 	    {
 		    _maxDashesNumber++;
+	    }
+
+	    public void DungeonEndScreen(bool isWin)
+	    {
+		    WinDefeatUI endingScreen = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().WinDefeatScreen.GetComponent<WinDefeatUI>();
+		    
+		    if (isWin)
+		    {
+			    endingScreen.RunState = "Victory!";
+		    }
+		    else
+		    {
+			    endingScreen.RunState = "Defeat...";
+		    }
+		    GameObject.FindWithTag("GameManager").GetComponent<GameManager>().WinDefeatScreen.SetActive(true);
 	    }
 	    
 	    

@@ -19,9 +19,11 @@ namespace Tech_Dev
         public GameObject Shop2Screen;
         public GameObject UpgradeScreen;
         public GameObject TrialScreen;
+        public GameObject WinDefeatScreen;
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
+        public int RunTotalPlayerKills;
 
         private static GenerationManager _generationManager;
 

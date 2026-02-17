@@ -10,8 +10,15 @@ namespace Tech_Dev.Procedural
         private void Start()
         {
             UpgradeCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().UpgradeScreen;
-            
-            UpgradeCanvas.SetActive(false);
+
+            if (UpgradeCanvas)
+            {
+                UpgradeCanvas.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError("Error: No Upgrade Canvas found in game manager!");
+            }
         }
 
         public void OpenUpgradeChoice()

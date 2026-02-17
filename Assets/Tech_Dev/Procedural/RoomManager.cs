@@ -174,6 +174,7 @@ namespace Tech_Dev.Procedural
 
 		public void RegisterEnemyDeath(GameObject enemyRef)
 		{
+			GameObject.FindWithTag("GameManager").GetComponent<GameManager>().RunTotalPlayerKills++;
 			RoomEnemies.Remove(enemyRef);
 
 			if (RoomEnemies.Count == 0)
