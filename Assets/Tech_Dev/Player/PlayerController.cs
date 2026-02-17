@@ -210,6 +210,11 @@ namespace Tech_Dev.Player
 				    {
 					    merchant.OpenShop();
 				    }
+
+				    if (coll.TryGetComponent(out UpgradeRoom upgradeRoom))
+				    {
+					    //upgradeRoom;
+				    }
 			    }
 			    _interactTimeDelta = _interactCooldown;
 		    }

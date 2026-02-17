@@ -157,7 +157,7 @@ namespace Tech_Dev.Procedural
 
 		private void InitTrialRoom()
 		{
-			//TODO spawn random trinket and generate enemies when taken
+			
 		}
 
 
@@ -171,7 +171,7 @@ namespace Tech_Dev.Procedural
 
 		private void InitUpgradeRoom()
 		{
-			//TODO choose random upgrade
+			
 		}
 
 

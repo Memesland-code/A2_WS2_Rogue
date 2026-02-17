@@ -796,7 +796,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6064296987206974571, guid: a318da80c0f79f044960ecf84c0ea054, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1792491465}
   m_SourcePrefab: {fileID: 100100000, guid: a318da80c0f79f044960ecf84c0ea054, type: 3}
 --- !u!1001 &1636440347
 PrefabInstance:
@@ -869,6 +872,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Asset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
+--- !u!1 &1792491462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6064296987206974571, guid: a318da80c0f79f044960ecf84c0ea054, type: 3}
+  m_PrefabInstance: {fileID: 1390206552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1792491465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792491462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ead3bef7e2712e42bb579e01fd7a3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeCanvas: {fileID: 0}
 --- !u!1 &1828575095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7344042892573471243, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
@@ -1724,6 +1745,14 @@ PrefabInstance:
       objectReference: {fileID: 2109781341}
     - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
       propertyPath: Shop2Ref
+      value: 
+      objectReference: {fileID: 1828575095}
+    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
+      propertyPath: Shop1Screen
+      value: 
+      objectReference: {fileID: 2109781341}
+    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
+      propertyPath: Shop2Screen
       value: 
       objectReference: {fileID: 1828575095}
     - target: {fileID: 3778439703684701780, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}

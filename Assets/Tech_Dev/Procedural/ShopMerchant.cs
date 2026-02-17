@@ -4,7 +4,7 @@ namespace Tech_Dev.Procedural
 {
     public class ShopMerchant : MonoBehaviour
     {
-        [Header("Do not fill, automatically filled")]
+        [Header("Do not fill, automatically filled from MainCanvas values")]
         public GameObject ShopCanvas;
         public int ShopNumber;
 
@@ -12,11 +12,11 @@ namespace Tech_Dev.Procedural
         {
             if (ShopNumber == 1)
             {
-                ShopCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().Shop1Ref;
+                ShopCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().Shop1Screen;
             }
             else
             {
-                ShopCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().Shop2Ref;
+                ShopCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().Shop2Screen;
             }
             
             ShopCanvas.SetActive(false);

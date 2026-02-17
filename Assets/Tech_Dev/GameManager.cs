@@ -15,8 +15,9 @@ namespace Tech_Dev
         [SerializeField] private GameObject _enemySkullPrefab;
         [SerializeField] private GameObject _bossPrefab;
 
-        public GameObject Shop1Ref;
-        public GameObject Shop2Ref;
+        public GameObject Shop1Screen;
+        public GameObject Shop2Screen;
+        public GameObject UpgradeScreen;
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
