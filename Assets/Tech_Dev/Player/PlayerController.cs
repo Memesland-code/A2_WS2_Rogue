@@ -15,6 +15,7 @@ namespace Tech_Dev.Player
 	    private float _health;
 	    [SerializeField] private float _healthRecoverPercentage;
 	    [SerializeField] private float _woundBarExpireTime;
+	    [SerializeField] private float _interactCooldown;
 	    
 	    [Space(10), Header("Attack system")]
 	    [SerializeField] private float _meleeAttackDamage;
@@ -43,7 +44,6 @@ namespace Tech_Dev.Player
 	    [SerializeField] private PlayerSpell _spellProjectile;
 	    [SerializeField] private float _projectileForce;
 	    [SerializeField] private Transform _shootPoint;
-	    [SerializeField] private float _interactCooldown;
 	    [SerializeField] private float _dashCooldown;
 	    [SerializeField] private float _dashTime;
 	    
@@ -354,7 +354,7 @@ namespace Tech_Dev.Player
 		    SetNewCameraBounds(_currentRoom.GetRoomBounds());
 		    
 		    yield return new WaitForSeconds(_teleportationFadeTime);
-		    _currentRoom.InitRoom();
+		    _currentRoom.InitRoomOnEnter();
 		    
 		    GameManager.GetFadeRef().PlayFadeOut();
 	    }

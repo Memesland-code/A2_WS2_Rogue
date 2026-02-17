@@ -40,11 +40,13 @@ namespace Tech_Dev.Procedural
 					break;
 				}
 			}
+			
+			if (Type == Type.Shop) InitShopRoom();
 		}
 
 
 
-		public void InitRoom()
+		public void InitRoomOnEnter()
 		{
 			switch (Type)
 			{
@@ -54,10 +56,6 @@ namespace Tech_Dev.Procedural
 				
 				case Type.Boss:
 					InitBossRoom();
-					break;
-				
-				case Type.Shop:
-					InitShopRoom();
 					break;
 				
 				case Type.Trial:
@@ -166,7 +164,7 @@ namespace Tech_Dev.Procedural
 
 		private void InitShopRoom()
 		{
-			GetComponentInChildren<ShopMerchant>().RoomManagerRef = this;
+			GetComponentInChildren<ShopMerchant>().ShopNumber = RoomInternalNb;
 		}
 
 

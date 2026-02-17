@@ -3,7 +3,6 @@ using Tech_Dev.Procedural;
 using Tech_Dev.UI;
 using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Tech_Dev
 {
@@ -15,6 +14,9 @@ namespace Tech_Dev
         [SerializeField] private GameObject _enemyRatPrefab;
         [SerializeField] private GameObject _enemySkullPrefab;
         [SerializeField] private GameObject _bossPrefab;
+
+        public GameObject Shop1Ref;
+        public GameObject Shop2Ref;
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
