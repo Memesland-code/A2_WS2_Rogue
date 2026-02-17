@@ -20,7 +20,7 @@ namespace Tech_Dev.Procedural
 		
 		private GameManager _gameManager;
 
-		private GameObject _roomTeleporter;
+		public GameObject RoomTeleporter;
 
 		private void Start()
 		{
@@ -36,7 +36,7 @@ namespace Tech_Dev.Procedural
 			{
 				if (go.CompareTag("TeleportersContainer") || go.CompareTag("TeleporterBoss"))
 				{
-					_roomTeleporter = go.gameObject;
+					RoomTeleporter = go.gameObject;
 					break;
 				}
 			}
@@ -95,9 +95,9 @@ namespace Tech_Dev.Procedural
 		
 		private void InitFightRoom()
 		{
-			if (_roomTeleporter != null)
+			if (RoomTeleporter != null)
 			{
-				_roomTeleporter.SetActive(false);
+				RoomTeleporter.SetActive(false);
 			}
 			else
 			{
@@ -136,10 +136,10 @@ namespace Tech_Dev.Procedural
 
 		private void InitBossRoom()
 		{
-			if (_roomTeleporter != null)
+			if (RoomTeleporter != null)
 			{
-				_roomTeleporter.GetComponent<Teleporter>().TeleportToHub = true;
-				_roomTeleporter.SetActive(false);
+				RoomTeleporter.GetComponent<Teleporter>().TeleportToHub = true;
+				RoomTeleporter.SetActive(false);
 			}
 			else
 			{
@@ -192,7 +192,7 @@ namespace Tech_Dev.Procedural
 
 		public void UnlockTeleporters()
 		{
-			_roomTeleporter.SetActive(true);
+			RoomTeleporter.SetActive(true);
 		}
 
 

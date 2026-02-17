@@ -174,6 +174,20 @@ namespace Tech_Dev
             {
                 _playerScriptRef.GoBackToRoomEntry();
             }
+
+            if (Input.GetKeyDown(KeyCode.Keypad6))
+            {
+                GameObject roomTeleporter = _playerScriptRef.GetCurrentRoom().RoomTeleporter;
+
+                if (roomTeleporter.transform.childCount == 0)
+                {
+                    _playerScriptRef.ForceEnterNewRoom(roomTeleporter.GetComponent<Teleporter>());
+                }
+                else
+                {
+                    _playerScriptRef.ForceEnterNewRoom(roomTeleporter.transform.GetChild(0).GetComponent<Teleporter>());
+                }
+            }
         }
     }
 }

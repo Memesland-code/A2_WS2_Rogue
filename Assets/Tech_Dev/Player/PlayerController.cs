@@ -322,6 +322,13 @@ namespace Tech_Dev.Player
 
 
 
+	    public void ForceEnterNewRoom(Teleporter teleporter)
+	    {
+		    StartCoroutine(EnterNewRoom(teleporter));
+	    }
+
+
+
 	    private IEnumerator EnterNewRoom(Teleporter teleporter)
 	    {
 		    GameManager.GetFadeRef().PlayFadeIn();
