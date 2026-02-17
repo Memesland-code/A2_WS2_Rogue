@@ -89,12 +89,13 @@ namespace Tech_Dev.Procedural
         
         /*
          * HUB
-         * 2 fight rooms
+         * 2 fight 
          * shop - heal
-         * 1 fight random
+         * 1 fight 
          * bonus/upgrade - trial/gambling
-         * 2 fight random
+         * 1 fight 
          * bonus - trial
+         * 1 fight
          * shop - heal
          * BOSS
          */
@@ -111,7 +112,7 @@ namespace Tech_Dev.Procedural
                 Room roomChoice1 = new();
                 Room roomChoice2 = new();
 
-                if (i is 0 or 1 or 3 or 5 or 6) // Room 1, 2, 4, 6 and 7  = fight
+                if (i is 0 or 1 or 3 or 5 or 7) // Room 1, 2, 4, 6 and 8  = fight
                 {
                     roomChoice1.Type = Type.Fight;
                     roomChoice1.Difficulty = Difficulty.Pristine;
@@ -129,7 +130,7 @@ namespace Tech_Dev.Procedural
                     roomChoice2.RoomInternalNb = shopRoomNumber;
                     shopRoomNumber++;
                 }
-                else if (i is 4 or 7) // Room 5 and 8 = Trial and Upgrade
+                else if (i is 4 or 6) // Room 5 and 8 = Trial and Upgrade
                 {
                     roomChoice1.Type = Type.Upgrade;
                     roomChoice1.Difficulty = Difficulty.Pristine;
