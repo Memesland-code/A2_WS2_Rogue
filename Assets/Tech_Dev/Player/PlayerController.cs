@@ -385,6 +385,10 @@ namespace Tech_Dev.Player
 		    return _maxHealth;
 	    }
 	    
+	    public float GetCurrentWound() // Modification de Baptiste pour récupérer les wound pour la barre de vie
+	    {
+		    return _woundDamageAmount;
+	    }
 	    
 	    
 	    public void GodMode()
