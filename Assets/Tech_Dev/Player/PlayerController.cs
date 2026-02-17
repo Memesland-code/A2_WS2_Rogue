@@ -456,6 +456,16 @@ namespace Tech_Dev.Player
 		    return false;
 	    }
 
+	    public bool RemoveBlood(float amount)
+	    {
+		    if (_health - amount > 0)
+		    {
+			    _health -= amount;
+			    return true;
+		    }
+		    return false;
+	    }
+
 
 
 	    public float GetHealth()
