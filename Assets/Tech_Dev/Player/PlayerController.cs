@@ -205,7 +205,7 @@ namespace Tech_Dev.Player
 
 				    if (coll.TryGetComponent(out ShopMerchant merchant))
 				    {
-					    merchant.ShopCanvas.gameObject.SetActive(true);
+					    merchant.OpenShop();
 				    }
 			    }
 			    _interactTimeDelta = _interactCooldown;
@@ -327,11 +327,20 @@ namespace Tech_Dev.Player
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    yield return new WaitForSeconds(1f);
 
-		    if (_currentRoom.Type == Type.Boss) GameManager.GetGenerationManagerRef().ResetDungeon(false);
-		    
-		    // 100 gold pristine
-		    // 2 souls ruin
-		    // 5 souls boss
+		    if (_currentRoom.Type == Type.Boss)
+		    {
+			    AddSouls(5);
+			    GameManager.GetGenerationManagerRef().ResetDungeon(false);
+		    }
+		    else if (_currentRoom.Type == Type.Fight)
+		    {
+			    AddGold(100);
+		    }
+
+		    if (_currentRoom.Difficulty == Difficulty.Ruins)
+		    {
+			    AddSouls(2);
+		    }
 		    
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
@@ -441,7 +450,7 @@ namespace Tech_Dev.Player
 		    return false;
 	    }
 
-	    public void AddSoul(int amount)
+	    public void AddSouls(int amount)
 	    {
 		    _souls += amount;
 	    }
