@@ -76,6 +76,10 @@ namespace Tech_Dev.Player
 	    private float _woundDamageAmount;
 
 	    private GameObject _camera;
+
+
+	    public int Gold;
+	    public int Souls;
 	    
 	    
 	    // Cheat codes
@@ -406,6 +410,13 @@ namespace Tech_Dev.Player
 		    
 		    //TODO show defeat screen
 		    GameManager.GetFadeRef().PlayFadeOut(); //! TO REMOVE LATER
+	    }
+
+
+
+	    public void AddGold(int amount)
+	    {
+		    Gold += amount;
 	    }
 
 

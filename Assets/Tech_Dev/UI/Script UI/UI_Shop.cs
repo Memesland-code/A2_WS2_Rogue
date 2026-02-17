@@ -26,7 +26,7 @@ public class UI_Shop : MonoBehaviour
  {
   // faire la réferance de la salle pour que actual shop corresponde au shop 1 ou 2
    // getRoomInternalNb
-   ActualShop = PlayerController.getRoomInternalNb();
+   //ActualShop = PlayerController.getRoomInternalNb();
   
   if (Input.GetKeyDown(TestOpen) && OpenMenu == false)
   {
