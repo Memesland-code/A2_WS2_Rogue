@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Tech_Dev.Procedural
@@ -11,8 +12,6 @@ namespace Tech_Dev.Procedural
 
         private void Start()
         {
-            ShopNumber = RoomManagerRef.GetRoomInternalNb();
-            
             if (ShopNumber == 1)
             {
                 ShopCanvas = GameObject.FindWithTag("Shop1");
@@ -23,6 +22,13 @@ namespace Tech_Dev.Procedural
             }
         }
 
+        private void Update()
+        {
+            if (ShopNumber == 0)
+            {
+                ShopNumber = RoomManagerRef.GetRoomInternalNb();
+            }
+        }
 
 
         public void OpenShop()
