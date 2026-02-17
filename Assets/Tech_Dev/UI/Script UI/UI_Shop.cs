@@ -1,3 +1,4 @@
+using Tech_Dev.Player;
 using UnityEngine;
 
 public class UI_Shop : MonoBehaviour
@@ -6,6 +7,12 @@ public class UI_Shop : MonoBehaviour
  [SerializeField] private KeyCode TestClose;
  
  [SerializeField] private GameObject ShopInterface;
+ 
+ [SerializeField] private GameObject Shop1;
+ [SerializeField] private GameObject Shop2;
+
+ private GameObject ActualShop;
+ 
  
  private bool OpenMenu = false;
 
@@ -17,6 +24,10 @@ public class UI_Shop : MonoBehaviour
 
  void Update()
  {
+  // faire la réferance de la salle pour que actual shop corresponde au shop 1 ou 2
+   // getRoomInternalNb
+   ActualShop = PlayerController.getRoomInternalNb();
+  
   if (Input.GetKeyDown(TestOpen) && OpenMenu == false)
   {
    
@@ -35,11 +46,47 @@ public class UI_Shop : MonoBehaviour
 
  public void OpenShop()
  {
-  ShopInterface.SetActive(true);
+  Time.timeScale = 0; // met le jeux et les animations en pause ATTNETION à bien retirer la pause ensuite
+
+
+  if (ActualShop == Shop1)
+  {
+    ShopInterface.SetActive(true);
+  }
+  else if (ActualShop == Shop2)
+  {
+   ShopInterface.SetActive(true);
+  }
  }
 
  public void CloseShop()
  {
   ShopInterface.SetActive(false);
+  Time.timeScale = 1; //   le jeu et les animation de la pause
  }
+
+ public void Choice1() 
+ {
+ }
+ 
+ public void Choice2()
+ {
+ }
+ 
+ public void Choice3()
+ {
+ }
+ 
+ public void Choice4() 
+ {
+ }
+ 
+ public void Choice5()
+ {
+ }
+ 
+ public void Choice6()
+ {
+ }
+ 
 }
