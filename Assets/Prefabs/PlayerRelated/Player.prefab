@@ -37,6 +37,7 @@ Transform:
   - {fileID: 7497974607580128351}
   - {fileID: 8206124213659047130}
   - {fileID: 1154505659140929774}
+  - {fileID: 5860642257080451823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &78998481687026676
@@ -170,15 +171,49 @@ MonoBehaviour:
   _dashForce: 13
   _dashMultiplierX: 2
   _dashMultiplierY: 2
+  _spellProjectile: {fileID: -8806197135947406014, guid: fcd0814986228534d82fce0637e6b59e, type: 3}
+  _projectileForce: 120
+  _shootPoint: {fileID: 5860642257080451823}
   _interactCooldown: 1
   _dashCooldown: 1
   _dashTime: 0.1
   _groundMaterial: {fileID: 13400000, guid: b0f38ab0861d08548b7cfdca135749b4, type: 2}
   _airMaterial: {fileID: 13400000, guid: 09c644450a5473746bc465706ab87b01, type: 2}
   _teleportationFadeTime: 0.75
-  Gold: 0
-  Souls: 0
+  HasProjectileStunUpgrade: 0
+  HasProjectileTpUpgrade: 0
   NoClip: 0
+--- !u!1 &4154378733959914343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5860642257080451823}
+  m_Layer: 7
+  m_Name: ShootPoint
+  m_TagString: PlayerRelated
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5860642257080451823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154378733959914343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6833196506537375265}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4803926977503262152
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +226,7 @@ GameObject:
   - component: {fileID: 328647522771395394}
   m_Layer: 0
   m_Name: GroundDetector
-  m_TagString: Untagged
+  m_TagString: PlayerRelated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +273,7 @@ GameObject:
   - component: {fileID: 3116907633525925660}
   m_Layer: 0
   m_Name: AttackPoint
-  m_TagString: Untagged
+  m_TagString: PlayerRelated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,6 +444,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a527208df1406d040a7b407ef7f0c2b2, type: 3}
       propertyPath: m_Name
       value: Dhampire_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a527208df1406d040a7b407ef7f0c2b2, type: 3}
+      propertyPath: m_TagString
+      value: PlayerRelated
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

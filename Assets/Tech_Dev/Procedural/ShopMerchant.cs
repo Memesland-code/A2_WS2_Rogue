@@ -6,6 +6,6 @@ namespace Tech_Dev.Procedural
     {
         public Canvas ShopCanvas;
         
-        
+        //TODO check when player interact in
     }
 }

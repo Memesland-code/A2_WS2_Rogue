@@ -40,6 +40,9 @@ namespace Tech_Dev.Player
 	    [SerializeField] private float _dashMultiplierY;
 	    
 	    [Space(5), Header("Abilities related")]
+	    [SerializeField] private PlayerSpell _spellProjectile;
+	    [SerializeField] private float _projectileForce;
+	    [SerializeField] private Transform _shootPoint;
 	    [SerializeField] private float _interactCooldown;
 	    [SerializeField] private float _dashCooldown;
 	    [SerializeField] private float _dashTime;
@@ -70,6 +73,8 @@ namespace Tech_Dev.Player
 
 	    private int _currentJumpsCombo;
 	    private bool _isDashing;
+	    public bool HasProjectileStunUpgrade;
+	    public bool HasProjectileTpUpgrade;
 
 	    private bool _woundBarActive;
 	    private float _woundBarTimer;
@@ -78,8 +83,8 @@ namespace Tech_Dev.Player
 	    private GameObject _camera;
 
 
-	    public int Gold;
-	    public int Souls;
+	    private int _gold;
+	    private int _souls;
 	    
 	    
 	    // Cheat codes
@@ -279,13 +284,19 @@ namespace Tech_Dev.Player
 		    }
 		    _heavyTimeDelta -= Time.deltaTime;
 
+		    
+		    
 		    if (_inputs.Skill && _skillTimeDelta <= 0.0f)
 		    {
-			    //TODO Spawn projectile
-
-			    print("Test");
+			    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
+			    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (_projectileForce * 10));
+			    spell.HasStunUpgrade = HasProjectileStunUpgrade;
+			    spell.HasTeleportUpgrade = HasProjectileTpUpgrade;
+			    
 			    _skillTimeDelta = _skillCooldown;
 		    }
+		    
+		    _skillTimeDelta -= Time.deltaTime;
 		    
 		    
 		    
@@ -416,7 +427,33 @@ namespace Tech_Dev.Player
 
 	    public void AddGold(int amount)
 	    {
-		    Gold += amount;
+		    _gold += amount;
+	    }
+
+	    public bool RemoveGold(int amount)
+	    {
+		    if (_gold - amount >= 0)
+		    {
+			    _gold -= amount;
+			    return true;
+		    }
+
+		    return false;
+	    }
+
+	    public void AddSoul(int amount)
+	    {
+		    _souls += amount;
+	    }
+
+	    public bool RemoveSoul(int amount)
+	    {
+		    if (_souls - amount >= 0)
+		    {
+			    _souls -= amount;
+			    return true;
+		    }
+		    return false;
 	    }
 
 

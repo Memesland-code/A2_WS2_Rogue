@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1950909494333644813}
   m_Layer: 8
   m_Name: Enemy_Rat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   _walkPoint: {x: 0, y: 0, z: 0}
   _walkPointRange: 5
   _timeBetweenAttacks: 2
-  _damage: 10
+  _damage: 5
   _attackPoint: {fileID: 8119809765179345413}
   _damageRange: 3
   _attackCooldown: 1.5

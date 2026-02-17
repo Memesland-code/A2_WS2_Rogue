@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2947398591744941673}
   - component: {fileID: 3018497463413874021}
   - component: {fileID: 1420065367697658249}
-  - component: {fileID: 3175951251303992656}
+  - component: {fileID: -8806197135947406014}
   m_Layer: 0
-  m_Name: SkullProjectile
+  m_Name: PlayerSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -235.18, y: 4.25, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,7 +108,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1420065367697658249
 Rigidbody:
@@ -137,7 +137,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3175951251303992656
+--- !u!114 &-8806197135947406014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,8 +146,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1975553654354491707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0940982af9542ac49a70c1437eb37d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b7bf0308b7f9994fb4dd63e38415066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 5
-  _maxBounces: 3
+  _damage: 40
+  HasStunUpgrade: 0
+  HasTeleportUpgrade: 0
