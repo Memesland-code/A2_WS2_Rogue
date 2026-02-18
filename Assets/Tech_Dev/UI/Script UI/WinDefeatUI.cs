@@ -15,8 +15,13 @@ namespace Tech_Dev.UI.Script_UI
         
         private void OnEnable()
         {
+            if (GameManager.GetPlayerScriptRef() == null)
+            {
+                return;
+            }
+            
             _runState.text = RunState;
-            _totalKills.text = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().RunTotalPlayerKills.ToString();
+            _totalKills.text = GameManager.GetTotalPlayerKills().ToString();
             _totalGoldGain.text = GameManager.GetPlayerScriptRef().TotalGoldGain.ToString();
             _totalSoulsGain.text = GameManager.GetPlayerScriptRef().TotalSoulGain.ToString();
             _runTime.text = Math.Floor(GameManager.GetPlayerScriptRef().RunTimer).ToString();

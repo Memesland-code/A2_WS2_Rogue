@@ -26,7 +26,7 @@ namespace Tech_Dev
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
-        public int RunTotalPlayerKills;
+        public static int RunTotalPlayerKills;
 
         private static GenerationManager _generationManager;
 
@@ -38,6 +38,9 @@ namespace Tech_Dev
         
         private void Awake()
         {
+            _playerRef = GameObject.FindWithTag("Player");
+            _playerScriptRef = _playerRef.GetComponent<PlayerController>();
+            
             _fadeEffect = GameObject.FindWithTag("CanvasFade").transform.GetChild(0).GetComponent<FadeEffect>();
 
             if (_fadeEffect == null)
@@ -46,9 +49,6 @@ namespace Tech_Dev
 
                 _fadeEffect = fadeEffect.transform.GetChild(0).GetComponent<FadeEffect>();
             }
-            
-            _playerRef = GameObject.FindWithTag("Player");
-            _playerScriptRef = _playerRef.GetComponent<PlayerController>();
             
             Shop1Screen = GameObject.FindWithTag("Shop1");
             Shop1Screen.SetActive(false);
@@ -175,6 +175,23 @@ namespace Tech_Dev
         public static PlayerController GetPlayerScriptRef()
         {
             return _playerScriptRef;
+        }
+
+
+
+        public static void AddTotalPlayerKills()
+        {
+            RunTotalPlayerKills++;
+        }
+
+        public static void SetTotalPlayerKills(int newNumber)
+        {
+            RunTotalPlayerKills = newNumber;
+        }
+
+        public static int GetTotalPlayerKills()
+        {
+            return RunTotalPlayerKills;
         }
         
         

@@ -62,6 +62,8 @@ namespace Tech_Dev.Player
 	    
 	    private Rigidbody _rb;
 	    private InputManager _inputs;
+	    private Animator _animator;
+	    
 	    private bool _isDead;
 	    public bool IsVictory;
 	    
@@ -118,6 +120,8 @@ namespace Tech_Dev.Player
 		    _inputs = GetComponent<InputManager>();
 		    _swordDamager = GetComponentInChildren<SwordDamager>();
 		    _camera = GameManager.GetCamera();
+		    _animator = GetComponent<Animator>();
+		    //print(_animator.gameObject.name);
 		    
 		    ResetPlayer();
 	    }
@@ -152,7 +156,7 @@ namespace Tech_Dev.Player
 		    TotalGoldGain = 0;
 		    TotalSoulGain = 0;
 		    RunTimer = 0;
-		    GameObject.FindWithTag("GameManager").GetComponent<GameManager>().RunTotalPlayerKills = 0;
+		    GameManager.SetTotalPlayerKills(0);
 	    }
 
 	    
@@ -180,6 +184,7 @@ namespace Tech_Dev.Player
 		    // Check input jump and if on ground and else if max jump count is not exceeded
 		    if (_inputs.Jump && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
 		    {
+			    
 			    SoundManager.PlaySound(SoundType.CharacterJump);
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
