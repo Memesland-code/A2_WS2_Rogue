@@ -1,3 +1,4 @@
+using System;
 using Tech_Dev;
 using Tech_Dev.Player;
 using Tech_Dev.Procedural;
@@ -6,15 +7,7 @@ using UnityEngine;
 
 public class UI_Shop : MonoBehaviour
 {
-
  
- //[SerializeField] private GameObject Shop1;
- //[SerializeField] private GameObject Shop2;
-
- [SerializeField] private int ActualShop;
- 
- 
- [SerializeField] private GameObject AllGreyChoice;
  [SerializeField] private GameObject GreyChoice1; // cadres qui recouvrirons les items une fois acheté
  [SerializeField] private GameObject GreyChoice2;
  [SerializeField] private GameObject GreyChoice3;
@@ -43,14 +36,9 @@ public class UI_Shop : MonoBehaviour
  [SerializeField] int Price5;
  [SerializeField] int Price6;
  
- 
  private int CurrentGold;
-
  
  
- private bool OpenMenu = false;
-
-
  void Start()
  {
 
@@ -71,23 +59,12 @@ public class UI_Shop : MonoBehaviour
 
  }
 
- void Update()
+ private void Update()
  {
-  //CurrentGold = playerController.Gold;
-   ActualShop = GameManager.GetPlayerScriptRef().GetCurrentRoom().GetRoomInternalNb();
-   
-   TextPrice1.SetText($"{Price1}");
-   TextPrice2.SetText($"{Price2}");
-   TextPrice3.SetText($"{Price3}");
-   TextPrice4.SetText($"{Price4}");
-   TextPrice5.SetText($"{Price5}");
-   TextPrice6.SetText($"{Price6}");
-   
-   
+  CurrentGold = GameManager.GetPlayerScriptRef().GetGold();
  }
 
 
-           // ne pas oublier de soustraire le prix à la suite d'un achat
  public void Choice1() 
  {
   if (CurrentGold >= Price1)

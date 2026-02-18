@@ -21,6 +21,7 @@ namespace Tech_Dev
         public static GameObject UpgradeScreen;
         public static GameObject TrialScreen;
         public static GameObject WinDefeatScreen;
+        public static GameObject HealingScreen;
 
         public static List<GameObject> ScreensList = new();
 
@@ -64,6 +65,9 @@ namespace Tech_Dev
             
             WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
             WinDefeatScreen.SetActive(false);
+            
+            HealingScreen = GameObject.FindWithTag("HealingScreen");
+            HealingScreen.SetActive(false);
         }
 
 
