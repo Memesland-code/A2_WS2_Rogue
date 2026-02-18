@@ -117,6 +117,8 @@ namespace Tech_Dev
             foreach (GameObject ui in ScreensList)
             {
                 ui.SetActive(false);
+                Time.timeScale = 1;
+
             }
         }
 

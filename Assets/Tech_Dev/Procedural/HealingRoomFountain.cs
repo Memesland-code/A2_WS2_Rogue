@@ -24,6 +24,7 @@ namespace Tech_Dev.Procedural
         public void OpenHealingChoice() 
         {
             healingCanvas.SetActive(true);
+            
         }
         
         

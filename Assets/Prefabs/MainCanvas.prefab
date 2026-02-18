@@ -671,9 +671,7 @@ RectTransform:
   - {fileID: 736729852388594059}
   - {fileID: 2459723653856268991}
   - {fileID: 759042635611083278}
-  - {fileID: 4710472790843240926}
   - {fileID: 4081787941957461243}
-  - {fileID: 680553824652996350}
   - {fileID: 4653492297254336438}
   - {fileID: 2213789853586653509}
   m_Father: {fileID: 4370026021562665834}
@@ -5527,15 +5525,15 @@ RectTransform:
   m_GameObject: {fileID: 4688730604198578439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4187741, y: 1.398927, z: 0.5123313}
+  m_LocalScale: {x: 1.1564258, y: 0.12963381, z: 0.24494772}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5968369596273151418}
-  m_Father: {fileID: 8412465061543110194}
+  m_Father: {fileID: 4081787941957461243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 316.8, y: -58.2}
+  m_AnchoredPosition: {x: -8.701477, y: -10.675194}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4907116899348735783
@@ -7539,18 +7537,18 @@ MonoBehaviour:
   ImageChoice1: {fileID: 6238478363204310282}
   ImageChoice2: {fileID: 9113278357822668792}
   ImageChoice3: {fileID: 8326102543884450373}
-  ImageChoice4: {fileID: 5487209563710410879}
-  ImageChoice5: {fileID: 3962946556110817207}
-  ImageChoice6: {fileID: 3917027211558834000}
+  ImageChoice4: {fileID: 1363776496626806608}
+  ImageChoice5: {fileID: 6881236464943846236}
+  ImageChoice6: {fileID: 1436713089093460218}
   TextPrice1: {fileID: 5756905935247466930}
   TextPrice2: {fileID: 5408950969908066498}
   TextPrice3: {fileID: 3425422070312488552}
   TextPrice4: {fileID: 4521664741260451145}
   TextPrice5: {fileID: 8165102351574930823}
   TextPrice6: {fileID: 32352093960556597}
-  Price1: 1000
-  Price2: 800
-  Price3: 200000000
+  Price1: 100
+  Price2: 100
+  Price3: 100
   Price4: 5000
   Price5: 55
   Price6: 6606
@@ -7996,7 +7994,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5410058205053464561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1171947194010986454}
+        m_TargetAssemblyTypeName: UI_Shop, Assembly-CSharp
+        m_MethodName: Choice1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6315548852770860636
 GameObject:
   m_ObjectHideFlags: 0
@@ -8385,15 +8395,15 @@ RectTransform:
   m_GameObject: {fileID: 6553434820259895517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4187741, y: 1.398927, z: 0.5123313}
+  m_LocalScale: {x: 1.1564258, y: 0.12963381, z: 0.24494772}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2589955224907525082}
-  m_Father: {fileID: 8412465061543110194}
+  m_Father: {fileID: 759042635611083278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.7, y: -58.200005}
+  m_AnchoredPosition: {x: -8.462456, y: -10.675194}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &553953373427612467
@@ -10131,6 +10141,7 @@ RectTransform:
   m_Children:
   - {fileID: 3650678650093438340}
   - {fileID: 1851416559281096314}
+  - {fileID: 680553824652996350}
   m_Father: {fileID: 8412465061543110194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -10993,6 +11004,7 @@ RectTransform:
   m_Children:
   - {fileID: 510932943449870200}
   - {fileID: 3880387737455292962}
+  - {fileID: 4710472790843240926}
   m_Father: {fileID: 8412465061543110194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
