@@ -181,8 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51904c8a04f8cab448363a84ac4ae960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _stunCooldown: 4
+  _maxHealth: 1000
   _agent: {fileID: 2476937301750895221}
   _whatIsGround:
     serializedVersion: 2
@@ -192,10 +191,10 @@ MonoBehaviour:
     m_Bits: 128
   _walkPoint: {x: 0, y: 0, z: 0}
   _walkPointRange: 5
-  _timeBetweenAttacks: 2
+  _timeBetweenAttacks: 4
   _projectile: {fileID: 3175951251303992656, guid: 74eab48e48b057c45ae7d7998321a61d, type: 3}
   _shootPoint: {fileID: 9034114208356960506}
-  _bulletForce: 30
+  _bulletForce: 50
   _sightRange: 20
   _attackRange: 15
   _playerInSightRange: 0
