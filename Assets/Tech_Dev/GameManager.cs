@@ -59,7 +59,19 @@ namespace Tech_Dev
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
 
             Shop1Screen = GameObject.FindWithTag("Shop1");
-            //Shop1Screen = 
+            Shop1Screen.SetActive(false);
+            
+            Shop2Screen = GameObject.FindWithTag("Shop2");
+            Shop2Screen.SetActive(false);
+            
+            UpgradeScreen = GameObject.FindWithTag("UpgradeScreen");
+            UpgradeScreen.SetActive(false);
+            
+            TrialScreen = GameObject.FindWithTag("TrialScreen");
+            TrialScreen.SetActive(false);
+            
+            WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
+            WinDefeatScreen.SetActive(false);
         }
 
         public static GameObject GetShop1Screen()
