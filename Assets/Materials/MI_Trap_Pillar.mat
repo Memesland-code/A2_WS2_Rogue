@@ -106,7 +106,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Extra_Normal:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c57955bfcbe608041a8fc7ebf9d231a7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -193,6 +193,7 @@ Material:
     - _GlossyReflections: 0
     - _Invert_AO: 0
     - _Invert_Extra_Normal: 0
+    - _Invert_Glossiness: 0
     - _Invert_Normal: 0
     - _MaskB_Contrast: 1
     - _MaskB_Multiply: 1
@@ -201,7 +202,7 @@ Material:
     - _MaskR_Contrast: 1
     - _MaskR_Multiply: 1
     - _Metallic: 0
-    - _Normal_Strength: 0
+    - _Normal_Strength: 1.41
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
