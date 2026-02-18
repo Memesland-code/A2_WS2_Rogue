@@ -8,19 +8,21 @@ namespace Tech_Dev.Procedural
         public GameObject ShopCanvas;
         public int ShopNumber;
 
-        private void Start()
+        public void InitShopRef(int shopNumber)
         {
-            if (ShopNumber == 1)
-            {
-                ShopCanvas = GameManager.GetShop1Screen();
-            }
-            else
-            {
-                ShopCanvas = GameManager.GetShop2Screen();
-            }
+	        ShopNumber = shopNumber;
+	        
+	        if (ShopNumber == 1)
+	        {
+		        ShopCanvas = GameManager.GetShop1Screen();
+	        }
+	        else
+	        {
+		        ShopCanvas = GameManager.GetShop2Screen();
+	        }
             
-            print(ShopNumber + " - " + ShopCanvas.name);
-            ShopCanvas.SetActive(false);
+	        print(ShopNumber + " - " + ShopCanvas.name);
+	        ShopCanvas.SetActive(false);
         }
 
         public void OpenShop()

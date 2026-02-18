@@ -167,7 +167,7 @@ namespace Tech_Dev.Procedural
 
 		private void InitShopRoom()
 		{
-			GetComponentInChildren<ShopMerchant>().ShopNumber = RoomInternalNb;
+			GetComponentInChildren<ShopMerchant>().InitShopRef(RoomInternalNb);
 		}
 
 

@@ -310,6 +310,20 @@ namespace Tech_Dev
                 }
             }
 
+            if (Input.GetKeyDown(KeyCode.Keypad7))
+            {
+	            GameObject roomTeleporter = _playerScriptRef.GetCurrentRoom().RoomTeleporter;
+
+	            if (roomTeleporter.transform.childCount == 0)
+	            {
+		            _playerScriptRef.ForceEnterNewRoom(roomTeleporter.GetComponent<Teleporter>());
+	            }
+	            else
+	            {
+		            _playerScriptRef.ForceEnterNewRoom(roomTeleporter.transform.GetChild(1).GetComponent<Teleporter>());
+	            }
+            }
+
             if (Input.GetKeyDown(KeyCode.KeypadPlus))
             {
                 GetPlayerScriptRef().AddGold(1000);
