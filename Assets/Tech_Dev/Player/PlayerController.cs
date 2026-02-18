@@ -586,6 +586,16 @@ namespace Tech_Dev.Player
 		    _maxDashesNumber++;
 	    }
 
+	    public int GetGold()
+	    {
+		    return _gold;
+	    }
+
+	    public int GetSouls()
+	    {
+		    return _souls;
+	    }
+
 	    public void DungeonEndScreen(bool isWin)
 	    {
 		    WinDefeatUI endingScreen = GameManager.GetWinDefeatScreen().GetComponent<WinDefeatUI>();
