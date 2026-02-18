@@ -387,6 +387,11 @@ namespace Tech_Dev.Player
 			    _woundBarActive = false;
 			    _woundBarTimer = 0.1f;
 		    }
+
+		    if (Input.GetKeyDown(KeyCode.U))
+		    {
+			    _animator.SetTrigger("Test");
+		    }
 	    }
 
 
