@@ -1,3 +1,4 @@
+using Tech_Dev;
 using Tech_Dev.Player;
 using TMPro;
 using UnityEngine;
@@ -15,8 +16,10 @@ public class Ui_Currencies : MonoBehaviour
 
     void Update ()
     {
-         //CurrentGold = playerController.Gold;
-         //CurrentSouls = playerController.Souls;
+        
+        CurrentGold = GameManager.GetPlayerScriptRef().GetGold();
+        CurrentSouls = GameManager.GetPlayerScriptRef().GetSouls();
+
 
          GoldText.SetText($"{CurrentGold}"); 
          SoulsText.SetText($"{CurrentSouls}");

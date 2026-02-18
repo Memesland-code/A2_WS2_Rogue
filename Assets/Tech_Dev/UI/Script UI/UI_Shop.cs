@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class UI_Shop : MonoBehaviour
 {
- [SerializeField] private KeyCode TestOpen;
- [SerializeField] private KeyCode TestClose;
+
  
- [SerializeField] private GameObject Shop1;
- [SerializeField] private GameObject Shop2;
+ //[SerializeField] private GameObject Shop1;
+ //[SerializeField] private GameObject Shop2;
 
  [SerializeField] private int ActualShop;
  
@@ -54,8 +53,7 @@ public class UI_Shop : MonoBehaviour
 
  void Start()
  {
-  Shop1.SetActive(false);
-  Shop2.SetActive(false);
+
   
   GreyChoice1.SetActive(false); // met sur faux sur les cadres qui recouvrirons les items une fois acheté
   GreyChoice2.SetActive(false);
@@ -76,56 +74,19 @@ public class UI_Shop : MonoBehaviour
  void Update()
  {
   //CurrentGold = playerController.Gold;
-
-  
    ActualShop = GameManager.GetPlayerScriptRef().GetCurrentRoom().GetRoomInternalNb();
-
    
-  if (Input.GetKeyDown(TestOpen) && OpenMenu == false) 
-  {
+   TextPrice1.SetText($"{Price1}");
+   TextPrice2.SetText($"{Price2}");
+   TextPrice3.SetText($"{Price3}");
+   TextPrice4.SetText($"{Price4}");
+   TextPrice5.SetText($"{Price5}");
+   TextPrice6.SetText($"{Price6}");
    
-   OpenMenu = true; // à retirer ou alors à faire en clean
-    OpenShop();
-  }
-
-  if (Input.GetKeyDown(TestClose) && OpenMenu == true)
-  {
-   OpenMenu = false; // à retirer ou alors à faire en clean 
-   CloseShop(); //fermer menu  
-  }
+   
  }
 
- public void OpenShop()
- {
-  Time.timeScale = 0; // met le jeux et les animations en pause ATTNETION à bien retirer la pause ensuite
 
-  if (ActualShop == 1)
-  {
-    Shop1.SetActive(true);
-  }
-  
-  if (ActualShop == 2)
-  {
-   Shop2.SetActive(true);
-  }
- }
-
- public void CloseShop()
- {
-  if (ActualShop == 1)
-  {
-   Shop1.SetActive(false);
-  }
-  if (ActualShop == 2)
-  {
-   Shop2.SetActive(false);
-  }
-  
-  
-  Time.timeScale = 1; //   le jeu et les animation de la pause
-  
-
- }
            // ne pas oublier de soustraire le prix à la suite d'un achat
  public void Choice1() 
  {
@@ -142,7 +103,7 @@ public class UI_Shop : MonoBehaviour
  public void Choice2()
  {
   if (CurrentGold >= Price2)
-  {
+  { 
    GreyChoice2.SetActive(true);
    ImageChoice2.SetActive(false);
    //ajouter item à l'inventaire
