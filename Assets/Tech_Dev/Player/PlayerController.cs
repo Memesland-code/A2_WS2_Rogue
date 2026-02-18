@@ -333,7 +333,6 @@ namespace Tech_Dev.Player
 		    if (_inputs.HeavyAttack && _heavyTimeDelta <= 0.0f)
 		    {
 			    SoundManager.PlaySound(SoundType.CharacterHeavyAttack);
-			    print("heavy");
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 

@@ -61,7 +61,6 @@ namespace Tech_Dev.Player
 
         public void OnCloseUI(InputValue value)
         {
-	        print("ee");
             GameManager.CloseAllUIs();
         }
     }
