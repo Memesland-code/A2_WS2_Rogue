@@ -93,6 +93,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emissive:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Extra_Normal:
         m_Texture: {fileID: 2800000, guid: cec6775914023e14e8e21b9914b362c0, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -110,7 +114,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ORM:
-        m_Texture: {fileID: 2800000, guid: 0da01fa994c61e24daa43e8213acb334, type: 3}
+        m_Texture: {fileID: 2800000, guid: d31c656e5ab52354a8525e9ceb56dc11, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ORM_1:
@@ -173,10 +177,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _Emissive_Intensity: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Invert_AO: 0
     - _Invert_Extra_Normal: 0
     - _Invert_Normal: 0
     - _MaskB_Contrast: 1
