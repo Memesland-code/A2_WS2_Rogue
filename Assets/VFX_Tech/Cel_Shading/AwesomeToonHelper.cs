@@ -110,13 +110,22 @@ namespace AwesomeToon {
 
         void UpdateMaterial() {
             if (!material) return;
+            bool isLightGood = true;
 
             // Refresh light data
             List<LightSet> sortedLights = new List<LightSet>();
             if (lightSets != null) {
-                foreach (LightSet lightSet in lightSets.Values) {
+                foreach (LightSet lightSet in lightSets.Values)
+                {
+	                if (lightSet.light == null)
+	                {
+		                isLightGood = false;
+		                break;
+	                }
                     sortedLights.Add(CalcLight(lightSet));
                 }
+                
+                if (!isLightGood) GetLights();
             }
 
             // Sort lights by brightness
