@@ -329,7 +329,7 @@ namespace Tech_Dev.Player
 			    {
 				    if (!enemy) return;
 
-				    damagedEnemy = ManageEnemyDamage(enemy, _meleeAttackDamage);
+				    damagedEnemy = ManageEnemyDamage(enemy, _heavyAttackDamage);
 			    }
 			    
 			    if (damagedEnemy && _woundBarActive)
