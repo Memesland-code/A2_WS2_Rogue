@@ -239,6 +239,11 @@ namespace Tech_Dev
                     _playerScriptRef.ForceEnterNewRoom(roomTeleporter.transform.GetChild(0).GetComponent<Teleporter>());
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.KeypadPlus))
+            {
+                GameManager.GetPlayerScriptRef().AddGold(1000);
+            }
         }
     }
 }
