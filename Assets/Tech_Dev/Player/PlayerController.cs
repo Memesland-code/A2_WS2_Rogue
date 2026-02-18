@@ -132,6 +132,7 @@ namespace Tech_Dev.Player
 
 		    if (GameManager.IsGameLaunch)
 		    {
+			    SoundManager.PlaySound(SoundType.CharacterRiseFromTomb);
 			    transform.position = GameObject.FindWithTag("GameStart").transform.position;
 		    }
 		    else
@@ -179,6 +180,7 @@ namespace Tech_Dev.Player
 		    // Check input jump and if on ground and else if max jump count is not exceeded
 		    if (_inputs.Jump && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
 		    {
+			    SoundManager.PlaySound(SoundType.CharacterJump);
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 			    _currentJumpsCombo++;
@@ -267,6 +269,7 @@ namespace Tech_Dev.Player
 		    
 		    if (_inputs.Dash && (_dashCooldownTimeDelta <= 0.0f || (_currentDashesNumber < _maxDashesNumber && _fastDashAvoid <= 0.0f)))
 		    {
+			    SoundManager.PlaySound(SoundType.CharacterDash);
 			    _rb.linearVelocity = Vector3.zero;
 			    _dashCooldownTimeDelta = _dashCooldown;
 			    _isDashing = true;
@@ -317,6 +320,7 @@ namespace Tech_Dev.Player
 
 		    if (_inputs.HeavyAttack && _heavyTimeDelta <= 0.0f)
 		    {
+			    SoundManager.PlaySound(SoundType.CharacterHeavyAttack);
 			    print("heavy");
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
@@ -342,6 +346,7 @@ namespace Tech_Dev.Player
 		    
 		    if (_inputs.Skill && _skillTimeDelta <= 0.0f)
 		    {
+			    SoundManager.PlaySound(SoundType.CharacterSpell);
 			    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
 			    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (RunSpellProjectileSpeed * 10));
 			    spell.HasStunUpgrade = HasProjectileStunUpgrade;
@@ -430,18 +435,21 @@ namespace Tech_Dev.Player
 	    {
 		    if (enemy.TryGetComponent(out EnemyRat rat))
 		    {
+			    SoundManager.PlaySound(SoundType.RatDeath);
 			    rat.TakeDamage(damage);
 			    return true;
 		    }
 
 		    if (enemy.TryGetComponent(out EnemySkull skull))
 		    {
+			    SoundManager.PlaySound(SoundType.SkullDeath);
 			    skull.TakeDamage(damage);
 			    return true;
 		    }
 
 		    if (enemy.TryGetComponent(out BossSkull bossSkull))
 		    {
+			    SoundManager.PlaySound(SoundType.SkullDeath);
 			    bossSkull.TakeDamage(damage);
 			    return true;
 		    }
@@ -453,6 +461,7 @@ namespace Tech_Dev.Player
 
 	    public void Damage(float damage)
 	    {
+		    SoundManager.PlaySound(SoundType.CharacterHurt);
 		    if (_godMode) return;
 		    
 		    _health -= damage;
@@ -472,6 +481,7 @@ namespace Tech_Dev.Player
 	    public IEnumerator PlayerDeath()
 	    {
 		    if (!_isDead) _isDead = true;
+		    SoundManager.PlaySound(SoundType.CharacterDeath);
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    
 		    yield return new WaitForSeconds(1f);
@@ -508,6 +518,7 @@ namespace Tech_Dev.Player
 	    {
 		    if (_gold - amount >= 0)
 		    {
+			    SoundManager.PlaySound(SoundType.MerchantBuy);
 			    _gold -= amount;
 			    return true;
 		    }
@@ -535,6 +546,7 @@ namespace Tech_Dev.Player
 	    {
 		    if (_health - amount > 0)
 		    {
+			    SoundManager.PlaySound(SoundType.MerchantBlood);
 			    _health -= amount;
 			    return true;
 		    }
