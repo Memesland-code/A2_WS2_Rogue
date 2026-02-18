@@ -52,21 +52,27 @@ namespace Tech_Dev
             }
             
             Shop1Screen = GameObject.FindWithTag("Shop1");
+            ScreensList.Add(Shop1Screen);
             Shop1Screen.SetActive(false);
             
             Shop2Screen = GameObject.FindWithTag("Shop2");
+            ScreensList.Add(Shop2Screen);
             Shop2Screen.SetActive(false);
             
             UpgradeScreen = GameObject.FindWithTag("UpgradeScreen");
+            ScreensList.Add(UpgradeScreen);
             UpgradeScreen.SetActive(false);
             
             TrialScreen = GameObject.FindWithTag("TrialScreen");
+            ScreensList.Add(TrialScreen);
             TrialScreen.SetActive(false);
             
             WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
+            ScreensList.Add(WinDefeatScreen);
             WinDefeatScreen.SetActive(false);
             
             HealingScreen = GameObject.FindWithTag("HealingScreen");
+            ScreensList.Add(HealingScreen);
             HealingScreen.SetActive(false);
         }
 

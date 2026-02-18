@@ -22,8 +22,6 @@ namespace Tech_Dev.Player
         private void Update()
         {
             Jump = false;
-            //MeleeAttack = false;
-            //HeavyAttack = false;
         }
 
         public void OnMove(InputValue value)
