@@ -260,9 +260,9 @@ namespace Tech_Dev.Player
 					    trialRoom.OpenTrialChoice();
 				    }
 
-				    if (coll.TryGetComponent(out HealingRoomFountain healingFountain))
+				    if (coll.TryGetComponent(out HealingRoomFountain healingFountain)) 
 				    {
-					    _health += healingFountain.GetFountainHeal();
+					    healingFountain.OpenHealingChoice();
 				    }
 			    }
 			    _interactTimeDelta = _interactCooldown;

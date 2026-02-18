@@ -4,13 +4,28 @@ namespace Tech_Dev.Procedural
 {
     public class HealingRoomFountain : MonoBehaviour
     {
-        [SerializeField] private float _healAmount;
-        private bool _activated;
+        [Header("Do not fill, automatically filled from MainCanvas values")]
+        public GameObject healingCanvas;
 
-        public float GetFountainHeal()
+        private void Start()
         {
-            if (_activated) return 0;
-            return _healAmount;
+            healingCanvas = GameManager.GetTrialScreen();
+            
+            if (healingCanvas)
+            {
+                healingCanvas.SetActive(false);
+            }
+            else
+            {
+                Debug.LogWarning("Warning: No healing Canvas found in game manager!");
+            }
         }
+
+        public void OpenHealingChoice() 
+        {
+            healingCanvas.SetActive(true);
+        }
+        
+        
     }
 }
