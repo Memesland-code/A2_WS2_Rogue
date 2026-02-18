@@ -174,6 +174,8 @@ MonoBehaviour:
   _dashMultiplierX: 2
   _dashMultiplierY: 2
   _spellProjectile: {fileID: -8806197135947406014, guid: fcd0814986228534d82fce0637e6b59e, type: 3}
+  _spellDamage: 0
+  _spellStunTime: 0
   _projectileForce: 120
   _shootPoint: {fileID: 5860642257080451823}
   _dashCooldown: 3
@@ -181,8 +183,16 @@ MonoBehaviour:
   _groundMaterial: {fileID: 13400000, guid: b0f38ab0861d08548b7cfdca135749b4, type: 2}
   _airMaterial: {fileID: 13400000, guid: 09c644450a5473746bc465706ab87b01, type: 2}
   _teleportationFadeTime: 0.75
+  IsVictory: 0
   HasProjectileStunUpgrade: 0
   HasProjectileTpUpgrade: 0
+  RunSpecialAttackCooldown: 0
+  RunSpellProjectileDamage: 0
+  RunStunTime: 0
+  RunSpellProjectileSpeed: 0
+  TotalGoldGain: 0
+  TotalSoulGain: 0
+  RunTimer: 0
   NoClip: 0
 --- !u!1 &4154378733959914343
 GameObject:
