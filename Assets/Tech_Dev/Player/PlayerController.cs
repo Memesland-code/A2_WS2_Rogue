@@ -121,7 +121,7 @@ namespace Tech_Dev.Player
 		    _swordDamager = GetComponentInChildren<SwordDamager>();
 		    _camera = GameManager.GetCamera();
 		    _animator = GetComponent<Animator>();
-		    //print(_animator.gameObject.name);
+		    print(_animator.gameObject.name);
 		    
 		    ResetPlayer();
 	    }
@@ -169,12 +169,12 @@ namespace Tech_Dev.Player
 		    if (_inputs.Move.x < 0 && _isFacingRight)
 		    {
 			    _isFacingRight = false;
-			    transform.rotation = Quaternion.Euler(0, 180, 0);
+			    transform.rotation = Quaternion.Euler(0, -90, 0);
 		    }
 		    else if (_inputs.Move.x > 0 && !_isFacingRight)
 		    {
 			    _isFacingRight = true;
-			    transform.rotation = Quaternion.Euler(0, 0, 0);
+			    transform.rotation = Quaternion.Euler(0, 90, 0);
 		    }
 		    
 		    // Reset jump combo on ground touch
@@ -184,7 +184,7 @@ namespace Tech_Dev.Player
 		    // Check input jump and if on ground and else if max jump count is not exceeded
 		    if (_inputs.Jump && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
 		    {
-			    
+			    _animator.SetTrigger("Jump");
 			    SoundManager.PlaySound(SoundType.CharacterJump);
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -216,17 +216,22 @@ namespace Tech_Dev.Player
 		    // Physics and noclip
 		    if (NoClip)
 		    {
+			    if (_inputs.Move.x != 0) _animator.SetBool("IsMoving", true);
 			    transform.position += new Vector3(_inputs.Move.x, _inputs.Move.y, 0);
 		    }
 		    else if (_isDashing)
 		    {
 			    Vector3 dashVelocity = new(_inputs.Move.x * _dashForce * _dashMultiplierX, _inputs.Move.y * _dashForce * _dashMultiplierY, 0);
 			    _rb.linearVelocity = new Vector3(0, 0, 0) + horizontalMove + dashVelocity;
+			    _animator.SetBool("IsMoving", false);
 		    }
 		    else
 		    {
 				_rb.linearVelocity = new Vector3(0, realGravity, 0) + horizontalMove;
+				if (_inputs.Move.x != 0) _animator.SetBool("IsMoving", true);
 		    }
+		    
+		    if (_inputs.Move.x == 0) _animator.SetBool("IsMoving", false);
 
 		    
 		    // Interaction
@@ -301,7 +306,7 @@ namespace Tech_Dev.Player
 		    //TODO Check for cooldown: animation time
 		    if (_inputs.MeleeAttack && _meleeTimeDelta <= 0.0f)
 		    {
-			    print("melee");
+			    _animator.SetTrigger("Attack");
 			    SoundManager.PlaySound(SoundType.CharacterSwordHit);
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
@@ -351,13 +356,9 @@ namespace Tech_Dev.Player
 		    
 		    if (_inputs.Skill && _skillTimeDelta <= 0.0f)
 		    {
-			    SoundManager.PlaySound(SoundType.CharacterSpell);
-			    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
-			    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (RunSpellProjectileSpeed * 10));
-			    spell.HasStunUpgrade = HasProjectileStunUpgrade;
-			    spell.HasTeleportUpgrade = HasProjectileTpUpgrade;
-			    spell.Damage = RunSpellProjectileDamage;
-			    spell.StunTime = RunStunTime;
+			    _animator.SetTrigger("Spell");
+
+			    StartCoroutine(LaunchSpell());
 			    
 			    _skillTimeDelta = _skillCooldown;
 			    if (HasProjectileStunUpgrade == true)
@@ -386,6 +387,19 @@ namespace Tech_Dev.Player
 			    _woundBarActive = false;
 			    _woundBarTimer = 0.1f;
 		    }
+	    }
+
+
+	    public IEnumerator LaunchSpell()
+	    {
+		    yield return new WaitForSeconds(1.05f);
+		    SoundManager.PlaySound(SoundType.CharacterSpell);
+		    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
+		    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (RunSpellProjectileSpeed * 10));
+		    spell.HasStunUpgrade = HasProjectileStunUpgrade;
+		    spell.HasTeleportUpgrade = HasProjectileTpUpgrade;
+		    spell.Damage = RunSpellProjectileDamage;
+		    spell.StunTime = RunStunTime;
 	    }
 
 	    
@@ -496,10 +510,12 @@ namespace Tech_Dev.Player
 	    public IEnumerator PlayerDeath()
 	    {
 		    if (!_isDead) _isDead = true;
-		    SoundManager.PlaySound(SoundType.CharacterDeath);
-		    GameManager.GetFadeRef().PlayFadeIn();
 		    
-		    yield return new WaitForSeconds(1f);
+		    _animator.SetTrigger("Die");
+		    SoundManager.PlaySound(SoundType.CharacterDeath);
+		    yield return new WaitForSeconds(4f);
+		    
+		    GameManager.GetFadeRef().PlayFadeIn();
 
 		    //TODO send info to GameManager? (may avoid bugs)
 		    //TODO reset in-run related elements?

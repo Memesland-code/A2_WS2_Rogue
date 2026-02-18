@@ -18,6 +18,8 @@ namespace Tech_Dev.Procedural
             {
                 ShopCanvas = GameManager.GetShop2Screen();
             }
+            
+            print(ShopNumber + " - " + ShopCanvas.name);
             ShopCanvas.SetActive(false);
         }
 
