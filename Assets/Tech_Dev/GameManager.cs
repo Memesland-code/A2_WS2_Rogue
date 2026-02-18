@@ -14,12 +14,12 @@ namespace Tech_Dev
         [SerializeField] private GameObject _enemyRatPrefab;
         [SerializeField] private GameObject _enemySkullPrefab;
         [SerializeField] private GameObject _bossPrefab;
-
-        public GameObject Shop1Screen;
-        public GameObject Shop2Screen;
-        public GameObject UpgradeScreen;
-        public GameObject TrialScreen;
-        public GameObject WinDefeatScreen;
+        
+        public static GameObject Shop1Screen;
+        public static GameObject Shop2Screen;
+        public static GameObject UpgradeScreen;
+        public static GameObject TrialScreen;
+        public static GameObject WinDefeatScreen;
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
@@ -57,6 +57,8 @@ namespace Tech_Dev
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
 
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
+            
+            
         }
 
 
