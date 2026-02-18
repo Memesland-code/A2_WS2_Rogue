@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_Stone_Rough
+  m_Name: MI_Chair
   m_Shader: {fileID: -6465566751694194690, guid: cdefc1edbe288df43a1b7824756bd267, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,23 +38,23 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: fbd94313a41fc034d8af8bbfbb5536e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: f3fb83a2a5caab9438ad6642965352f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_01:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ebfb50c058442b40820acfc16b6b1ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_01_Red:
-        m_Texture: {fileID: 2800000, guid: fbd94313a41fc034d8af8bbfbb5536e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7ebfb50c058442b40820acfc16b6b1ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_02:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8edac117403d1964fbf8e62951c56970, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_02_Green:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b02bbc45381f87041ba9a91f71a3ed2e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_02_Red:
@@ -62,11 +62,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_03:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b02bbc45381f87041ba9a91f71a3ed2e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_03_Blue:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fbd94313a41fc034d8af8bbfbb5536e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor_03_Green:
@@ -118,11 +118,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: 625ea7bebc6685b478c00716c8c1f4c1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50b7129029f892849818080bab9f500f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ORM:
-        m_Texture: {fileID: 2800000, guid: 9f3bdaa1133f6dc44938052496db2cf2, type: 3}
+        m_Texture: {fileID: 2800000, guid: e971e12462d024449963a4e866f9bcad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ORM_1:
@@ -146,7 +146,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGB_Mask:
-        m_Texture: {fileID: 2800000, guid: 8a49292e7b8678b4e921bb462b273848, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -155,22 +155,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Specular:
         m_Texture: {fileID: 2800000, guid: 8a49292e7b8678b4e921bb462b273848, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Triplanar_12957ed8e93a42a08d6bfbdaf9ce85e7_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: b02bbc45381f87041ba9a91f71a3ed2e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Triplanar_82f10cf409c9417ab535164d8b1bc9c9_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f3fb83a2a5caab9438ad6642965352f9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Triplanar_d5aaf07c91e047e3b13a942fac1cc513_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: fbd94313a41fc034d8af8bbfbb5536e6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Triplanar_f3f78c6fcea34b2db44ccdb0c76e1010_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f3fb83a2a5caab9438ad6642965352f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -192,14 +176,10 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _Broken_Stone: 0
-    - _Brokenstone_Contrast: 1
-    - _Brokenstone_Power: 1
-    - _Brokenstone_Tiling: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Contrast: 0
+    - _Contrast: 10.87
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -215,20 +195,18 @@ Material:
     - _Invert_Extra_Normal: 0
     - _Invert_Glossiness: 0
     - _Invert_Normal: 0
-    - _MaskB_Contrast: 1
+    - _MaskB_Contrast: 1.54
+    - _MaskB_Intensity: 1.36
     - _MaskB_Multiply: 1
-    - _MaskG_Contrast: 1
+    - _MaskG_Contrast: 1.44
     - _MaskG_Multiply: 1
     - _MaskR_Contrast: 1
     - _MaskR_Multiply: 1
     - _Metallic: 0
-    - _Moss: 0
-    - _Moss_Contrast: 1
-    - _Moss_Power: 1
-    - _Moss_Tiling: 1
     - _Normal_Strength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Power: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -239,10 +217,9 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Use_Extra_Normal: 0
-    - _Use_Triplanar: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _multiply: 0
+    - _multiply: 1.79
     - _saturation: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
