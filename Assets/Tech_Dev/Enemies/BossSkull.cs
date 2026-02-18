@@ -121,7 +121,6 @@ namespace Tech_Dev.Enemies
         {
             // Make sure enemy doesn't move
             _agent.SetDestination(transform.position);
-            SoundManager.PlaySound(SoundType.SkullAttack);
             _shootPoint.LookAt(_player);
             transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 
@@ -133,6 +132,7 @@ namespace Tech_Dev.Enemies
                     projectile.GetComponent<Rigidbody>().AddForce(shootPoint.forward * _bulletForce * 10);
                 }
                 
+                SoundManager.PlaySound(SoundType.SkullAttack);
                 _alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), _timeBetweenAttacks);
             }
