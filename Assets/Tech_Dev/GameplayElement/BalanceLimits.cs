@@ -11,16 +11,13 @@ namespace Tech_Dev.GameplayElement
         
         void Update()
         {
-            _plank = transform.GetChild(0).gameObject;
-            _rotation = _plank.transform.rotation.eulerAngles;
-            
             if (_rotation.z < 360 - _rotationLimit && _rotation.z > 180)
             {
-                _plank.transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, 360 - _rotationLimit);
+                transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, 360 - _rotationLimit);
             }
             else if (_rotation.z > _rotationLimit && _rotation.z < 180)
             {
-                _plank.transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, _rotationLimit);
+                transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, _rotationLimit);
             }
         }
     }
