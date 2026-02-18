@@ -132,7 +132,7 @@ namespace Tech_Dev.Player
 
 		    if (GameManager.IsGameLaunch)
 		    {
-			    SoundManager.PlaySound(SoundType.CharacterRiseFromTomb);
+			    //SoundManager.PlaySound(SoundType.CharacterRiseFromTomb);
 			    transform.position = GameObject.FindWithTag("GameStart").transform.position;
 		    }
 		    else
@@ -355,6 +355,15 @@ namespace Tech_Dev.Player
 			    spell.StunTime = RunStunTime;
 			    
 			    _skillTimeDelta = _skillCooldown;
+			    if (HasProjectileStunUpgrade == true)
+			    {
+				    SoundManager.PlaySound(SoundType.CharacterSpellElectric);
+			    }
+
+			    if (HasProjectileTpUpgrade == true)
+			    {
+				    SoundManager.PlaySound(SoundType.CharacterSpellElectric);
+			    }
 		    }
 		    
 		    _skillTimeDelta -= Time.deltaTime;

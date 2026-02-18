@@ -104,7 +104,7 @@ namespace Tech_Dev
         public static void StartGame()
         {
             GameObject.FindWithTag("SarcophagusTop").GetComponent<Animator>().SetTrigger("Open");
-            
+            SoundManager.PlaySound(SoundType.CharacterRiseFromTomb);
             _playerRef.GetComponent<Rigidbody>().isKinematic = false;
             
             IsGameLaunch = false;
