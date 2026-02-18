@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Ui_Trials : MonoBehaviour
 {
-	
+	[SerializeField] private GameObject Relique1TrialRoom;
+
+	private void Start()
+	{
+		Relique1TrialRoom.SetActive(false);
+	}
+
 	public void Trial1rstChoice()
 	{
 		GameManager.CloseAllUIs();
+		Relique1TrialRoom.SetActive(true);
 		// ajouter la relique 1 envoyer au GameManager l'information
 		
 	}

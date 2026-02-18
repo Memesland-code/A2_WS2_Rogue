@@ -22,6 +22,8 @@ public class UI_Shop : MonoBehaviour
  [SerializeField] private GameObject ImageChoice5;
  [SerializeField] private GameObject ImageChoice6;
  
+ [SerializeField] private GameObject ReliqueShop1;
+ 
  [SerializeField] TMP_Text TextPrice1;
  [SerializeField] TMP_Text TextPrice2;
  [SerializeField] TMP_Text TextPrice3;
@@ -49,6 +51,8 @@ public class UI_Shop : MonoBehaviour
   GreyChoice4.SetActive(false);
   GreyChoice5.SetActive(false);
   GreyChoice6.SetActive(false);
+  
+  ReliqueShop1.SetActive(false);
   
   TextPrice1.SetText($"{Price1}");
   TextPrice2.SetText($"{Price2}");
@@ -94,6 +98,8 @@ public class UI_Shop : MonoBehaviour
   {
    GreyChoice3.SetActive(true);
    ImageChoice3.SetActive(false);
+   ReliqueShop1.SetActive(true);
+
    //ajouter item à l'inventaire
 
   }
