@@ -67,8 +67,8 @@ namespace Tech_Dev
             UpgradeScreen = GameObject.FindWithTag("UpgradeScreen");
             UpgradeScreen.SetActive(false);
             
-            TrialScreen = GameObject.FindWithTag("TrialScreen");
-            TrialScreen.SetActive(false);
+            //TrialScreen = GameObject.FindWithTag("TrialScreen");
+            //TrialScreen.SetActive(false);
             
             WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
             WinDefeatScreen.SetActive(false);
@@ -172,39 +172,39 @@ namespace Tech_Dev
 
 
 
-        public void SetRelicSpellprojectileTeleport()
+        public static void SetRelicSpellprojectileTeleport()
         {
             _playerScriptRef.HasProjectileTpUpgrade = true;
         }
 
-        public void SetRelicSpellProjectileStun()
+        public static void SetRelicSpellProjectileStun()
         {
             _playerScriptRef.HasProjectileStunUpgrade = true;
         }
 
-        public void SetRelicDoubleDash()
+        public static void SetRelicDoubleDash()
         {
             _playerScriptRef.AddDashMaxNumber();
         }
 
 
 
-        public void TrinketSpecialAttackCooldown()
+        public static void TrinketSpecialAttackCooldown()
         {
             _playerScriptRef.RunSpecialAttackCooldown *= 0.8f;
         }
 
-        public void TrinketSpellProjectileDamage()
+        public static void TrinketSpellProjectileDamage()
         {
             _playerScriptRef.RunSpecialAttackCooldown *= 1.25f;
         }
 
-        public void TrinketSpellStun()
+        public static void TrinketSpellStun()
         {
             _playerScriptRef.RunStunTime *= 1.5f;
         }
 
-        public void SpellProjectileSpeed()
+        public static void SpellProjectileSpeed()
         {
             _playerScriptRef.RunSpellProjectileSpeed *= 1.3f;
         }
