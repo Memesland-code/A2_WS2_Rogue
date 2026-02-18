@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Tech_Dev.Player;
 using Tech_Dev.Procedural;
 using Tech_Dev.UI;
@@ -20,6 +21,8 @@ namespace Tech_Dev
         public static GameObject UpgradeScreen;
         public static GameObject TrialScreen;
         public static GameObject WinDefeatScreen;
+
+        public static List<GameObject> ScreensList = new();
 
         private static GameObject _playerRef;
         private static PlayerController _playerScriptRef;
@@ -56,9 +59,8 @@ namespace Tech_Dev
             UpgradeScreen = GameObject.FindWithTag("UpgradeScreen");
             UpgradeScreen.SetActive(false);
             
-            //TODO Add trial screen
-            //TrialScreen = GameObject.FindWithTag("TrialScreen");
-            //TrialScreen.SetActive(false);
+            TrialScreen = GameObject.FindWithTag("TrialScreen");
+            TrialScreen.SetActive(false);
             
             WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
             WinDefeatScreen.SetActive(false);
@@ -98,6 +100,14 @@ namespace Tech_Dev
         public static GameObject GetWinDefeatScreen()
         {
             return WinDefeatScreen;
+        }
+
+        public static void CloseAllUIs()
+        {
+            foreach (GameObject ui in ScreensList)
+            {
+                ui.SetActive(false);
+            }
         }
 
 

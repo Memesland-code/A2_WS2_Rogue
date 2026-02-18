@@ -18,26 +18,6 @@ namespace Tech_Dev.Player
         private float _heavyAttackTimeDelta;
         private bool _attackPressed;
 
-        private void LateUpdate()
-        {
-            /*
-            if (_attackPressed)
-            {
-                _heavyAttackTimeDelta -= Time.deltaTime;
-            }
-            
-            if (_heavyAttackTimeDelta <= 0 && (Mouse.current.leftButton.wasReleasedThisFrame || (Gamepad.current != null && Gamepad.current.buttonWest.wasReleasedThisFrame)))
-            {
-                HeavyAttack = true;
-                _heavyAttackTimeDelta = _heavyAttackTime;
-            }
-            else if (_heavyAttackTimeDelta > 0 && (Mouse.current.leftButton.wasReleasedThisFrame || (Gamepad.current != null && Gamepad.current.buttonWest.wasReleasedThisFrame)))
-            {
-                MeleeAttack = true;
-                _heavyAttackTimeDelta = _heavyAttackTime;
-            }
-            */
-        }
 
         private void Update()
         {
@@ -79,6 +59,11 @@ namespace Tech_Dev.Player
         public void OnSkill(InputValue value)
         {
             Skill = value.isPressed;
+        }
+
+        public void OnCloseUI(InputValue value)
+        {
+            GameManager.CloseAllUIs();
         }
     }
 }
