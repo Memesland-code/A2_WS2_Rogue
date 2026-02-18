@@ -401,6 +401,7 @@ namespace Tech_Dev.Player
 
 	    private IEnumerator EnterNewRoom(Teleporter teleporter)
 	    {
+		    SoundManager.PlaySound(SoundType.DoorOpen);
 		    GameManager.GetFadeRef().PlayFadeIn();
 		    yield return new WaitForSeconds(1f);
 

@@ -121,7 +121,7 @@ namespace Tech_Dev.Enemies
         {
             // Make sure enemy doesn't move
             _agent.SetDestination(transform.position);
-            
+            SoundManager.PlaySound(SoundType.SkullAttack);
             _shootPoint.LookAt(_player);
             transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 

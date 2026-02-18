@@ -134,6 +134,7 @@ namespace Tech_Dev.Enemies
 
         private void AttackPlayer()
         {
+            SoundManager.PlaySound(SoundType.RatAttack);
             transform.LookAt(new Vector3(_player.position.x, transform.position.y, _player.position.z));
 
             _agent.speed = _boostSpeed;

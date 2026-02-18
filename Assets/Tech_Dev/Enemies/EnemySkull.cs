@@ -128,7 +128,7 @@ namespace Tech_Dev.Enemies
             {
                 SkullProjectile projectile = Instantiate(_projectile, _shootPoint.position, Quaternion.identity);
                 projectile.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * _bulletForce * 10);
-                
+                SoundManager.PlaySound(SoundType.SkullAttack);
                 _alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), _timeBetweenAttacks);
             }

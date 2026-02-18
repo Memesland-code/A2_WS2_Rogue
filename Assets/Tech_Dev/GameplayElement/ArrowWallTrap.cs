@@ -23,6 +23,8 @@ namespace Tech_Dev.GameplayElement
 
             if (_shootTimer <= 0)
             {
+                //le son joue de partout = faire une detection de la salle où est le jouer sinon tant pis
+                //SoundManager.PlaySound(SoundType.TrapSpikes);
                 GameObject arrows = Instantiate(_arrows, _shootPoint.position, transform.rotation);
                 arrows.GetComponent<Rigidbody>().AddForce(transform.forward * (_arrowShootForce * 10));
                 arrows.GetComponent<FlyingArrows>().Damage = _arrowsDamage;
