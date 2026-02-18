@@ -294,6 +294,7 @@ namespace Tech_Dev.Player
 		    if (_inputs.MeleeAttack && _meleeTimeDelta <= 0.0f)
 		    {
 			    print("melee");
+			    SoundManager.PlaySound(SoundType.CharacterSwordHit);
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
 
