@@ -294,6 +294,75 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 8325159894955032222, guid: c4a1f0999ea48944e992c84855639c15, type: 3}
   m_PrefabInstance: {fileID: 6961852820973553459}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &441080700
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Skin_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 35996261ffe19804ba588b95489e6eb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.12785047, g: 0.12269866, b: 0.10794921, a: 0.33544925}
+    - _L1_dir: {r: 0.04481248, g: 0.99861324, b: -0.027629614, a: 0}
+    - _L2_color: {r: 0.050592292, g: 0.04855364, b: 0.042717077, a: 0.03570737}
+    - _L2_dir: {r: 0.9448641, g: 0.32663724, b: 0.023239015, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &460211161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,28 +589,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba2db603d15a3574594ff6a51691a916, type: 3}
---- !u!114 &778686956 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7592102301038949589, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
-  m_PrefabInstance: {fileID: 1541745792439375949}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &824411490 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5052760699563318347, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
-  m_PrefabInstance: {fileID: 1541745792439375949}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &851208373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -550,10 +597,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5078571979390296171, guid: ec537e3f01a538e41ae9a3fb2f8d1aab, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5850641479758835055, guid: ec537e3f01a538e41ae9a3fb2f8d1aab, type: 3}
       propertyPath: m_Name
       value: Room_Heal 1
@@ -651,6 +694,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6326535958881728142, guid: 8fd7fadda86059944bfd031dc36e7b4a, type: 3}
+      propertyPath: m_Size.y
+      value: 18.30387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326535958881728142, guid: 8fd7fadda86059944bfd031dc36e7b4a, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.164377
+      objectReference: {fileID: 0}
     - target: {fileID: 8469244039335000220, guid: 8fd7fadda86059944bfd031dc36e7b4a, type: 3}
       propertyPath: m_Name
       value: Room_Shop_Ruins
@@ -660,6 +711,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd7fadda86059944bfd031dc36e7b4a, type: 3}
+--- !u!21 &1052059794
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Clothes_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b883cbcafc24e24f9b9f6ad6a55286d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.12785047, g: 0.12269866, b: 0.10794921, a: 0.33544925}
+    - _L1_dir: {r: 0.04481248, g: 0.99861324, b: -0.027629614, a: 0}
+    - _L2_color: {r: 0.050592292, g: 0.04855364, b: 0.042717077, a: 0.03570737}
+    - _L2_dir: {r: 0.9448641, g: 0.32663724, b: 0.023239015, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &1172076560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,6 +876,14 @@ PrefabInstance:
     - target: {fileID: 598714406051557755, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
       propertyPath: m_Name
       value: Room_Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 854605865926291242, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_Size.y
+      value: 37.653
+      objectReference: {fileID: 0}
+    - target: {fileID: 854605865926291242, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
+      propertyPath: m_Offset.y
+      value: -4.936016
       objectReference: {fileID: 0}
     - target: {fileID: 8477179363755032656, guid: c2e13fe1f4631a74080076d47e00da73, type: 3}
       propertyPath: m_LocalPosition.x
@@ -854,11 +982,88 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_Bonus_Normal
       objectReference: {fileID: 0}
+    - target: {fileID: 6649353966811385551, guid: a318da80c0f79f044960ecf84c0ea054, type: 3}
+      propertyPath: m_Size.y
+      value: 20.59998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649353966811385551, guid: a318da80c0f79f044960ecf84c0ea054, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.321133
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a318da80c0f79f044960ecf84c0ea054, type: 3}
+--- !u!21 &1412715319
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Sword_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 9e3f8b0fcc48e4441a6b9d2ca9ac5308, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L1_color: {r: 0.17028274, g: 0.16342108, b: 0.14377646, a: 0.44678143}
+    - _L1_dir: {r: 0.030205773, g: 0.9982564, b: 0.050713018, a: 0}
+    - _L2_color: {r: 0.06174321, g: 0.059255224, b: 0.052132245, a: 0.043577544}
+    - _L2_dir: {r: 0.9631082, g: 0.26504818, b: 0.046604633, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1636440347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,22 +1379,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2038225019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1063058383835344639, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
-  m_PrefabInstance: {fileID: 1541745792439375949}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &2109781341 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 615965626093427685, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
-  m_PrefabInstance: {fileID: 1541745792439375949}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1541745792439375949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,9 +1387,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2771144353422271188, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
-      propertyPath: m_TagString
-      value: Shop2
+    - target: {fileID: 2282541674210920270, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4370026021562665834, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
       propertyPath: m_Pivot.x
@@ -1285,10 +1474,6 @@ PrefabInstance:
     - target: {fileID: 6081503262588236309, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
       propertyPath: m_Name
       value: MainCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6421229595854593179, guid: c75ca3522c1bbe444ad872572a6a400e, type: 3}
-      propertyPath: m_TagString
-      value: UpgradeScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1482,14 +1667,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 516929137544606949, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
-      propertyPath: m_UIInputModule
+    - target: {fileID: 523403920414697639, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1957344384}
+      objectReference: {fileID: 1052059794}
     - target: {fileID: 865315768279201196, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5958828277354555389, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1412715319}
     - target: {fileID: 6833196506537375265, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -247.8
@@ -1530,6 +1719,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7606819872696681997, guid: ad8966da95e23b6468d1e2d9c1447bc7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 441080700}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1714,18 +1907,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 624879623689648450, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: PvBar
-      value: 
-      objectReference: {fileID: 778686956}
-    - target: {fileID: 624879623689648450, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: PvCount
-      value: 
-      objectReference: {fileID: 824411490}
-    - target: {fileID: 624879623689648450, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: WoundBar
-      value: 
-      objectReference: {fileID: 2038225019}
     - target: {fileID: 1259418714393773937, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 373.84534
@@ -1765,30 +1946,6 @@ PrefabInstance:
     - target: {fileID: 1259418714393773937, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095426535528243199, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: ShopInterface
-      value: 
-      objectReference: {fileID: 2109781341}
-    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: Shop1Ref
-      value: 
-      objectReference: {fileID: 2109781341}
-    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: Shop2Ref
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: Shop1Screen
-      value: 
-      objectReference: {fileID: 2109781341}
-    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: Shop2Screen
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3457310816753813259, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
-      propertyPath: WinDefeatScreen
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3778439703684701780, guid: a23846c7d3730e84681e8633bc8ea44f, type: 3}
       propertyPath: m_Name

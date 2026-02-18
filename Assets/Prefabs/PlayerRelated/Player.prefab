@@ -154,15 +154,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _healthRecoverPercentage: 15
+  _healthRecoverPercentage: 50
   _woundBarExpireTime: 5
   _interactCooldown: 1
-  _meleeAttackDamage: 30
-  _heavyAttackDamage: 50
+  _meleeAttackDamage: 25
+  _heavyAttackDamage: 80
   _swordAttackCenter: {fileID: 1154505659140929774}
-  _meleeCooldown: 0.5
-  _heavyCooldown: 0.5
-  _skillCooldown: 0.5
+  _meleeCooldown: 0.4
+  _heavyCooldown: 6
+  _skillCooldown: 3.5
   _groundSpeed: 11
   _airSpeed: 12
   _jumpForce: 3
@@ -174,11 +174,11 @@ MonoBehaviour:
   _dashMultiplierX: 2
   _dashMultiplierY: 2
   _spellProjectile: {fileID: -8806197135947406014, guid: fcd0814986228534d82fce0637e6b59e, type: 3}
-  _spellDamage: 0
-  _spellStunTime: 0
+  _spellDamage: 40
+  _spellStunTime: 1.5
   _projectileForce: 120
   _shootPoint: {fileID: 5860642257080451823}
-  _dashCooldown: 3
+  _dashCooldown: 1.5
   _dashTime: 0.1
   _groundMaterial: {fileID: 13400000, guid: b0f38ab0861d08548b7cfdca135749b4, type: 2}
   _airMaterial: {fileID: 13400000, guid: 09c644450a5473746bc465706ab87b01, type: 2}
