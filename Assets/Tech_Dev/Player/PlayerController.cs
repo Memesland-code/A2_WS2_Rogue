@@ -165,6 +165,8 @@ namespace Tech_Dev.Player
 	    {
 		    if (_currentRoom.Type != Type.Spawn) RunTimer += Time.deltaTime;
 		    
+		    if (transform.rotation.y == 0) transform.rotation = Quaternion.Euler(0, 90, 0);
+		    
 			// Check player facing direction and change on movement direction 
 		    if (_inputs.Move.x < 0 && _isFacingRight)
 		    {
