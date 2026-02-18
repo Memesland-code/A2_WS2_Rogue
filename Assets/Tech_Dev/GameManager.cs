@@ -57,8 +57,34 @@ namespace Tech_Dev
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
 
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
-            
-            
+
+            Shop1Screen = GameObject.FindWithTag("Shop1");
+            //Shop1Screen = 
+        }
+
+        public static GameObject GetShop1Screen()
+        {
+            return Shop1Screen;
+        }
+
+        public static GameObject GetShop2Screen()
+        {
+            return Shop2Screen;
+        }
+
+        public static GameObject GetUpgradeScreen()
+        {
+            return UpgradeScreen;
+        }
+
+        public static GameObject GetTrialScreen()
+        {
+            return TrialScreen;
+        }
+        
+        public static GameObject GetWinDefeatScreen()
+        {
+            return WinDefeatScreen;
         }
 
 
@@ -242,7 +268,7 @@ namespace Tech_Dev
 
             if (Input.GetKeyDown(KeyCode.KeypadPlus))
             {
-                GameManager.GetPlayerScriptRef().AddGold(1000);
+                GetPlayerScriptRef().AddGold(1000);
             }
         }
     }

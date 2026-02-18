@@ -9,7 +9,7 @@ namespace Tech_Dev.Procedural
 
         private void Start()
         {
-            UpgradeCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().UpgradeScreen;
+            UpgradeCanvas = GameManager.GetUpgradeScreen();
 
             if (UpgradeCanvas)
             {

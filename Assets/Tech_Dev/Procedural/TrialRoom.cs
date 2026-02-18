@@ -9,7 +9,7 @@ namespace Tech_Dev.Procedural
 
         private void Start()
         {
-            TrialCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().TrialScreen;
+            TrialCanvas = GameManager.GetTrialScreen();
             
             if (TrialCanvas)
             {

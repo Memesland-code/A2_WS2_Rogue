@@ -12,11 +12,11 @@ namespace Tech_Dev.Procedural
         {
             if (ShopNumber == 1)
             {
-                ShopCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().Shop1Screen;
+                ShopCanvas = GameManager.GetShop1Screen();
             }
             else
             {
-                ShopCanvas = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().Shop2Screen;
+                ShopCanvas = GameManager.GetShop2Screen();
             }
             
             ShopCanvas.SetActive(false);

@@ -579,7 +579,7 @@ namespace Tech_Dev.Player
 
 	    public void DungeonEndScreen(bool isWin)
 	    {
-		    WinDefeatUI endingScreen = GameObject.FindWithTag("GameManager").GetComponent<GameManager>().WinDefeatScreen.GetComponent<WinDefeatUI>();
+		    WinDefeatUI endingScreen = GameManager.GetWinDefeatScreen().GetComponent<WinDefeatUI>();
 		    
 		    if (isWin)
 		    {
@@ -589,7 +589,7 @@ namespace Tech_Dev.Player
 		    {
 			    endingScreen.RunState = "Defeat...";
 		    }
-		    GameObject.FindWithTag("GameManager").GetComponent<GameManager>().WinDefeatScreen.SetActive(true);
+		    GameManager.GetWinDefeatScreen().SetActive(true);
 	    }
 	    
 	    
