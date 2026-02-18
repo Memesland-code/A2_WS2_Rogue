@@ -46,6 +46,22 @@ namespace Tech_Dev
             
             _playerRef = GameObject.FindWithTag("Player");
             _playerScriptRef = _playerRef.GetComponent<PlayerController>();
+            
+            Shop1Screen = GameObject.FindWithTag("Shop1");
+            Shop1Screen.SetActive(false);
+            
+            Shop2Screen = GameObject.FindWithTag("Shop2");
+            Shop2Screen.SetActive(false);
+            
+            UpgradeScreen = GameObject.FindWithTag("UpgradeScreen");
+            UpgradeScreen.SetActive(false);
+            
+            //TODO Add trial screen
+            //TrialScreen = GameObject.FindWithTag("TrialScreen");
+            //TrialScreen.SetActive(false);
+            
+            WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
+            WinDefeatScreen.SetActive(false);
         }
 
 
@@ -57,21 +73,6 @@ namespace Tech_Dev
             GameObject.FindWithTag("MainCamera").GetComponent<CinemachineCamera>().Target.TrackingTarget = _playerRef.transform;
 
             _generationManager = GameObject.FindWithTag("GenerationManager").GetComponent<GenerationManager>();
-
-            Shop1Screen = GameObject.FindWithTag("Shop1");
-            Shop1Screen.SetActive(false);
-            
-            Shop2Screen = GameObject.FindWithTag("Shop2");
-            Shop2Screen.SetActive(false);
-            
-            UpgradeScreen = GameObject.FindWithTag("UpgradeScreen");
-            UpgradeScreen.SetActive(false);
-            
-            //TrialScreen = GameObject.FindWithTag("TrialScreen");
-            //TrialScreen.SetActive(false);
-            
-            WinDefeatScreen = GameObject.FindWithTag("WinDefeatScreen");
-            WinDefeatScreen.SetActive(false);
         }
 
         public static GameObject GetShop1Screen()
