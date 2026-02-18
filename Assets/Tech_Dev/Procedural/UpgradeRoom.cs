@@ -17,7 +17,7 @@ namespace Tech_Dev.Procedural
             }
             else
             {
-                Debug.LogError("Error: No Upgrade Canvas found in game manager!");
+                Debug.LogWarning("Warning: No Upgrade Canvas found in game manager!");
             }
         }
 

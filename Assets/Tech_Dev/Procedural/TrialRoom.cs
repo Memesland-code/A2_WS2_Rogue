@@ -17,7 +17,7 @@ namespace Tech_Dev.Procedural
             }
             else
             {
-                Debug.LogError("Error: No Trial Canvas found in game manager!");
+                Debug.LogWarning("Warning: No Trial Canvas found in game manager!");
             }
         }
 
