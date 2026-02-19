@@ -112,6 +112,11 @@ namespace Tech_Dev
             return WinDefeatScreen;
         }
 
+        public static GameObject GetHealingScreen()
+        {
+	        return HealingScreen;
+        }
+
         public static void CloseAllUIs()
         {
             foreach (GameObject ui in ScreensList)

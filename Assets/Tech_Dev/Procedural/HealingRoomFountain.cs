@@ -9,7 +9,7 @@ namespace Tech_Dev.Procedural
 
         private void Start()
         {
-            healingCanvas = GameManager.GetTrialScreen();
+            healingCanvas = GameManager.GetHealingScreen();
             
             if (healingCanvas)
             {
