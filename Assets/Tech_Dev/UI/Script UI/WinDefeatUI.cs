@@ -24,7 +24,17 @@ namespace Tech_Dev.UI.Script_UI
             _totalKills.text = GameManager.GetTotalPlayerKills().ToString();
             _totalGoldGain.text = GameManager.GetPlayerScriptRef().TotalGoldGain.ToString();
             _totalSoulsGain.text = GameManager.GetPlayerScriptRef().TotalSoulGain.ToString();
-            _runTime.text = Math.Floor(GameManager.GetPlayerScriptRef().RunTimer).ToString();
+
+            int minutes = 0;
+            int seconds = (int)Math.Floor(GameManager.GetPlayerScriptRef().RunTimer);
+
+            while (seconds >= 60)
+            {
+	            seconds -= 60;
+	            minutes += 1;
+            }
+            
+            _runTime.text = minutes + ":" + seconds;
         }
 
         public void BackToHub()
