@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Special attack''s projectile teleports at impact
+  m_text: 'Healing your wounds
 
 '
   m_isRightToLeft: 0
@@ -2545,7 +2545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gives a Double Dash
+  m_text: 'Max life +25%
 
 '
   m_isRightToLeft: 0
@@ -7656,11 +7656,12 @@ RectTransform:
   - {fileID: 5889914612939580765}
   - {fileID: 4076129458579989918}
   - {fileID: 1857918212494071155}
+  - {fileID: 1710448841397151038}
   m_Father: {fileID: 8373376576703213685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -613.17505, y: -316.6}
+  m_AnchoredPosition: {x: -558, y: -316.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &6170673973710195032
@@ -9791,16 +9792,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8022181610043945398}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -497.1, y: -258.2, z: 188}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 87.465164, y: 44.005726, z: 0.41755572}
+  m_LocalScale: {x: 0.75352275, y: 0.75352275, z: 0.75352275}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4299549826159165055}
   - {fileID: 2459423737177165570}
   - {fileID: 1176048647015670022}
   - {fileID: 6187840690673625899}
-  m_Father: {fileID: 8373376576703213685}
+  m_Father: {fileID: 7115924458417368240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8027018738035624520
 GameObject:
@@ -9833,7 +9834,6 @@ Transform:
   m_Children:
   - {fileID: 7115924458417368240}
   - {fileID: 8783950225550620135}
-  - {fileID: 1710448841397151038}
   m_Father: {fileID: 4370026021562665834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8091273236893472307
