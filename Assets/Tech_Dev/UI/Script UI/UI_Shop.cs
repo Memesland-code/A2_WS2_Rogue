@@ -75,8 +75,9 @@ public class UI_Shop : MonoBehaviour
   {
    GreyChoice1.SetActive(true);
    ImageChoice1.SetActive(false);
+   GameManager.SpellProjectileSpeed();
    //ajouter item à l'inventaire
-   
+
   }
   
  }
@@ -87,6 +88,7 @@ public class UI_Shop : MonoBehaviour
   { 
    GreyChoice2.SetActive(true);
    ImageChoice2.SetActive(false);
+   GameManager.TrinketSpellStun();
    //ajouter item à l'inventaire
   }
 
@@ -97,11 +99,9 @@ public class UI_Shop : MonoBehaviour
   if (CurrentGold >= Price3)
   {
    GreyChoice3.SetActive(true);
-   ImageChoice3.SetActive(false);
-   ReliqueShop1.SetActive(true);
-
-   //ajouter item à l'inventaire
-
+   ImageChoice3.SetActive(false); 
+   GameManager.SetRelicSpellProjectileStun();
+   ReliqueShop1.SetActive(true); //ajouter item à l'inventaire
   }
 
  }
@@ -112,6 +112,7 @@ public class UI_Shop : MonoBehaviour
   {
    GreyChoice4.SetActive(true);
    ImageChoice4.SetActive(false);
+   GameManager.SpellProjectileSpeed();
    //ajouter item à l'inventaire
 
   }
@@ -124,6 +125,7 @@ public class UI_Shop : MonoBehaviour
   {
    GreyChoice5.SetActive(true);
    ImageChoice5.SetActive(false);
+   GameManager.TrinketSpecialAttackCooldown();
    //ajouter item à l'inventaire
   }
  }
@@ -134,6 +136,7 @@ public class UI_Shop : MonoBehaviour
   {
    GreyChoice6.SetActive(true);
    ImageChoice6.SetActive(false);
+   GameManager.SetRelicDoubleDash();
    //ajouter item à l'inventaire
 
   }

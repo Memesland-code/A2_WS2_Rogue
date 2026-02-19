@@ -46,6 +46,8 @@ public class UI_PV : MonoBehaviour
       CurrentHP=GameManager.GetPlayerScriptRef().GetHealth();
       
       CurrentWound = GameManager.GetPlayerScriptRef().GetCurrentWound();
+      
+      PvCount.SetText($"{CurrentHP}/{MaxHP}"); // écrire le nombre de pv / pvMax
 
 
  

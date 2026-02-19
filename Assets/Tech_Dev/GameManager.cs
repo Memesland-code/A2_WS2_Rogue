@@ -220,16 +220,19 @@ namespace Tech_Dev
         public static void SetRelicSpellprojectileTeleport()
         {
             _playerScriptRef.HasProjectileTpUpgrade = true;
+            //choix 1 trial room
         }
 
         public static void SetRelicSpellProjectileStun()
         {
             _playerScriptRef.HasProjectileStunUpgrade = true;
+            // choice 3 shop 1
         }
 
         public static void SetRelicDoubleDash()
         {
             _playerScriptRef.AddDashMaxNumber();
+            // trial choice 2 || shop 2 relic
         }
 
 
@@ -237,21 +240,25 @@ namespace Tech_Dev
         public static void TrinketSpecialAttackCooldown()
         {
             _playerScriptRef.RunSpecialAttackCooldown *= 0.8f;
+            // choice 5 shop2 || upgrade choice 2
         }
 
         public static void TrinketSpellProjectileDamage()
         {
             _playerScriptRef.RunSpecialAttackCooldown *= 1.25f;
+            // upgrade choice 1
         }
 
         public static void TrinketSpellStun()
         {
             _playerScriptRef.RunStunTime *= 1.5f;
+            // shop 1 choice 2
         }
 
         public static void SpellProjectileSpeed()
         {
             _playerScriptRef.RunSpellProjectileSpeed *= 1.3f;
+            // shop 1 choice 1 || shop 2 choice 4
         }
 
 
@@ -259,9 +266,10 @@ namespace Tech_Dev
         public static void IncreasePlayerMaxHealth(float maxHealthToAdd)
         {
 	        _playerScriptRef.SetMaxHealth(_playerScriptRef.GetMaxHealth() + maxHealthToAdd);
+            // Healing room choice 2
         }
         
-        
+        // ajouter le soin des pv
         
         //INFO CHEAT CODES
 
