@@ -636,6 +636,11 @@ namespace Tech_Dev.Player
 		    return _souls;
 	    }
 
+	    public void AddHealth(float healthAmount)
+	    {
+		    _health += healthAmount;
+	    }
+
 	    public void SetMaxHealth(float newMaxHealth)
 	    {
 		    _maxHealth = newMaxHealth;
