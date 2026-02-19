@@ -403,7 +403,7 @@ namespace Tech_Dev.Player
 
 		    if (Input.GetKeyDown(KeyCode.U))
 		    {
-			    _animator.SetTrigger(Test);
+			    AddHealth(100);
 		    }
 	    }
 
@@ -637,8 +637,9 @@ namespace Tech_Dev.Player
 	    }
 
 	    public void AddHealth(float healthAmount)
-	    {
+	    { 
 		    _health += healthAmount;
+		    if (_health > _maxHealth) _health = _maxHealth;
 	    }
 
 	    public void SetMaxHealth(float newMaxHealth)
