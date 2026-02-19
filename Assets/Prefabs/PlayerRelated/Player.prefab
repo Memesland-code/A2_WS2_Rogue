@@ -5440,6 +5440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6331349663563672860}
   - component: {fileID: 2343018833223391219}
+  - component: {fileID: 5653507612468892202}
   m_Layer: 0
   m_Name: SM_Clothes
   m_TagString: Untagged
@@ -10438,6 +10439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6364084507635942603}
   - component: {fileID: 5645060371325532505}
+  - component: {fileID: 1501884641708964959}
   m_Layer: 0
   m_Name: SM_Skin
   m_TagString: Untagged
@@ -20862,15 +20864,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _healthRecoverPercentage: 15
+  _healthRecoverPercentage: 50
   _woundBarExpireTime: 5
   _interactCooldown: 1
   _meleeAttackDamage: 30
   _heavyAttackDamage: 50
   _swordAttackCenter: {fileID: 6375709751926746350}
-  _meleeCooldown: 1.5
-  _heavyCooldown: 0.5
-  _skillCooldown: 0.5
+  _meleeCooldown: 0.4
+  _heavyCooldown: 5
+  _skillCooldown: 2.5
   _groundSpeed: 11
   _airSpeed: 12
   _jumpForce: 3
@@ -20883,7 +20885,7 @@ MonoBehaviour:
   _dashMultiplierY: 2
   _spellProjectile: {fileID: -8806197135947406014, guid: fcd0814986228534d82fce0637e6b59e, type: 3}
   _spellDamage: 30
-  _spellStunTime: 2
+  _spellStunTime: 1.5
   _projectileForce: 120
   _shootPoint: {fileID: 4607957716772601316}
   _dashCooldown: 3
@@ -20894,6 +20896,7 @@ MonoBehaviour:
   IsVictory: 0
   HasProjectileStunUpgrade: 0
   HasProjectileTpUpgrade: 0
+  _woundBarActive: 0
   RunSpecialAttackCooldown: 0
   RunSpellProjectileDamage: 0
   RunStunTime: 0
@@ -36530,6 +36533,7 @@ GameObject:
   - component: {fileID: 7066227747867229022}
   - component: {fileID: 865282809311750037}
   - component: {fileID: 8463830089892403369}
+  - component: {fileID: 1304806548121498045}
   m_Layer: 0
   m_Name: SM_HeroSword_01
   m_TagString: Untagged
