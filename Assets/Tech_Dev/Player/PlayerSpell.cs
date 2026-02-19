@@ -68,6 +68,8 @@ namespace Tech_Dev.Player
                 
                 Destroy(gameObject);
             }
+            
+            print("No enemy hit: " + other.gameObject.name);
 
             if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Sword") || other.gameObject.CompareTag("PlayerRelated") || other.gameObject.CompareTag("GlobalVolume"))
             {
