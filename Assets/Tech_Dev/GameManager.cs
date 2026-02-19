@@ -34,6 +34,10 @@ namespace Tech_Dev
         private bool _noClip;
 
         public static bool IsGameLaunch = true;
+
+        public List<Type> RoomsTypes;
+        public List<Material> AssociatedRoomIcon;
+        public static Dictionary<Type, Material> RoomsIcon = new Dictionary<Type, Material>();
         
         
         
@@ -49,6 +53,11 @@ namespace Tech_Dev
                 Canvas fadeEffect = Instantiate(_fadeEffectPrefab);
 
                 _fadeEffect = fadeEffect.transform.GetChild(0).GetComponent<FadeEffect>();
+            }
+
+            for (int i = 0; i < RoomsTypes.Count; i++)
+            {
+	            RoomsIcon.Add(RoomsTypes[i], AssociatedRoomIcon[i]);
             }
             
             Shop1Screen = GameObject.FindWithTag("Shop1");

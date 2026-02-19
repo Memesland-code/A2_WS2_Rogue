@@ -11,8 +11,6 @@ namespace Tech_Dev.Procedural
 		private GameObject _spawnedDoorGlow;
 		private GameObject _nextRoomRef;
 		public bool TeleportToHub;
-		
-		//public List<>
 
 		private void OnDrawGizmos()
 		{
@@ -29,12 +27,18 @@ namespace Tech_Dev.Procedural
 
 		private void OnEnable()
 		{
-			transform.GetChild(0).gameObject.SetActive(true);
+			foreach (Transform child in gameObject.transform)
+			{
+				child.gameObject.SetActive(true);
+			}
 		}
 
 		private void OnDisable()
 		{
-			transform.GetChild(0).gameObject.SetActive(false);
+			foreach (Transform child in gameObject.transform)
+			{
+				child.gameObject.SetActive(false);
+			}
 		}
 
 		public Transform GetDestination()
@@ -46,6 +50,9 @@ namespace Tech_Dev.Procedural
 		{
 			_nextRoomRef = nextRoomRef;
 			_nextRoomEntryPoint = destinationTeleportPoint;
+			
+			if (nextRoomRef.GetComponent<RoomManager>().Type == Type.Boss) return;
+			transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().sharedMaterial = GameManager.RoomsIcon[_nextRoomRef.GetComponent<RoomManager>().Type];
 		}
 
 		public Difficulty GetTeleporterDifficulty()

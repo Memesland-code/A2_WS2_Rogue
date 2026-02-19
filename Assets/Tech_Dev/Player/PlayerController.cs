@@ -134,7 +134,6 @@ namespace Tech_Dev.Player
 		    _swordDamager = GetComponentInChildren<SwordDamager>();
 		    _camera = GameManager.GetCamera();
 		    _animator = GetComponent<Animator>();
-		    print(_animator.gameObject.name);
 		    
 		    ResetPlayer();
 	    }
@@ -233,7 +232,7 @@ namespace Tech_Dev.Player
 		    if (NoClip)
 		    {
 			    if (_inputs.Move.x != 0) _animator.SetBool(IsMoving, true);
-			    transform.position += new Vector3(_inputs.Move.x, _inputs.Move.y, 0);
+			    transform.position += new Vector3(_inputs.Move.x / 2, _inputs.Move.y / 2, 0);
 		    }
 		    else if (_isDashing)
 		    {
