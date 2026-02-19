@@ -253,6 +253,13 @@ namespace Tech_Dev
         {
             _playerScriptRef.RunSpellProjectileSpeed *= 1.3f;
         }
+
+
+
+        public static void IncreasePlayerMaxHealth(float maxHealthToAdd)
+        {
+	        _playerScriptRef.SetMaxHealth(_playerScriptRef.GetMaxHealth() + maxHealthToAdd);
+        }
         
         
         

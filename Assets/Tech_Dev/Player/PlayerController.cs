@@ -100,6 +100,7 @@ namespace Tech_Dev.Player
 	    public float RunSpellProjectileDamage;
 	    public float RunStunTime;
 	    public float RunSpellProjectileSpeed;
+	    public float RunMaxHealth;
 
 	    //Run related
 	    public int TotalGoldGain;
@@ -152,6 +153,7 @@ namespace Tech_Dev.Player
 		    RunSpellProjectileDamage = _spellDamage;
 		    RunStunTime = _spellStunTime;
 		    RunSpellProjectileSpeed = _projectileForce;
+		    RunMaxHealth = _maxHealth;
 
 		    TotalGoldGain = 0;
 		    TotalSoulGain = 0;
@@ -622,6 +624,11 @@ namespace Tech_Dev.Player
 	    public int GetSouls()
 	    {
 		    return _souls;
+	    }
+
+	    public void SetMaxHealth(float newMaxHealth)
+	    {
+		    _maxHealth = newMaxHealth;
 	    }
 
 	    public void DungeonEndScreen(bool isWin)
