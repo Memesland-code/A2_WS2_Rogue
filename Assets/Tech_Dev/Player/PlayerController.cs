@@ -158,8 +158,6 @@ namespace Tech_Dev.Player
 
 		    _camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = _currentRoom.GetRoomBounds();
 
-		    _isDead = false;
-
 		    RunSpecialAttackCooldown = _heavyCooldown;
 		    RunSpellProjectileDamage = _spellDamage;
 		    RunStunTime = _spellStunTime;
@@ -170,6 +168,8 @@ namespace Tech_Dev.Player
 		    TotalSoulGain = 0;
 		    RunTimer = 0;
 		    GameManager.SetTotalPlayerKills(0);
+		    
+		    _isDead = false;
 	    }
 
 	    
@@ -524,6 +524,7 @@ namespace Tech_Dev.Player
 		    
 		    if (_health <= 0)
 		    {
+			    if (_isDead) return;
 			    StartCoroutine(PlayerDeath());
 		    }
 	    }
@@ -533,7 +534,7 @@ namespace Tech_Dev.Player
 	    // ReSharper disable Unity.PerformanceAnalysis
 	    public IEnumerator PlayerDeath()
 	    {
-		    if (!_isDead) _isDead = true;
+		    _isDead = true;
 		    
 		    _animator.SetTrigger(Die);
 		    SoundManager.PlaySound(SoundType.CharacterDeath);
