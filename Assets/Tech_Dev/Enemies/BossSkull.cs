@@ -74,8 +74,6 @@ namespace Tech_Dev.Enemies
             _playerInSightRange = Physics.CheckSphere(transform.position, _sightRange, _whatIsPlayer);
             _playerInAttackRange = Physics.CheckSphere(transform.position, _attackRange, _whatIsPlayer);
             
-            if (!_playerInSightRange && !_playerInAttackRange) Patroling();
-            if (_playerInSightRange && !_playerInAttackRange) ChasePlayer();
             if (_playerInAttackRange && _playerInSightRange) AttackPlayer();
         }
 
