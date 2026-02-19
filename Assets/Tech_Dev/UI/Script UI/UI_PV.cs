@@ -32,11 +32,11 @@ public class UI_PV : MonoBehaviour
       CurrentHP=GameManager.GetPlayerScriptRef().GetHealth(); // idem avec CurrentHP
       CurrentWound = GameManager.GetPlayerScriptRef().GetCurrentWound(); // récupérer la valeur de blessure
       
-      PvBar.fillAmount = CurrentHP / MaxHP;  // set le fillAmount de l'image  en des pv / pvMax 
+      PvBar.fillAmount = MaxHP;  // set le fillAmount de l'image  en des pv / pvMax 
       PvCount.SetText($"{CurrentHP}/{MaxHP}"); // écrire le nom de pv / pvMax
       SaveCurrentHP = CurrentHP; // save le nombre de pv pour en faire une comparaison plus tard voir pour le supprimer plus tard
       
-      PvBar.fillAmount = CurrentWound / MaxHP  ;  // set le fillAmount de l'image  en des pv / pvMax 
+      //PvBar.fillAmount = CurrentWound / MaxHP  ;  // set le fillAmount de l'image  en des pv / pvMax 
       CurrentWound = CurrentHP;
       SaveCurrentWound = CurrentWound; // garder la currentWond pour la comparé pour savoir quand est ce qu'elle change
       WoundBar.gameObject.SetActive(false);
