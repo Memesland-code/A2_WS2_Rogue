@@ -97,9 +97,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2583519353867083252}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 7
   m_Drag: 0
-  m_AngularDrag: 15
+  m_AngularDrag: 20
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1556e0002b3dd43a6d4b495fbd9258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationLimit: 20
+  _rotationLimit: 40
 --- !u!65 &51789365674863170
 BoxCollider:
   m_ObjectHideFlags: 0
