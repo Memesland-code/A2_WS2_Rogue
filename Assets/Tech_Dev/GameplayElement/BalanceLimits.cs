@@ -6,18 +6,16 @@ namespace Tech_Dev.GameplayElement
     public class BalanceLimits : MonoBehaviour
     {
         [SerializeField] private float _rotationLimit;
-        private GameObject _plank;
-        private Vector3 _rotation;
         
         void Update()
         {
-            if (_rotation.z < 360 - _rotationLimit && _rotation.z > 180)
+            if (transform.rotation.eulerAngles.z < 360 - _rotationLimit && transform.rotation.eulerAngles.z > 180)
             {
-                transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, 360 - _rotationLimit);
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 360 - _rotationLimit);
             }
-            else if (_rotation.z > _rotationLimit && _rotation.z < 180)
+            else if (transform.rotation.eulerAngles.z > _rotationLimit && transform.rotation.eulerAngles.z < 180)
             {
-                transform.rotation = Quaternion.Euler(_rotation.x, _rotation.y, _rotationLimit);
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, _rotationLimit);
             }
         }
     }
