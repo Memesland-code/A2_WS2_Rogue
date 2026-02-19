@@ -76,6 +76,7 @@ public class UI_Shop : MonoBehaviour
    GreyChoice1.SetActive(true);
    ImageChoice1.SetActive(false);
    GameManager.SpellProjectileSpeed();
+   GameManager.GetPlayerScriptRef().RemoveGold(Price1);
    //ajouter item à l'inventaire
 
   }
@@ -89,6 +90,7 @@ public class UI_Shop : MonoBehaviour
    GreyChoice2.SetActive(true);
    ImageChoice2.SetActive(false);
    GameManager.TrinketSpellStun();
+   GameManager.GetPlayerScriptRef().RemoveGold(Price2);
    //ajouter item à l'inventaire
   }
 
@@ -102,6 +104,8 @@ public class UI_Shop : MonoBehaviour
    ImageChoice3.SetActive(false); 
    GameManager.SetRelicSpellProjectileStun();
    ReliqueShop1.SetActive(true); //ajouter item à l'inventaire
+   GameManager.GetPlayerScriptRef().RemoveGold(Price3);
+
   }
 
  }
@@ -113,6 +117,7 @@ public class UI_Shop : MonoBehaviour
    GreyChoice4.SetActive(true);
    ImageChoice4.SetActive(false);
    GameManager.SpellProjectileSpeed();
+   GameManager.GetPlayerScriptRef().RemoveGold(Price4);
    //ajouter item à l'inventaire
 
   }
@@ -126,6 +131,7 @@ public class UI_Shop : MonoBehaviour
    GreyChoice5.SetActive(true);
    ImageChoice5.SetActive(false);
    GameManager.TrinketSpecialAttackCooldown();
+   GameManager.GetPlayerScriptRef().RemoveGold(Price5);
    //ajouter item à l'inventaire
   }
  }
@@ -137,6 +143,8 @@ public class UI_Shop : MonoBehaviour
    GreyChoice6.SetActive(true);
    ImageChoice6.SetActive(false);
    GameManager.SetRelicDoubleDash();
+   GameManager.GetPlayerScriptRef().RemoveGold(Price6);
+
    //ajouter item à l'inventaire
 
   }
@@ -145,7 +153,9 @@ public class UI_Shop : MonoBehaviour
 
  public void BloodButton()
  {
-  // bouton pour donner de la vie aux marchand contre du gold
+  float MaxHP;
+  MaxHP = GameManager.GetPlayerScriptRef().GetMaxHealth();
+  GameManager.GetPlayerScriptRef().RemoveBlood(MaxHP/5); // retirer des pv
  }
  
 }

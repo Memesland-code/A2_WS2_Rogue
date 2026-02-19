@@ -599,6 +599,8 @@ namespace Tech_Dev.Player
 		    {
 			    SoundManager.PlaySound(SoundType.MerchantBlood);
 			    _health -= amount;
+			    _gold = _gold + 500; // ajoute 500 gold contre des pv
+
 			    return true;
 		    }
 		    return false;
