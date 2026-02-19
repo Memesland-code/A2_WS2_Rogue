@@ -11,7 +11,7 @@ namespace Tech_Dev.UI.Script_UI
             GameManager.StartGame();
         }
 
-        public void Quit()
+        public void QuitGame()
         {
 	        Application.Quit();
         }
