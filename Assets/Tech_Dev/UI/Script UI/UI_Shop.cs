@@ -4,6 +4,7 @@ using Tech_Dev.Player;
 using Tech_Dev.Procedural;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class UI_Shop : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class UI_Shop : MonoBehaviour
  [SerializeField] private GameObject ImageChoice5;
  [SerializeField] private GameObject ImageChoice6;
  
- [SerializeField] private GameObject ReliqueShop1;
+ [SerializeField] private GameObject Relique1Shop1;
+ [SerializeField] private GameObject Relique2Shop1;
  
  [SerializeField] TMP_Text TextPrice1;
  [SerializeField] TMP_Text TextPrice2;
@@ -52,7 +54,8 @@ public class UI_Shop : MonoBehaviour
   GreyChoice5.SetActive(false);
   GreyChoice6.SetActive(false);
   
-  ReliqueShop1.SetActive(false);
+  Relique1Shop1.SetActive(false);
+  Relique2Shop1.SetActive(false);
   
   TextPrice1.SetText($"{Price1}");
   TextPrice2.SetText($"{Price2}");
@@ -103,7 +106,7 @@ public class UI_Shop : MonoBehaviour
    GreyChoice3.SetActive(true);
    ImageChoice3.SetActive(false); 
    GameManager.SetRelicSpellProjectileStun();
-   ReliqueShop1.SetActive(true); //ajouter item à l'inventaire
+   Relique1Shop1.SetActive(true); //ajouter item à l'inventaire
    GameManager.GetPlayerScriptRef().RemoveGold(Price3);
 
   }
@@ -144,6 +147,10 @@ public class UI_Shop : MonoBehaviour
    ImageChoice6.SetActive(false);
    GameManager.SetRelicDoubleDash();
    GameManager.GetPlayerScriptRef().RemoveGold(Price6);
+   GameManager.SetRelicDoubleDash();
+   Relique2Shop1.SetActive(true); //ajouter item à l'inventaire
+
+   
 
    //ajouter item à l'inventaire
 
