@@ -216,10 +216,10 @@ namespace AwesomeToon {
             if (!raycast) return 1.1f;
             RaycastHit hit;
             if (Physics.Raycast(posAbs, dir, out hit, dist, raycastMask)) {
-                Debug.DrawRay(posAbs, dir.normalized * hit.distance, Color.red);
+                //Debug.DrawRay(posAbs, dir.normalized * hit.distance, Color.red);
                 return -0.1f;
             } else {
-                Debug.DrawRay(posAbs, dir.normalized * dist, Color.green);
+                //Debug.DrawRay(posAbs, dir.normalized * dist, Color.green);
                 return 1.1f;
             }
         }
@@ -230,7 +230,7 @@ namespace AwesomeToon {
         }
 
         private void OnDrawGizmosSelected() {
-            Gizmos.DrawWireSphere(posAbs, 0.1f);
+            //Gizmos.DrawWireSphere(posAbs, 0.1f);
         }
     }
 }
