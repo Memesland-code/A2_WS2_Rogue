@@ -11,6 +11,15 @@ namespace Tech_Dev.Player
 {
     public class PlayerController : MonoBehaviour
     {
+	    private static readonly int IsUpgrade = Animator.StringToHash("IsUpgrade");
+	    private static readonly int Die = Animator.StringToHash("Die");
+	    private static readonly int Test = Animator.StringToHash("Test");
+	    private static readonly int Spell = Animator.StringToHash("Spell");
+	    private static readonly int Attack = Animator.StringToHash("Attack");
+	    private static readonly int Dash = Animator.StringToHash("Dash");
+	    private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+	    private static readonly int Jump = Animator.StringToHash("Jump");
+
 	    [Header("Player stats")]
 	    [SerializeField] private float _maxHealth;
 	    private float _health;
@@ -188,7 +197,7 @@ namespace Tech_Dev.Player
 		    // Check input jump and if on ground and else if max jump count is not exceeded
 		    if (_inputs.Jump && (_groundDetector.Touched || _currentJumpsCombo < _maxJumpsNumber))
 		    {
-			    _animator.SetTrigger("Jump");
+			    _animator.SetTrigger(Jump);
 			    SoundManager.PlaySound(SoundType.CharacterJump);
 			    _rb.linearVelocity = Vector3.zero;
 			    _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -220,22 +229,22 @@ namespace Tech_Dev.Player
 		    // Physics and noclip
 		    if (NoClip)
 		    {
-			    if (_inputs.Move.x != 0) _animator.SetBool("IsMoving", true);
+			    if (_inputs.Move.x != 0) _animator.SetBool(IsMoving, true);
 			    transform.position += new Vector3(_inputs.Move.x, _inputs.Move.y, 0);
 		    }
 		    else if (_isDashing)
 		    {
 			    Vector3 dashVelocity = new(_inputs.Move.x * _dashForce * _dashMultiplierX, _inputs.Move.y * _dashForce * _dashMultiplierY, 0);
 			    _rb.linearVelocity = new Vector3(0, 0, 0) + horizontalMove + dashVelocity;
-			    _animator.SetBool("IsMoving", false);
+			    _animator.SetBool(IsMoving, false);
 		    }
 		    else
 		    {
 				_rb.linearVelocity = new Vector3(0, realGravity, 0) + horizontalMove;
-				if (_inputs.Move.x != 0) _animator.SetBool("IsMoving", true);
+				if (_inputs.Move.x != 0) _animator.SetBool(IsMoving, true);
 		    }
 		    
-		    if (_inputs.Move.x == 0) _animator.SetBool("IsMoving", false);
+		    if (_inputs.Move.x == 0) _animator.SetBool(IsMoving, false);
 
 		    
 		    // Interaction
@@ -284,6 +293,8 @@ namespace Tech_Dev.Player
 		    if (_inputs.Dash && (_dashCooldownTimeDelta <= 0.0f || (_currentDashesNumber < _maxDashesNumber && _fastDashAvoid <= 0.0f)))
 		    {
 			    SoundManager.PlaySound(SoundType.CharacterDash);
+			    _animator.SetTrigger(Dash);
+			    
 			    _rb.linearVelocity = Vector3.zero;
 			    _dashCooldownTimeDelta = _dashCooldown;
 			    _isDashing = true;
@@ -310,7 +321,7 @@ namespace Tech_Dev.Player
 		    //TODO Check for cooldown: animation time
 		    if (_inputs.MeleeAttack && _meleeTimeDelta <= 0.0f)
 		    {
-			    _animator.SetTrigger("Attack");
+			    _animator.SetTrigger(Attack);
 			    SoundManager.PlaySound(SoundType.CharacterSwordHit);
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
@@ -334,6 +345,7 @@ namespace Tech_Dev.Player
 
 		    if (_inputs.HeavyAttack && _heavyTimeDelta <= 0.0f)
 		    {
+			    _animator.SetTrigger(Spell);
 			    SoundManager.PlaySound(SoundType.CharacterHeavyAttack);
 			    bool damagedEnemy = false;
 			    var enemiesInRange = _swordDamager.GetEnemiesInCollider();
@@ -359,17 +371,15 @@ namespace Tech_Dev.Player
 		    
 		    if (_inputs.Skill && _skillTimeDelta <= 0.0f)
 		    {
-			    _animator.SetTrigger("Spell");
-
 			    StartCoroutine(LaunchSpell());
 			    
 			    _skillTimeDelta = _skillCooldown;
-			    if (HasProjectileStunUpgrade == true)
+			    if (HasProjectileStunUpgrade)
 			    {
 				    SoundManager.PlaySound(SoundType.CharacterSpellElectric);
 			    }
 
-			    if (HasProjectileTpUpgrade == true)
+			    if (HasProjectileTpUpgrade)
 			    {
 				    SoundManager.PlaySound(SoundType.CharacterSpellElectric);
 			    }
@@ -393,11 +403,12 @@ namespace Tech_Dev.Player
 
 		    if (Input.GetKeyDown(KeyCode.U))
 		    {
-			    _animator.SetTrigger("Test");
+			    _animator.SetTrigger(Test);
 		    }
 	    }
 
 
+	    // ReSharper disable Unity.PerformanceAnalysis
 	    public IEnumerator LaunchSpell()
 	    {
 		    yield return new WaitForSeconds(1.05f);
@@ -515,18 +526,16 @@ namespace Tech_Dev.Player
 
 
 
+	    // ReSharper disable Unity.PerformanceAnalysis
 	    public IEnumerator PlayerDeath()
 	    {
 		    if (!_isDead) _isDead = true;
 		    
-		    _animator.SetTrigger("Die");
+		    _animator.SetTrigger(Die);
 		    SoundManager.PlaySound(SoundType.CharacterDeath);
 		    yield return new WaitForSeconds(4f);
 		    
 		    GameManager.GetFadeRef().PlayFadeIn();
-
-		    //TODO send info to GameManager? (may avoid bugs)
-		    //TODO reset in-run related elements?
 		    
 		    _currentRoom.KillAllEnemies();
 		    
@@ -606,7 +615,7 @@ namespace Tech_Dev.Player
 		    return _maxHealth;
 	    }
 	    
-	    public float GetCurrentWound() // Modification de Baptiste pour récupérer les wound pour la barre de vie
+	    public float GetCurrentWound()
 	    {
 		    return _woundDamageAmount;
 	    }
@@ -614,6 +623,7 @@ namespace Tech_Dev.Player
 	    public void AddDashMaxNumber()
 	    {
 		    _maxDashesNumber++;
+		    _animator.SetBool(IsUpgrade, true);
 	    }
 
 	    public int GetGold()
@@ -635,14 +645,7 @@ namespace Tech_Dev.Player
 	    {
 		    WinDefeatUI endingScreen = GameManager.GetWinDefeatScreen().GetComponent<WinDefeatUI>();
 		    
-		    if (isWin)
-		    {
-			    endingScreen.RunState = "Victory!";
-		    }
-		    else
-		    {
-			    endingScreen.RunState = "Defeat...";
-		    }
+		    endingScreen.RunState = isWin ? "Victory!" : "Defeat...";
 		    GameManager.GetWinDefeatScreen().SetActive(true);
 	    }
 	    
