@@ -20848,7 +20848,7 @@ MonoBehaviour:
   _dashTime: 0.1
   _groundMaterial: {fileID: 13400000, guid: b0f38ab0861d08548b7cfdca135749b4, type: 2}
   _airMaterial: {fileID: 13400000, guid: 09c644450a5473746bc465706ab87b01, type: 2}
-  _teleportationFadeTime: 0.75
+  _teleportationFadeTime: 1
   IsVictory: 0
   HasProjectileStunUpgrade: 0
   HasProjectileTpUpgrade: 0
@@ -20861,6 +20861,7 @@ MonoBehaviour:
   TotalSoulGain: 0
   RunTimer: 0
   NoClip: 0
+  PreviousRoom: {fileID: 0}
 --- !u!1 &3915735747374700959
 GameObject:
   m_ObjectHideFlags: 0

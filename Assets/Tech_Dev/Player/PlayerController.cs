@@ -122,6 +122,8 @@ namespace Tech_Dev.Player
 	    private bool _godMode;
 
 	    public bool NoClip;
+
+	    public RoomManager PreviousRoom;
 	    
 	    
 	    
@@ -413,7 +415,6 @@ namespace Tech_Dev.Player
 	    // ReSharper disable Unity.PerformanceAnalysis
 	    public IEnumerator LaunchSpell()
 	    {
-		    print("GOOD");
 		    yield return new WaitForSeconds(1.05f);
 		    SoundManager.PlaySound(SoundType.CharacterSpell);
 		    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
@@ -462,7 +463,8 @@ namespace Tech_Dev.Player
 		    {
 			    AddSouls(2);
 		    }
-		    
+
+		    PreviousRoom = _currentRoom;
 		    _currentRoom = teleporter.GetNextRoomRef();
 		    gameObject.transform.position = teleporter.GetDestination().gameObject.transform.position;
 		    SetNewCameraBounds(_currentRoom.GetRoomBounds());

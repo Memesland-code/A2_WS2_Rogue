@@ -356,6 +356,12 @@ namespace Tech_Dev
             {
                 GetPlayerScriptRef().AddGold(1000);
             }
+
+            if (Input.GetKeyDown(KeyCode.KeypadDivide))
+            {
+	            _playerRef.transform.position = _playerScriptRef.PreviousRoom.GetRoomEntryCoord();
+	            _playerScriptRef.SetNewCameraBounds(_playerScriptRef.PreviousRoom.GetRoomBounds());
+            }
         }
     }
 }
