@@ -5,6 +5,7 @@ using Tech_Dev.Procedural;
 using Tech_Dev.UI.Script_UI;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Type = Tech_Dev.Procedural.Type;
 
 namespace Tech_Dev.Player
@@ -66,6 +67,10 @@ namespace Tech_Dev.Player
 	    [SerializeField] private PhysicsMaterial _groundMaterial;
 	    [SerializeField] private PhysicsMaterial _airMaterial;
 	    [SerializeField] private float _teleportationFadeTime;
+	    
+	    [FormerlySerializedAs("Reliqu1")] [SerializeField] private GameObject Relique1;
+	    [FormerlySerializedAs("Reliqu2")] [SerializeField] private GameObject Relique2;
+	    [FormerlySerializedAs("Reliqu3")] [SerializeField] private GameObject Relique3;
 
 	    private RoomManager _currentRoom;
 	    
@@ -557,6 +562,10 @@ namespace Tech_Dev.Player
 		    _currentRoom.KillAllEnemies();
 		    
 		    GameManager.GetGenerationManagerRef().ResetDungeon(false);
+		    Relique1.SetActive(false);
+		    Relique2.SetActive(false);
+		    Relique3.SetActive(false);
+		    
 		    
 		    foreach (Transform hubElement in GameObject.FindWithTag("Respawn").transform)
 		    {
