@@ -151,6 +151,159 @@ Transform:
   - {fileID: 2074059918}
   m_Father: {fileID: 776955423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &5982361
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Boss_Cel_Shading 2
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 27baeff4b024ea440830762e84b8e16c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &36286083
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,75 +400,6 @@ Transform:
   - {fileID: 298304243}
   m_Father: {fileID: 36286084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &71031859
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Sword_Cel_Shading
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 9e3f8b0fcc48e4441a6b9d2ca9ac5308, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L2_color: {r: 0.08115237, g: 0.08115237, b: 0.08115237, a: 0.09253405}
-    - _L2_dir: {r: 0.28146157, g: -0.060680956, b: 0.9576519, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &78870296
 GameObject:
   m_ObjectHideFlags: 0
@@ -15180,6 +15264,159 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!21 &182203543
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Clothes_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b883cbcafc24e24f9b9f6ad6a55286d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &188748132
 GameObject:
   m_ObjectHideFlags: 0
@@ -15643,75 +15880,6 @@ Transform:
   - {fileID: 1761317964}
   m_Father: {fileID: 776955423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &328931768
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Skin_Cel_Shading
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 35996261ffe19804ba588b95489e6eb4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L2_color: {r: 0.07600018, g: 0.07600018, b: 0.07600018, a: 0.08665926}
-    - _L2_dir: {r: 0.3243534, g: 0.104883745, b: 0.94010335, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &340487782
 GameObject:
   m_ObjectHideFlags: 0
@@ -15821,6 +15989,159 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &396495119
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Skin_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 35996261ffe19804ba588b95489e6eb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &412804094
 GameObject:
   m_ObjectHideFlags: 0
@@ -15853,231 +16174,6 @@ Transform:
   - {fileID: 1697329894}
   m_Father: {fileID: 1448288775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &423331878
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Marchand_Skin
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: ff703212df89cab4abf55aa8580fda12, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L1_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L2_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir_1: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &456577441
 GameObject:
   m_ObjectHideFlags: 0
@@ -16320,6 +16416,159 @@ Transform:
   - {fileID: 858003354}
   m_Father: {fileID: 174513327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &527495626
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Boss_Cel_Shading 2
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 27baeff4b024ea440830762e84b8e16c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &543458366
 GameObject:
   m_ObjectHideFlags: 0
@@ -16383,6 +16632,159 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1187244014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &555680899
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Skull_Jewlery
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 437743d568f04284caa81e8ed5fc4db8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &575950422
 GameObject:
   m_ObjectHideFlags: 0
@@ -21694,6 +22096,159 @@ Transform:
   - {fileID: 1879666420}
   m_Father: {fileID: 805674850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &730254496
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Clothes_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2b883cbcafc24e24f9b9f6ad6a55286d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0.07600018, g: 0.07600018, b: 0.07600018, a: 0.08665926}
+    - _L2_dir: {r: 0.3243534, g: 0.104883745, b: 0.94010335, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &732157646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4292320628381962030, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
@@ -21756,14 +22311,146 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f9d636c4a4ce8468f085bd6405235b, type: 3}
---- !u!21 &735188373
+--- !u!1 &762905966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3878174459363594501, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
+  m_PrefabInstance: {fileID: 5202667676187291066}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2053830922}
+  - component: {fileID: 2053830924}
+  - component: {fileID: 2053830923}
+  m_Layer: 0
+  m_Name: SM_HeroSword_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &772603527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4282167778679754432, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
+  m_PrefabInstance: {fileID: 5202667676187291066}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772603528}
+  - component: {fileID: 772603529}
+  - component: {fileID: 5244680384872190969}
+  m_Layer: 0
+  m_Name: SM_Clothes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772603528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7441008575563035000, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
+  m_PrefabInstance: {fileID: 5202667676187291066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772603527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 927179549}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &772603529
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2349966134106352865, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
+  m_PrefabInstance: {fileID: 5202667676187291066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772603527}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 182203543}
+  - {fileID: 2100000, guid: 2a34db68a04da8441a2be695398956c1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: -4292737642379688251, guid: dbf884f3ede7306428424772f0c88dae, type: 3}
+  m_Bones:
+  - {fileID: 858003354}
+  - {fileID: 174513327}
+  - {fileID: 518385279}
+  - {fileID: 670087721}
+  - {fileID: 1761404452}
+  - {fileID: 666264633}
+  - {fileID: 261832448}
+  - {fileID: 1988192688}
+  - {fileID: 456577442}
+  - {fileID: 1659460733}
+  - {fileID: 1877826778}
+  - {fileID: 1448288775}
+  - {fileID: 412804095}
+  - {fileID: 818770853}
+  - {fileID: 1613078957}
+  - {fileID: 1117486535}
+  - {fileID: 1143027810}
+  - {fileID: 1697329894}
+  - {fileID: 976834635}
+  - {fileID: 776955423}
+  - {fileID: 1013258371}
+  - {fileID: 506082657}
+  - {fileID: 227894745}
+  - {fileID: 305542300}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1659460733}
+  m_AABB:
+    m_Center: {x: 0.0013902783, y: -0.4160375, z: 0.020994589}
+    m_Extent: {x: 0.61882573, y: 1.0027754, z: 0.3812068}
+  m_DirtyAABB: 0
+--- !u!21 &775823609
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Skull_Cel_Shading 1
+  m_Name: Instance of M_Boss_jewelery
   m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -21785,7 +22472,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 27baeff4b024ea440830762e84b8e16c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 437743d568f04284caa81e8ed5fc4db8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -21909,138 +22596,6 @@ Material:
     - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!1 &762905966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3878174459363594501, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
-  m_PrefabInstance: {fileID: 5202667676187291066}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2053830922}
-  - component: {fileID: 2053830924}
-  - component: {fileID: 2053830923}
-  m_Layer: 0
-  m_Name: SM_HeroSword_01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &772603527
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4282167778679754432, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
-  m_PrefabInstance: {fileID: 5202667676187291066}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 772603528}
-  - component: {fileID: 772603529}
-  - component: {fileID: 5244680384872190969}
-  m_Layer: 0
-  m_Name: SM_Clothes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &772603528
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7441008575563035000, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
-  m_PrefabInstance: {fileID: 5202667676187291066}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772603527}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 927179549}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &772603529
-SkinnedMeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2349966134106352865, guid: 848e2f531fabd314fad3684c4eaa1bc0, type: 3}
-  m_PrefabInstance: {fileID: 5202667676187291066}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772603527}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 796921337}
-  - {fileID: 2100000, guid: 2a34db68a04da8441a2be695398956c1, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -4292737642379688251, guid: dbf884f3ede7306428424772f0c88dae, type: 3}
-  m_Bones:
-  - {fileID: 858003354}
-  - {fileID: 174513327}
-  - {fileID: 518385279}
-  - {fileID: 670087721}
-  - {fileID: 1761404452}
-  - {fileID: 666264633}
-  - {fileID: 261832448}
-  - {fileID: 1988192688}
-  - {fileID: 456577442}
-  - {fileID: 1659460733}
-  - {fileID: 1877826778}
-  - {fileID: 1448288775}
-  - {fileID: 412804095}
-  - {fileID: 818770853}
-  - {fileID: 1613078957}
-  - {fileID: 1117486535}
-  - {fileID: 1143027810}
-  - {fileID: 1697329894}
-  - {fileID: 976834635}
-  - {fileID: 776955423}
-  - {fileID: 1013258371}
-  - {fileID: 506082657}
-  - {fileID: 227894745}
-  - {fileID: 305542300}
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 1659460733}
-  m_AABB:
-    m_Center: {x: 0.0013902783, y: -0.4160375, z: 0.020994589}
-    m_Extent: {x: 0.61882573, y: 1.0027754, z: 0.3812068}
-  m_DirtyAABB: 0
 --- !u!1 &776955422
 GameObject:
   m_ObjectHideFlags: 0
@@ -26969,231 +27524,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!21 &796921337
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Clothes_Cel_Shading
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2b883cbcafc24e24f9b9f6ad6a55286d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L1_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L2_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir_1: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &805674849
 GameObject:
   m_ObjectHideFlags: 0
@@ -27258,14 +27588,14 @@ Transform:
   - {fileID: 1143027810}
   m_Father: {fileID: 1877826778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &853763629
+--- !u!21 &829882061
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Skin_Cel_Shading
+  m_Name: Instance of M_Skull_Cel_Shading 1
   m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -27287,7 +27617,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 35996261ffe19804ba588b95489e6eb4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 27baeff4b024ea440830762e84b8e16c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -27313,18 +27643,102 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
     - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
     - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
     - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L2_color: {r: 0.07600018, g: 0.07600018, b: 0.07600018, a: 0.08665926}
-    - _L2_dir: {r: 0.3243534, g: 0.104883745, b: 0.94010335, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
     - _L3_color: {r: 0, g: 0, b: 0, a: 1}
     - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
     - _L4_color: {r: 0, g: 0, b: 0, a: 1}
     - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
     - _L5_color: {r: 0, g: 0, b: 0, a: 1}
     - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
     - _L6_color: {r: 0, g: 0, b: 0, a: 1}
     - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!1 &858003353
@@ -32436,14 +32850,14 @@ Transform:
   - {fileID: 157500036}
   m_Father: {fileID: 776955423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &975121526
+--- !u!21 &964251595
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Sword_Cel_Shading
+  m_Name: Instance of M_Rat_Cel_Shading
   m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -32465,7 +32879,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 9e3f8b0fcc48e4441a6b9d2ca9ac5308, type: 3}
+        m_Texture: {fileID: 2800000, guid: 79d38def4460ba844a3ab3b74f3647b0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -32491,18 +32905,255 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
     - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
     - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
     - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L2_color: {r: 0.08115237, g: 0.08115237, b: 0.08115237, a: 0.09253405}
-    - _L2_dir: {r: 0.28146157, g: -0.060680956, b: 0.9576519, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
     - _L3_color: {r: 0, g: 0, b: 0, a: 1}
     - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
     - _L4_color: {r: 0, g: 0, b: 0, a: 1}
     - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
     - _L5_color: {r: 0, g: 0, b: 0, a: 1}
     - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
     - _L6_color: {r: 0, g: 0, b: 0, a: 1}
     - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!21 &974507866
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Skull_Cel_Shading 1
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 4821bd7155552ec44a8c1de5e59bdd2c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!1 &976834634
@@ -32672,75 +33323,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 298304243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1045406022
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Clothes_Cel_Shading
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2b883cbcafc24e24f9b9f6ad6a55286d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L2_color: {r: 0.07600018, g: 0.07600018, b: 0.07600018, a: 0.08665926}
-    - _L2_dir: {r: 0.3243534, g: 0.104883745, b: 0.94010335, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1051907944
 GameObject:
   m_ObjectHideFlags: 0
@@ -42648,6 +43230,159 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!21 &1111008198
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Marchand_Clothes
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3f845d83781f99641b468931403b3f8c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1111044879
 GameObject:
   m_ObjectHideFlags: 0
@@ -47732,7 +48467,7 @@ Transform:
   - {fileID: 1117486535}
   m_Father: {fileID: 818770853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1165819954
+--- !u!21 &1143514729
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -62755,7 +63490,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1824514180}
+  - {fileID: 396495119}
   - {fileID: 2100000, guid: 5119c29b807d4e54798d425b52c3c71a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -73126,6 +73861,164 @@ Transform:
   - {fileID: 412804095}
   m_Father: {fileID: 1659460733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1455383363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 926223255512240345, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+  m_PrefabInstance: {fileID: 2103927659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!21 &1483917580
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Marchand_Skin
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: ff703212df89cab4abf55aa8580fda12, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1516703296
 GameObject:
   m_ObjectHideFlags: 0
@@ -82958,75 +83851,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1579371658
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Clothes_Cel_Shading
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2b883cbcafc24e24f9b9f6ad6a55286d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L2_color: {r: 0.07600018, g: 0.07600018, b: 0.07600018, a: 0.08665926}
-    - _L2_dir: {r: 0.3243534, g: 0.104883745, b: 0.94010335, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1613078956
 GameObject:
   m_ObjectHideFlags: 0
@@ -83059,6 +83883,159 @@ Transform:
   - {fileID: 1001305391}
   m_Father: {fileID: 1697329894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1635888817
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of M_Skull_Cel_Shading 1
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 4821bd7155552ec44a8c1de5e59bdd2c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1659460732
 GameObject:
   m_ObjectHideFlags: 0
@@ -83193,6 +84170,159 @@ Transform:
   - {fileID: 1613078957}
   m_Father: {fileID: 412804095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1721735669
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Sword_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 9e3f8b0fcc48e4441a6b9d2ca9ac5308, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0.071072936, g: 0.071072936, b: 0.071072936, a: 0.08104097}
+    - _L2_dir: {r: 0.2927048, g: -0.054300595, b: 0.9546598, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1001 &1747900638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83414,6 +84544,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 635990404}
+    - target: {fileID: 2525402428719180443, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525402428719180443, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 964251595}
+    - target: {fileID: 2525402428719180443, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4c8ba2d8dc6e124e812f8731e9d8d78, type: 2}
     - target: {fileID: 6250991955160108387, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
       propertyPath: m_Name
       value: Enemy_Rat
@@ -83465,13 +84607,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6250991955160108387, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1769229579}
-    - targetCorrespondingSourceObject: {fileID: 2007793374236979919, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4038871593501887310, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1769229581}
+      addedObject: {fileID: 1769229580}
   m_SourcePrefab: {fileID: 100100000, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
 --- !u!1 &1769229578 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6250991955160108387, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4038871593501887310, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
   m_PrefabInstance: {fileID: 1769229577}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1769229579
@@ -83480,7 +84622,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769229578}
+  m_GameObject: {fileID: 6250991953669832810}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e363c6a5a0727114ab700b382518b9cc, type: 3}
@@ -83495,18 +84637,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   raycastFadeSpeed: 10
---- !u!1 &1769229580 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2007793374236979919, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
-  m_PrefabInstance: {fileID: 1769229577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1769229581
+--- !u!114 &1769229580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769229580}
+  m_GameObject: {fileID: 1769229578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e363c6a5a0727114ab700b382518b9cc, type: 3}
@@ -83585,231 +84722,6 @@ Transform:
   - {fileID: 595300906}
   m_Father: {fileID: 3975359556572165387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1824514180
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of Skin_Cel_Shading
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 35996261ffe19804ba588b95489e6eb4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L1_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L2_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir_1: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!21 &1865524913
 Material:
   serializedVersion: 8
@@ -83975,231 +84887,6 @@ Transform:
   - {fileID: 1230390088}
   m_Father: {fileID: 1761317964}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1910229360
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Instance of M_Marchand_Clothes
-  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Shading_Gradient:
-        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 3f845d83781f99641b468931403b3f8c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Fresnel_Angle: 0.9
-    - _Fresnel_Size: -5.2
-    - _Gloss_Size: 2
-    - _QueueControl: 0
-    - _QueueOffset: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
-    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
-    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L10_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L11_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L12_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L13_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L14_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L15_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L16_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L17_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L18_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L19_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
-    - _L1_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
-    - _L1_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L20_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L21_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L22_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L23_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L24_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L25_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L26_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L27_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L28_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L29_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L2_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L2_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L2_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L30_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L31_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L32_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L33_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L34_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L35_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L36_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L3_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L3_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L4_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L4_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L5_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L5_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L6_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
-    - _L6_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_color_1: {r: 0, g: 0, b: 0, a: 1}
-    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L7_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L8_dir_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_color_1: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
-    - _L9_dir_1: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1913235904
 GameObject:
   m_ObjectHideFlags: 0
@@ -84232,6 +84919,159 @@ Transform:
   - {fileID: 1362681233}
   m_Father: {fileID: 1410640381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1927607651
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Instance of Skin_Cel_Shading
+  m_Shader: {fileID: -6465566751694194690, guid: ccf3f86e2d7a43147bf8f0ea2a71ffd9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: 5f27aa29a23c4b844891506162b28719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 35996261ffe19804ba588b95489e6eb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Angle: 0.9
+    - _Fresnel_Size: -5.2
+    - _Gloss_Size: 2
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnel_Intensity: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+    - _Gloss_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _L10_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L10_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L11_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L12_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L13_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L13_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L14_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L15_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L16_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L17_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L18_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L18_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L19_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L1_color: {r: 1, g: 0.95686275, b: 0.8392157, a: 0.99}
+    - _L1_dir: {r: -0, g: 0.3222657, b: -0.94664925, a: 0}
+    - _L20_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L20_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L21_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L22_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L23_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L24_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L25_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L25_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L26_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L27_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L28_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L29_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0.07600018, g: 0.07600018, b: 0.07600018, a: 0.08665926}
+    - _L2_dir: {r: 0.3243534, g: 0.104883745, b: 0.94010335, a: 0}
+    - _L30_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L30_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L31_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L32_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L33_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L34_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L35_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L36_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L37_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L37_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L38_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L39_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L3_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L3_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L40_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L40_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L41_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L42_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L42_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L43_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L44_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L45_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L46_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L47_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L48_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L4_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L4_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L5_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L5_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L6_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L6_dir: {r: 0, g: 1, b: 0, a: 0}
+    - _L7_color: {r: 0, g: 0, b: 0, a: 1}
+    - _L7_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L8_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L9_dir: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1941479297
 GameObject:
   m_ObjectHideFlags: 0
@@ -89619,6 +90459,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Skull_boss
       objectReference: {fileID: 0}
+    - target: {fileID: 7561918783598536835, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561918783598536835, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5982361}
+    - target: {fileID: 7561918783598536835, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3871765830832718312, guid: 50b32abe859ea3f44bb743cd48ca3311, type: 3}
+    - target: {fileID: 7561918783598536835, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cc6d21a1d7526a41992dc27d97893fc, type: 2}
     - target: {fileID: 7796273167456845057, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.84
@@ -89659,32 +90515,80 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8855252135611681130, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855252135611681130, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 527495626}
+    - target: {fileID: 8855252135611681130, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cc6d21a1d7526a41992dc27d97893fc, type: 2}
+    - target: {fileID: 8928550574685427063, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928550574685427063, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 775823609}
+    - target: {fileID: 8928550574685427063, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6cc6d21a1d7526a41992dc27d97893fc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5585818214824933734, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 544312445920678347, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2103927661}
+      addedObject: {fileID: 2103927663}
+    - targetCorrespondingSourceObject: {fileID: 926223255512240345, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2103927662}
   m_SourcePrefab: {fileID: 100100000, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
---- !u!1 &2103927660 stripped
+--- !u!1 &2103927661 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5585818214824933734, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
+  m_CorrespondingSourceObject: {fileID: 544312445920678347, guid: 82126964e3a92864aaa408a7a819b988, type: 3}
   m_PrefabInstance: {fileID: 2103927659}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2103927661
+--- !u!114 &2103927662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103927660}
+  m_GameObject: {fileID: 1455383363}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e363c6a5a0727114ab700b382518b9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: aeb90bdf9e6e6a34ca5758c33eec92fd, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
+--- !u!114 &2103927663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103927661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e363c6a5a0727114ab700b382518b9cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 4b828cda0784e4246ad48d8ff7558b1c, type: 2}
   instanceMaterial: 1
   meshCenter: {x: 0, y: 0, z: 0}
   maxLights: 6
@@ -89708,7 +90612,7 @@ PrefabInstance:
     - target: {fileID: 4499320707076774332, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 735188373}
+      objectReference: {fileID: 829882061}
     - target: {fileID: 5598083193721475626, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.73
@@ -89749,6 +90653,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6914497774845951177, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914497774845951177, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1635888817}
+    - target: {fileID: 6914497774845951177, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2429479076850214119, guid: 734e4bcab84ba7142a921055d856b528, type: 3}
+    - target: {fileID: 6914497774845951177, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 57c8027aa704e264eaa22cf227b519e2, type: 2}
+    - target: {fileID: 6914497774845951177, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 57c8027aa704e264eaa22cf227b519e2, type: 2}
+    - target: {fileID: 7927389023622651813, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927389023622651813, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 555680899}
+    - target: {fileID: 7927389023622651813, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 57c8027aa704e264eaa22cf227b519e2, type: 2}
+    - target: {fileID: 8002623616787186616, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002623616787186616, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 974507866}
+    - target: {fileID: 8002623616787186616, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 57c8027aa704e264eaa22cf227b519e2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89756,9 +90704,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3957470295548005880, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2133964172}
-    - targetCorrespondingSourceObject: {fileID: 2697709125377292393, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1325996080093649689, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2133964174}
+      addedObject: {fileID: 2133964176}
+    - targetCorrespondingSourceObject: {fileID: 1815425661702281739, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2133964175}
   m_SourcePrefab: {fileID: 100100000, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
 --- !u!1 &2133964171 stripped
 GameObject:
@@ -89777,7 +90728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e363c6a5a0727114ab700b382518b9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 6f777c30d0fdcf341a06f150a1db2fc8, type: 2}
   instanceMaterial: 1
   meshCenter: {x: 0, y: 0, z: 0}
   maxLights: 6
@@ -89788,10 +90739,15 @@ MonoBehaviour:
   raycastFadeSpeed: 10
 --- !u!1 &2133964173 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2697709125377292393, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1815425661702281739, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
   m_PrefabInstance: {fileID: 2133964170}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2133964174
+--- !u!1 &2133964174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1325996080093649689, guid: 1d8a8fe50906bcc4588aa53e22894dbf, type: 3}
+  m_PrefabInstance: {fileID: 2133964170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2133964175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89804,6 +90760,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 52142a74b5b26a14ba3c16664ca94534, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
+--- !u!114 &2133964176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133964174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e363c6a5a0727114ab700b382518b9cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 6f777c30d0fdcf341a06f150a1db2fc8, type: 2}
   instanceMaterial: 1
   meshCenter: {x: 0, y: 0, z: 0}
   maxLights: 6
@@ -124418,7 +125395,7 @@ PrefabInstance:
     - target: {fileID: 2413381614051111070, guid: f873c90244166764da7a29c3dd01fc77, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1165819954}
+      objectReference: {fileID: 1143514729}
     - target: {fileID: 2413381614051111070, guid: f873c90244166764da7a29c3dd01fc77, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -124603,11 +125580,11 @@ PrefabInstance:
     - target: {fileID: 6960553047275973833, guid: 71126f487ce4ad9419954a6bb69debc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 423331878}
+      objectReference: {fileID: 1483917580}
     - target: {fileID: 8530713131187119069, guid: 71126f487ce4ad9419954a6bb69debc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1910229360}
+      objectReference: {fileID: 1111008198}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -124708,6 +125685,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &6250991953669832810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6250991955160108387, guid: e1030a77a556d5c4ab2e98d8189dbfbb, type: 3}
+  m_PrefabInstance: {fileID: 1769229577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6723484782314025172
 Transform:
   m_ObjectHideFlags: 0
@@ -129557,7 +130539,7 @@ PrefabInstance:
     - target: {fileID: 1604186981229477390, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 328931768}
+      objectReference: {fileID: 1927607651}
     - target: {fileID: 1926566641224153702, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -129573,7 +130555,7 @@ PrefabInstance:
     - target: {fileID: 3270158065580613630, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 71031859}
+      objectReference: {fileID: 1721735669}
     - target: {fileID: 3270158065580613630, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -129673,7 +130655,7 @@ PrefabInstance:
     - target: {fileID: 8687563286664155300, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 1579371658}
+      objectReference: {fileID: 730254496}
     - target: {fileID: 8874440510326480863, guid: 5dd8c8025457f1341b6db20a15e58510, type: 3}
       propertyPath: m_IsActive
       value: 0
