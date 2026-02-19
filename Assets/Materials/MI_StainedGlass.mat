@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_Plateform_Purple
+  m_Name: MI_StainedGlass
   m_Shader: {fileID: -6465566751694194690, guid: cdefc1edbe288df43a1b7824756bd267, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,27 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor_01_Red:
-        m_Texture: {fileID: 2800000, guid: b7b7ef6ba79b14a4c944831c8fd275ef, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseColor_02_Green:
-        m_Texture: {fileID: 2800000, guid: b7b7ef6ba79b14a4c944831c8fd275ef, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseColor_02_Red:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseColor_03_Blue:
-        m_Texture: {fileID: 2800000, guid: b7b7ef6ba79b14a4c944831c8fd275ef, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseColor_03_Green:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BaseColor_04_Blue:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3c6e8fb5008471940a7915a058609a88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -73,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emissive:
-        m_Texture: {fileID: 2800000, guid: b7b7ef6ba79b14a4c944831c8fd275ef, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3c6e8fb5008471940a7915a058609a88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Extra_Normal:
@@ -89,23 +69,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: 6ee42848b0ec34e439fd4edcba665ff3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6a0047a756506ea4dae8d5e0828b2d95, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ORM:
-        m_Texture: {fileID: 2800000, guid: 227de26a9ec3163449cf99b71ebc5272, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ORM_1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ORM_2:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ORM_3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0f2fb93f561634a428a7d45f1ffd39e8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -173,21 +141,21 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _Emissive_Intensity: 0.27
+    - _Emissive_Intensity: 1.98
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Invert_AO: 0
+    - _Invert_AO: 1
     - _Invert_Extra_Normal: 0
-    - _Invert_Glossiness: 1
+    - _Invert_Glossiness: 0
     - _Invert_Normal: 0
     - _MaskB_Contrast: 1
-    - _MaskB_Multiply: 0
+    - _MaskB_Multiply: 1
     - _MaskG_Contrast: 1
-    - _MaskG_Multiply: 0
+    - _MaskG_Multiply: 1
     - _MaskR_Contrast: 1
-    - _MaskR_Multiply: 0
+    - _MaskR_Multiply: 1
     - _Metallic: 0
     - _Moss: 0
     - _Moss_Contrast: 1
@@ -208,7 +176,6 @@ Material:
     - _Triplanar_base: 0
     - _Triplanar_blendmats: 0
     - _Use_Extra_Normal: 0
-    - _Use_Triplanar: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _moss_emissive: 0
@@ -219,7 +186,7 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2442834665353294051
+--- !u!114 &688492905151515663
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
