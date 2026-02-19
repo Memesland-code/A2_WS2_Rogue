@@ -19,6 +19,7 @@ namespace Tech_Dev.Player
 	    private static readonly int Dash = Animator.StringToHash("Dash");
 	    private static readonly int IsMoving = Animator.StringToHash("IsMoving");
 	    private static readonly int Jump = Animator.StringToHash("Jump");
+	    private static readonly int StopDash = Animator.StringToHash("StopDash");
 
 	    [Header("Player stats")]
 	    [SerializeField] private float _maxHealth;
@@ -313,6 +314,7 @@ namespace Tech_Dev.Player
 		    if (_dashTimeDelta <= 0.0f)
 		    {
 			    _isDashing = false;
+			    _animator.SetTrigger(StopDash);
 		    }
 
 
