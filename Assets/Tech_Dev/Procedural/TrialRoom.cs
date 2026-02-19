@@ -24,10 +24,6 @@ namespace Tech_Dev.Procedural
         public void OpenTrialChoice()
         {
             TrialCanvas.SetActive(true);
-            Debug.LogWarning("Ne pas oublier de lancer les trials à la fermeture ==> Voir TrialRoom.cs");
         }
-        
-        //!TODO A METTRE POUR ACTIVER LES ENNEMIS QUAND LE SCRREN SE FERME
-        //GameManager.GetPlayerScriptRef().GetCurrentRoom().StartTrial();
     }
 }

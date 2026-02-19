@@ -11,6 +11,8 @@ namespace Tech_Dev.Procedural
 		private GameObject _spawnedDoorGlow;
 		private GameObject _nextRoomRef;
 		public bool TeleportToHub;
+		
+		//public List<>
 
 		private void OnDrawGizmos()
 		{

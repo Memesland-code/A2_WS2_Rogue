@@ -17,6 +17,7 @@ public class Ui_Trials : MonoBehaviour
 		GameManager.SetRelicSpellprojectileTeleport();
 		Relique1TrialRoom.SetActive(true);
 		// ajouter la relique 1 envoyer au GameManager l'information
+		GameManager.GetPlayerScriptRef().GetCurrentRoom().StartTrial();
 		
 	}
 
@@ -25,6 +26,7 @@ public class Ui_Trials : MonoBehaviour
 		GameManager.CloseAllUIs();
 		GameManager.SetRelicDoubleDash();
 		// ajouter la relique 2 envoyer au GameManager l'information
+		GameManager.GetPlayerScriptRef().GetCurrentRoom().StartTrial();
 	}
 	
 	

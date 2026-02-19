@@ -413,6 +413,7 @@ namespace Tech_Dev.Player
 	    // ReSharper disable Unity.PerformanceAnalysis
 	    public IEnumerator LaunchSpell()
 	    {
+		    print("GOOD");
 		    yield return new WaitForSeconds(1.05f);
 		    SoundManager.PlaySound(SoundType.CharacterSpell);
 		    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);

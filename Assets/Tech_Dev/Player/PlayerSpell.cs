@@ -69,12 +69,13 @@ namespace Tech_Dev.Player
                 Destroy(gameObject);
             }
 
-            if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Sword") || other.gameObject.CompareTag("PlayerRelated"))
+            if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Sword") || other.gameObject.CompareTag("PlayerRelated") || other.gameObject.CompareTag("GlobalVolume"))
             {
                 
             }
             else
             {
+	            print(other.gameObject.name);
                 Destroy(gameObject);
             }
         }
