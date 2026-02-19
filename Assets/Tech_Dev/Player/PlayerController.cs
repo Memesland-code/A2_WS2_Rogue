@@ -95,7 +95,7 @@ namespace Tech_Dev.Player
 	    public bool HasProjectileStunUpgrade;
 	    public bool HasProjectileTpUpgrade;
 
-	    private bool _woundBarActive;
+	    [SerializeField] private bool _woundBarActive;
 	    private float _woundBarTimer;
 	    private float _woundDamageAmount;
 
@@ -625,6 +625,10 @@ namespace Tech_Dev.Player
 	    public float GetCurrentWound()
 	    {
 		    return _woundDamageAmount;
+	    }
+	    public bool GetActiveWounds()
+	    {
+		    return _woundBarActive;
 	    }
 
 	    public void AddDashMaxNumber()

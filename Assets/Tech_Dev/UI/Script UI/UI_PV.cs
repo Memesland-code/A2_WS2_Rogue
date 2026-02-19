@@ -24,11 +24,13 @@ public class UI_PV : MonoBehaviour
     
     [SerializeField] private KeyCode Test;
     
+    private bool ActiveWound;
+    
   void Start()
   {
       MaxHP = GameManager.GetPlayerScriptRef().GetMaxHealth();  //récupérer les valeurs dans les scripts resepctif
       CurrentHP=GameManager.GetPlayerScriptRef().GetHealth(); // idem avec CurrentHP
-      CurrentWound = GameManager.GetPlayerScriptRef().GetCurrentWound();
+      CurrentWound = GameManager.GetPlayerScriptRef().GetCurrentWound(); // récupérer la valeur de blessure
       
       PvBar.fillAmount = CurrentHP / MaxHP;  // set le fillAmount de l'image  en des pv / pvMax 
       PvCount.SetText($"{CurrentHP}/{MaxHP}"); // écrire le nom de pv / pvMax
@@ -36,7 +38,9 @@ public class UI_PV : MonoBehaviour
       
       PvBar.fillAmount = CurrentWound / MaxHP  ;  // set le fillAmount de l'image  en des pv / pvMax 
       CurrentWound = CurrentHP;
-      SaveCurrentWound = CurrentWound;
+      SaveCurrentWound = CurrentWound; // garder la currentWond pour la comparé pour savoir quand est ce qu'elle change
+      WoundBar.gameObject.SetActive(false);
+
 
   }
 
@@ -45,28 +49,34 @@ public class UI_PV : MonoBehaviour
       MaxHP = GameManager.GetPlayerScriptRef().GetMaxHealth();
       CurrentHP=GameManager.GetPlayerScriptRef().GetHealth();
       
-      CurrentWound = GameManager.GetPlayerScriptRef().GetCurrentWound();
+      CurrentWound = GameManager.GetPlayerScriptRef().GetCurrentWound(); // en permanance récupérer la currentWond pour voir si elle change
+
+      ActiveWound = GameManager.GetPlayerScriptRef().GetActiveWounds();
       
       PvCount.SetText($"{CurrentHP}/{MaxHP}"); // écrire le nombre de pv / pvMax
-
-
- 
+      
+      
       
       if (SaveCurrentHP != CurrentHP) // vérifier une modification de point de vie
       {
         PV_Change(); // lire ce qu'il y a d'écrit
       }
 
-      if (SaveCurrentWound != CurrentWound)
+      if (SaveCurrentWound != CurrentWound && ActiveWound) // si la currentWound est différente de sa version save alors appelé Wound_Change
       {
+          WoundBar.gameObject.SetActive(true);
           Wound_Change();
       }
       
+      if (ActiveWound == false)
+      {
+          WoundBar.gameObject.SetActive(false);
+      }
       
   }
-
-
-  void PV_Change()
+  
+  
+        void PV_Change()
   {
       SaveCurrentHP = CurrentHP; // remettre save PV = current PV
       float PvPercent = CurrentHP / MaxHP; // set la valeur utiliser pour faire le pourcentage de point de vie
@@ -74,10 +84,16 @@ public class UI_PV : MonoBehaviour
       PvCount.SetText($"{CurrentHP}/{MaxHP}"); // afficher le nouveau nombre de point de vie
   }
 
-  void Wound_Change()
+      void Wound_Change() 
   {
-      SaveCurrentWound = CurrentWound; 
-      float WoundPercent = CurrentWound / MaxHP;
-      WoundBar.fillAmount = WoundPercent;
+      if (ActiveWound)
+      {
+        CurrentHP=GameManager.GetPlayerScriptRef().GetHealth();
+        SaveCurrentWound = CurrentWound; // Remettre CurrentWound égale à Save CurrentWond 
+        float WoundPercent = (CurrentHP+CurrentWound) / MaxHP; // crée un variable WoundPercent qui est égale à CurrentWound diviser par MaxHP
+        WoundBar.fillAmount = WoundPercent; // modifier le fil amount de la WoundBar
+      }
+
+      
   }
 }
