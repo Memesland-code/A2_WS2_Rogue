@@ -54,6 +54,7 @@ namespace Tech_Dev.Player
 	    
 	    [Space(5), Header("Abilities related")]
 	    [SerializeField] private PlayerSpell _spellProjectile;
+	    [SerializeField] private PlayerSpell _spellProjectileStun;
 	    [SerializeField] private float _spellDamage;
 	    [SerializeField] private float _spellStunTime;
 	    [SerializeField] private float _projectileForce;
@@ -416,7 +417,18 @@ namespace Tech_Dev.Player
 	    {
 		    yield return new WaitForSeconds(1.05f);
 		    SoundManager.PlaySound(SoundType.CharacterSpell);
-		    PlayerSpell spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
+
+		    PlayerSpell spell;
+		    
+		    if (HasProjectileStunUpgrade)
+		    {
+			    spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
+		    }
+		    else
+		    {
+				spell = Instantiate(_spellProjectile, _shootPoint.position, Quaternion.identity);
+		    }
+		    
 		    spell.GetComponent<Rigidbody>().AddForce(_shootPoint.forward * (RunSpellProjectileSpeed * 10));
 		    spell.HasStunUpgrade = HasProjectileStunUpgrade;
 		    spell.HasTeleportUpgrade = HasProjectileTpUpgrade;
