@@ -321,6 +321,7 @@ namespace Tech_Dev.Procedural
             }
             
             //info if room is boss room
+            print(_hubSpawnPoint.transform.position);
             _rooms.Last()[0].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform);
             _rooms.Last()[1].GetBossTeleporter().SetDestinationEntryPoint(_hubRoom, _hubSpawnPoint.transform); 
         }

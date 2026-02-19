@@ -51,7 +51,7 @@ namespace Tech_Dev.Procedural
 			_nextRoomRef = nextRoomRef;
 			_nextRoomEntryPoint = destinationTeleportPoint;
 			
-			if (nextRoomRef.GetComponent<RoomManager>().Type == Type.Boss) return;
+			if (nextRoomRef.GetComponent<RoomManager>().Type == Type.Spawn) return;
 			transform.GetChild(1).gameObject.GetComponent<MeshRenderer>().sharedMaterial = GameManager.RoomsIcon[_nextRoomRef.GetComponent<RoomManager>().Type];
 		}
 
