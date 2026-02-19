@@ -53,7 +53,7 @@ public class UI_PV : MonoBehaviour
 
       ActiveWound = GameManager.GetPlayerScriptRef().GetActiveWounds();
       
-      PvCount.SetText($"{CurrentHP}/{MaxHP}"); // écrire le nombre de pv / pvMax
+      //PvCount.SetText($"{CurrentHP}/{MaxHP}"); // écrire le nombre de pv / pvMax
       
       
       
@@ -81,7 +81,7 @@ public class UI_PV : MonoBehaviour
       SaveCurrentHP = CurrentHP; // remettre save PV = current PV
       float PvPercent = CurrentHP / MaxHP; // set la valeur utiliser pour faire le pourcentage de point de vie
       PvBar.fillAmount = PvPercent; // modifier l'iamge en fonction du pourcentage de point de vie
-      PvCount.SetText($"{CurrentHP}/{MaxHP}"); // afficher le nouveau nombre de point de vie
+      //PvCount.SetText($"{CurrentHP}/{MaxHP}"); // afficher le nouveau nombre de point de vie
   }
 
       void Wound_Change() 
