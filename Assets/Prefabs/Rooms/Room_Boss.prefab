@@ -3347,8 +3347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8bca95f7c947b4db5fb152a0d693d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anisotropy: 0.77
-  scattering: 4.5
+  anisotropy: 0.53
+  scattering: 4.07
   radius: 0
 --- !u!1 &2365107178047945832
 GameObject:
@@ -3919,8 +3919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8bca95f7c947b4db5fb152a0d693d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anisotropy: 0.77
-  scattering: 4.5
+  anisotropy: 0.53
+  scattering: 4.07
   radius: 0
 --- !u!1 &2728803650264646098
 GameObject:
@@ -12443,8 +12443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8bca95f7c947b4db5fb152a0d693d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anisotropy: 0.77
-  scattering: 4.5
+  anisotropy: 0.53
+  scattering: 4.07
   radius: 0
 --- !u!1 &7073664051890317209
 GameObject:
@@ -22280,6 +22280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Blockout_module_mur_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3695446252766683085, guid: 0eb9d3af6f5e21d4e9c78551344de9b0, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23547,6 +23551,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0eb9d3af6f5e21d4e9c78551344de9b0, type: 3}
       propertyPath: m_Name
       value: SM_Blockout_module_mur_01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695446252766683085, guid: 0eb9d3af6f5e21d4e9c78551344de9b0, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
