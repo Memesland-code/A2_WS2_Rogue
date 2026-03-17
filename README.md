@@ -1,3 +1,5 @@
+TEAM CREDITS:
+
 Game Designers
 [ARMANT Lylian - Level Design](https://www.linkedin.com/in/lylian-armant-8b217926a/)
 [CHAPON Kylian - Technical Design](https://www.linkedin.com/in/kylian-chapon-903924251/)
