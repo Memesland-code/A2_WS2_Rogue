@@ -5,7 +5,7 @@ Game Designers
 - [CHAPON Kylian](https://www.linkedin.com/in/kylian-chapon-903924251/) - Technical Design
 - [FERON Baptiste](https://www.linkedin.com/in/baptiste-feron-51232b264/) - Narrative Design
 - [MERLE Thibault](https://www.linkedin.com/in/thibault-merle-946187311/) - Production
-- ROSSIGNOL Tom - System Design
+- [ROSSIGNOL Tom](https://www.linkedin.com/in/tom-rossignol-63148a3b8/) - System Design
 - [SOYEZ-MARTIN Guillaume](https://www.linkedin.com/in/guillaume-soyez-martin-71a863253/) - Narrative Design
 
 Game Artists
